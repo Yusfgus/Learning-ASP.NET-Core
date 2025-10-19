@@ -24,10 +24,22 @@
             foreach (var item in source)
                 Console.Write($"{item}, ");
         }
-        else if(typeof(T) == typeof(string))
+        else if (typeof(T) == typeof(string))
         {
             foreach (var item in source)
                 Console.Write($"'{item}', ");
+        }
+        else if (typeof(System.Collections.IEnumerable).IsAssignableFrom(typeof(T)))
+        {
+            Console.WriteLine();
+            foreach(var collection in source)
+            {
+                System.Collections.IEnumerable? coll = collection as System.Collections.IEnumerable;
+                Console.Write("\t{ ");
+                foreach(var item in coll)
+                    Console.Write($"{item}, ");
+                Console.WriteLine("}");
+            }
         }
         else
         {
