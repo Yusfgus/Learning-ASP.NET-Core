@@ -16,7 +16,8 @@
         if (source == null)
             return;
 
-        Utils.printTitle(title);
+        if (title != "")
+            Utils.printTitle(title);
 
         Console.Write("{ ");
         if (typeof(T).IsValueType)
@@ -32,13 +33,16 @@
         else if (typeof(System.Collections.IEnumerable).IsAssignableFrom(typeof(T)))
         {
             Console.WriteLine();
-            foreach(var collection in source)
+            foreach (var collection in source)
             {
                 System.Collections.IEnumerable? coll = collection as System.Collections.IEnumerable;
-                Console.Write("\t{ ");
-                foreach(var item in coll)
-                    Console.Write($"{item}, ");
-                Console.WriteLine("}");
+                if (coll is not null)
+                {
+                    Console.Write("\t{ ");
+                    foreach (var item in coll)
+                        Console.Write($"{item}, ");
+                    Console.WriteLine("}");
+                }
             }
         }
         else
@@ -48,5 +52,19 @@
         }
         Console.WriteLine("}");
 
+    }
+    
+    public static void printGroups<T>(this IEnumerable<IGrouping<T, T>> groups, string title = "")
+    {
+        if (title != "")
+            Utils.printTitle(title);
+            
+        Console.WriteLine("{");
+        foreach(IGrouping<int, int> group in groups)
+        {
+            Console.Write($"\t{group.Key}: ");
+            group.Print();
+        }
+        Console.WriteLine("}");
     }
 }

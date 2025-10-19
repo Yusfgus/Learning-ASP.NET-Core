@@ -27,9 +27,14 @@
         #endregion
 
         #region Quantifiers ( Any, All, Contains )
-        Quantifiers.Any(); 
-        Quantifiers.All();
-        Quantifiers.Contains();
+        // Quantifiers.Any(); 
+        // Quantifiers.All();
+        // Quantifiers.Contains();
+        #endregion
+
+        #region Grouping ( GroupBy, ToLookup )
+        // Grouping.GroupBy();
+        // Grouping.ToLookup();
         #endregion
 
         // Console.ReadKey();
