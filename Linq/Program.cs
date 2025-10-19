@@ -26,6 +26,12 @@
         // Partitioning.Chunk();
         #endregion
 
+        #region Quantifiers ( Any, All, Contains )
+        Quantifiers.Any(); 
+        Quantifiers.All();
+        Quantifiers.Contains();
+        #endregion
+
         // Console.ReadKey();
         Console.WriteLine();
     }
