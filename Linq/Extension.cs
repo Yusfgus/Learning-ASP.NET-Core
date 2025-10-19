@@ -60,7 +60,7 @@
             Utils.printTitle(title);
             
         Console.WriteLine("{");
-        foreach(IGrouping<int, int> group in groups)
+        foreach(IGrouping<T, T> group in groups)
         {
             Console.Write($"\t{group.Key}: ");
             group.Print();

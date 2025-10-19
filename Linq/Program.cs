@@ -37,6 +37,11 @@
         // Grouping.ToLookup();
         #endregion
 
+        #region Joining ( Join, GroupJoin )
+        // Joining.Join();
+        // Joining.GroupJoin();
+        #endregion
+
         // Console.ReadKey();
         Console.WriteLine();
     }

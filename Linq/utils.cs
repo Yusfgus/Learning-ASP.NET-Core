@@ -11,7 +11,7 @@ static class Utils
         Console.ForegroundColor = ConsoleColor.Gray;
     }
 
-    public static string Center(this string text, int width, char c = ' ')
+    private static string Center(this string text, int width, char c = ' ')
     {
         if (text.Length >= width)
             return text;
