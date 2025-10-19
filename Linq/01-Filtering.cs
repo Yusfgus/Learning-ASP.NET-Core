@@ -1,12 +1,12 @@
 
-public class Where
+public class Filtering
 {
-    public static void Run()
+    public static void Where()
     {
         List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
         IEnumerable<int> evenNumbers01 = numbers.Filter(n => n % 2 == 0);
-        evenNumbers01.Print("using Filter");
+        evenNumbers01.Print("Using Filter");
 
         IEnumerable<int> evenNumbers02 = numbers.Where(n => n % 2 == 0);
         evenNumbers02.Print("Using Where");
