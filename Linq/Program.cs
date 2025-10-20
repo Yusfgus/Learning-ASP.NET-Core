@@ -56,6 +56,11 @@
         // Element.Single();
         #endregion
 
+        #region Equality Operations ( Equals, SequenceEqual )
+        // Equality.Equals();
+        // Equality.SequenceEqual();
+        #endregion
+
         // Console.ReadKey();
         Console.WriteLine();
     }

@@ -2,7 +2,6 @@
 
 public class Element
 {
-
     private static string[] elems = { "elem1", "elem2", "elem3", "elem4", "elem5", "elem6", "elem7", "elem8", "elem9", "elem10", "elem11", "elem100" };
 
     public static void ElementAt()
