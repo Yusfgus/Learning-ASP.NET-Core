@@ -61,6 +61,10 @@
         // Equality.SequenceEqual();
         #endregion
 
+        #region  Concatenation ( Concat )
+        // Concatenation.Concat();
+        #endregion
+
         // Console.ReadKey();
         Console.WriteLine();
     }
