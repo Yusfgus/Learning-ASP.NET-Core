@@ -42,6 +42,13 @@
         // Joining.GroupJoin();
         #endregion
 
+        #region Generation Operations ( Empty, DefaultIfEmpty, Range, Repeat )
+        // Generation.Empty();
+        // Generation.DefaultIfEmpty();
+        // Generation.Range();
+        Generation.Repeat();
+        #endregion
+
         // Console.ReadKey();
         Console.WriteLine();
     }
