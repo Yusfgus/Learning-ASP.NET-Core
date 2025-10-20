@@ -65,6 +65,15 @@
         // Concatenation.Concat();
         #endregion
 
+        #region  Aggregation Operations ( Aggregate, Count, Max, MaxBy, Min, MinBy, Sum, Average )
+        // Aggregation.Aggregate();
+        // Aggregation.Count();
+        // Aggregation.Max();
+        // Aggregation.Min();
+        // Aggregation.Sum();
+        // Aggregation.Average();
+        #endregion
+
         // Console.ReadKey();
         Console.WriteLine();
     }
