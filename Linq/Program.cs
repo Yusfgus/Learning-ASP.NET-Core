@@ -46,7 +46,14 @@
         // Generation.Empty();
         // Generation.DefaultIfEmpty();
         // Generation.Range();
-        Generation.Repeat();
+        // Generation.Repeat();
+        #endregion
+
+        #region Element Operations( ElementAt, First, FirstOrDefault, Last, LastOrDefault, Single, SingleOrDefault )
+        // Element.ElementAt();
+        // Element.First();
+        // Element.Last();
+        // Element.Single();
         #endregion
 
         // Console.ReadKey();
