@@ -61,17 +61,24 @@
         // Equality.SequenceEqual();
         #endregion
 
-        #region  Concatenation ( Concat )
+        #region Concatenation ( Concat )
         // Concatenation.Concat();
         #endregion
 
-        #region  Aggregation Operations ( Aggregate, Count, Max, MaxBy, Min, MinBy, Sum, Average )
+        #region Aggregation Operations ( Aggregate, Count, Max, MaxBy, Min, MinBy, Sum, Average )
         // Aggregation.Aggregate();
         // Aggregation.Count();
         // Aggregation.Max();
         // Aggregation.Min();
         // Aggregation.Sum();
         // Aggregation.Average();
+        #endregion
+
+        #region Sets( Distict, DistictBy, Except, ExceptBy, Intersect, IntersectBy, Union, UnoinBy )
+        // Sets.Distict();
+        // Sets.Except();
+        // Sets.Intersect();
+        // Sets.Union();
         #endregion
 
         // Console.ReadKey();

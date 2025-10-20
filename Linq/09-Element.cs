@@ -6,7 +6,7 @@ public class Element
 
     public static void ElementAt()
     {
-        Utils.printTitle(title: "Element ( ElementAt )", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Element ( ElementAt, ElementAtOrDefault )", color: ConsoleColor.Blue, width: 70);
 
         string elem01 = elems.ElementAt(3);
 
@@ -40,7 +40,7 @@ public class Element
 
     public static void First()
     {
-        Utils.printTitle(title: "Element ( First )", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Element ( First, FirstOrDefault )", color: ConsoleColor.Blue, width: 70);
 
         string elem01 = elems.First();
 
@@ -82,7 +82,7 @@ public class Element
 
     public static void Last()
     {
-        Utils.printTitle(title: "Element ( Last )", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Element ( Last, LastOrDefault )", color: ConsoleColor.Blue, width: 70);
 
         string elem01 = elems.Last();
 
@@ -124,7 +124,7 @@ public class Element
     
     public static void Single()
     {
-        Utils.printTitle(title: "Element ( Single )", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Element ( Single, SingleOrDefault )", color: ConsoleColor.Blue, width: 70);
 
         string elem01 = elems.Single(e => e.Length > 6);
 

@@ -53,7 +53,7 @@ public class Aggregation
 
     public static void Max()
     {
-        Utils.printTitle(title: "Equality ( Max )", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Equality ( Max, MaxBy)", color: ConsoleColor.Blue, width: 70);
 
         int max = numbers.Max();
 
@@ -77,7 +77,7 @@ public class Aggregation
 
     public static void Min()
     {
-        Utils.printTitle(title: "Equality ( Min )", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Equality ( Min, MinBy )", color: ConsoleColor.Blue, width: 70);
 
         int min = numbers.Min();
         
