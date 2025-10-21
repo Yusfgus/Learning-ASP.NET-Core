@@ -81,6 +81,12 @@
         // Sets.Union();
         #endregion
 
+        #region Expression Trees
+        // ExpressionTree.Compiling();
+        // ExpressionTree.Decomposing();
+        // ExpressionTree.Building();
+        #endregion
+
         // Console.ReadKey();
         Console.WriteLine();
     }
