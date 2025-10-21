@@ -22,7 +22,7 @@ public class Aggregation
         int sub = numbers.Aggregate(100, (a, b) => a - b);
 
         Utils.printTitle("Subtraction of numbers from 100");
-        Console.WriteLine($"Subtration = {sub}");
+        Console.WriteLine($"Subtraction = {sub}");
 
         // ==========================================================================================
 

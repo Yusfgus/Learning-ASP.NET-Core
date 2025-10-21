@@ -19,20 +19,21 @@
         if (title != "")
             Utils.printTitle(title);
 
-        Console.Write("{ ");
         if (typeof(T).IsValueType)
         {
+            Console.Write("{ ");
             foreach (var item in source)
                 Console.Write($"{item}, ");
         }
         else if (typeof(T) == typeof(string))
         {
+            Console.Write("{ ");
             foreach (var item in source)
                 Console.Write($"'{item}', ");
         }
         else if (typeof(System.Collections.IEnumerable).IsAssignableFrom(typeof(T)))
         {
-            Console.WriteLine();
+            Console.WriteLine("{");
             foreach (var collection in source)
             {
                 System.Collections.IEnumerable? coll = collection as System.Collections.IEnumerable;
@@ -47,8 +48,9 @@
         }
         else
         {
+            Console.WriteLine("{");
             foreach (var item in source)
-                Console.WriteLine(item);
+                Console.WriteLine($"\t{item}");
         }
         Console.WriteLine("}");
 

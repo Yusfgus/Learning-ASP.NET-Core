@@ -36,10 +36,10 @@ public class ExpressionTree
         ParameterExpression left = (ParameterExpression)body.Left;
         ParameterExpression right = (ParameterExpression)body.Right;
 
-        ExpressionType operantion = body.NodeType;
+        ExpressionType operation = body.NodeType;
 
         Utils.printTitle("Is Greater Expression");
-        Console.WriteLine($"({num1Param}, {num2Param}) => {left} {operantion} {right}");
+        Console.WriteLine($"({num1Param}, {num2Param}) => {left} {operation} {right}");
     }
 
     public static void Building()
@@ -53,9 +53,9 @@ public class ExpressionTree
         ConstantExpression twoConst = Expression.Constant(2, typeof(int)); // 2
         ConstantExpression zer0Const = Expression.Constant(0, typeof(int)); // 0
 
-        BinaryExpression modulExpression = Expression.Modulo(numParam, twoConst); // num % 2
+        BinaryExpression moduleExpression = Expression.Modulo(numParam, twoConst); // num % 2
 
-        BinaryExpression IsEvenBinaryExpression = Expression.Equal(modulExpression, zer0Const); // num % 2 == 0
+        BinaryExpression IsEvenBinaryExpression = Expression.Equal(moduleExpression, zer0Const); // num % 2 == 0
 
         ParameterExpression[] parameters = { numParam }; // (num)
 

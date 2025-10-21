@@ -2,20 +2,20 @@
 
 public class Sets
 {
-    private static string[] fruits01 = { "manga", "apple", "banana", "apple", "orange", "strewberry" };
-    private static List<string> fruits02 = new() { "apple", "manga", "watermellon" };
+    private static string[] fruits01 = { "manga", "apple", "banana", "apple", "orange", "strawberry" };
+    private static List<string> fruits02 = new() { "apple", "manga", "watermelon" };
 
-    public static void Distict()
+    public static void Distinct()
     {
-        Utils.printTitle(title: "Sets ( Distict, DistictBy )", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Sets ( Distinct, DistinctBy )", color: ConsoleColor.Blue, width: 70);
 
         IEnumerable<string> result01 = fruits01.Distinct(); // uses Equals()
-        result01.Print("Distict fruits");
+        result01.Print("Distinct fruits");
 
         //===========================================================================================
 
         IEnumerable<string> result02 = fruits01.DistinctBy(x => x.Length);
-        result02.Print("Distict lengths of fruits");
+        result02.Print("Distinct lengths of fruits");
     }
 
     public static void Except()
@@ -41,12 +41,12 @@ public class Sets
         //===========================================================================================
 
         IEnumerable<string> result02 = fruits01.IntersectBy(fruits02.Select(f2 => f2.Length), f1 => f1.Length);
-        result02.Print("Fruits01 Intersect with Fruits02 by Lenght");
+        result02.Print("Fruits01 Intersect with Fruits02 by Length");
     }
     
     public static void Union()
     {
-        // same as Concate but without repetition
+        // same as Concat but without repetition
 
         Utils.printTitle(title: "Sets ( Intersect, IntersectBy )", color: ConsoleColor.Blue, width: 70);
 
@@ -56,6 +56,6 @@ public class Sets
         //===========================================================================================
 
         IEnumerable<string> result02 = fruits01.UnionBy(fruits02, f1 => f1.Length);
-        result02.Print("Fruits01 Union with Fruits02 by Lenght");
+        result02.Print("Fruits01 Union with Fruits02 by Length");
     }
 } 

@@ -74,8 +74,8 @@
         // Aggregation.Average();
         #endregion
 
-        #region Sets( Distict, DistictBy, Except, ExceptBy, Intersect, IntersectBy, Union, UnoinBy )
-        // Sets.Distict();
+        #region Sets( Distinct, DistinctBy, Except, ExceptBy, Intersect, IntersectBy, Union, UnionBy )
+        // Sets.Distinct();
         // Sets.Except();
         // Sets.Intersect();
         // Sets.Union();
@@ -85,6 +85,16 @@
         // ExpressionTree.Compiling();
         // ExpressionTree.Decomposing();
         // ExpressionTree.Building();
+        #endregion
+
+        #region Data Conversion ( AsEnumerable, AsQueryable, Cast, OfType, ToArray, ToList, ToDictionary )
+        // DataConversion.AsEnumerable();
+        // DataConversion.AsQueryable();
+        // DataConversion.Cast();
+        // DataConversion.OfType();
+        // DataConversion.ToArray();
+        // DataConversion.ToList();
+        // DataConversion.ToDictionary();
         #endregion
 
         // Console.ReadKey();
