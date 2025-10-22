@@ -101,6 +101,10 @@
         // LinqExtensions.Paginate();
         #endregion
 
+        #region Linq Anatomy ( Execution Order )
+        // LinqAnatomy.ExecutionOrder();
+        #endregion
+
         // Console.ReadKey();
         Console.WriteLine();
     }

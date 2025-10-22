@@ -10,7 +10,7 @@ public class LinqExtensions
         int page = 2;
         int pageSize = 5;
 
-        IEnumerable<string> result = items.Paginate(null, pageSize);
+        IEnumerable<string> result = items.Paginate(page, pageSize);
 
         result.Print("Paginate Items");
     }
