@@ -51,7 +51,7 @@ public class Sorting
 
     public static void OrderBy_with_Comparer()
     {
-        Utils.printTitle(title: "Sorting ( OrderBy with comstum Comparer)", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Sorting ( OrderBy with custom Comparer)", color: ConsoleColor.Blue, width: 70);
 
         string[] employeesNo = { "2017-FI-1343", "2014-AC-4574", "2018-IT-2345", "2020-IT-2740", "2014-AC-4423" };
 
