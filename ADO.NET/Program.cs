@@ -21,6 +21,7 @@ class Program
             2- Insert Using RawSql.
             3- Insert Using ExecuteScalar.
             4- Insert Using Stored Procedure.
+            5- Update Using RawSql.
             ---> 
             """);
 
@@ -39,6 +40,9 @@ class Program
                     break;
                 case "4":
                     Insert.StoredProcedure();
+                    break;
+                case "5":
+                    Update.RawSql();
                     break;
                 default:
                     Console.WriteLine($"Invalid input ({choice})");
