@@ -11,17 +11,21 @@ class Program
 
         Connection.SetConnection();
 
-        string? choice, ans = "y";
-        while (ans == "y")
+        string? choice;
+        bool flag = true;
+        while (flag)
         {
             Console.Write("""
             
             Enter a choice:
-            1- Select Using RawSql.
-            2- Insert Using RawSql.
-            3- Insert Using ExecuteScalar.
-            4- Insert Using Stored Procedure.
-            5- Update Using RawSql.
+            1) Select Using RawSql.
+            2) Insert Using RawSql.
+            3) Insert Using ExecuteScalar.
+            4) Insert Using Stored Procedure.
+            5) Update Using RawSql.
+            6) Delete Using RawSql.
+            7) Select Using DataAdapter.
+            Any other key to exit.
             ---> 
             """);
 
@@ -44,13 +48,16 @@ class Program
                 case "5":
                     Update.RawSql();
                     break;
+                case "6":
+                    Delete.RawSql();
+                    break;
+                case "7":
+                    DataAdapter.Select();
+                    break;
                 default:
-                    Console.WriteLine($"Invalid input ({choice})");
+                    flag = false;
                     break;
             }
-
-            Console.Write("\nDo you want to continue (y) ? ");
-            ans = Console.ReadLine();
         }
 
 

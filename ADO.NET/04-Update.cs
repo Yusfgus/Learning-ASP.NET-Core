@@ -15,7 +15,7 @@ public abstract class Update
 
         Console.Write("Enter wallet id: ");
         wallet.Id = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Enter new holder id: ");
+        Console.Write("Enter new holder: ");
         wallet.Holder = Console.ReadLine();
         Console.Write("Enter new balance: ");
         wallet.Balance = Convert.ToInt32(Console.ReadLine());
@@ -59,7 +59,7 @@ public abstract class Update
 
         if (command.ExecuteNonQuery() > 0)
         {
-            Console.WriteLine($"wallet for updated successfully");
+            Console.WriteLine($"wallet updated successfully");
         }
 
 
