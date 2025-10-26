@@ -25,6 +25,7 @@ class Program
             5) Update Using RawSql.
             6) Delete Using RawSql.
             7) Select Using DataAdapter.
+            8) Update Using Transaction.
             Any other key to exit.
             ---> 
             """);
@@ -53,6 +54,9 @@ class Program
                     break;
                 case "7":
                     DataAdapter.Select();
+                    break;
+                case "8":
+                    Transaction.Update();
                     break;
                 default:
                     flag = false;
