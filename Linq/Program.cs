@@ -1,8 +1,12 @@
-﻿class Program
+﻿using Shared;
+
+namespace Linq;
+
+class Program
 {
     static void Main()
     {
-        Utils.printTitle(title: "Hello World!", color: ConsoleColor.Red, width: 80);
+        Utils.printTitle(title: "Hello World! ( Linq )", color: ConsoleColor.Red, width: 80);
 
         #region Filtering ( Where )
         // Filtering.Where();

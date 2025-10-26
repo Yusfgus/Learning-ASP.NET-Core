@@ -1,3 +1,6 @@
+using Shared;
+
+namespace Linq;
 
 public class LinqExtensions
 {

@@ -1,4 +1,6 @@
-using System.Collections;
+using Shared;
+
+namespace Linq;
 
 public class Sorting
 {

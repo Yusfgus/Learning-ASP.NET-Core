@@ -1,5 +1,6 @@
+using Shared;
 
-
+namespace Linq;
 
 public class Quantifiers
 {

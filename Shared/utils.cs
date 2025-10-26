@@ -1,5 +1,6 @@
+namespace Shared;
 
-static class Utils
+public static class Utils
 {
     public static void printTitle(string title, int width = 60, ConsoleColor color = ConsoleColor.Green)
     {

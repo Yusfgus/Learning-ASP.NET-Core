@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿namespace Shared;
 
 public static class Extension
 {
@@ -86,7 +86,7 @@ public static class Extension
             pageSize = 10;
         else if (pageSize <= 0)
             throw new ArgumentException(nameof(pageSize));
-            
+
         return source.Skip((page.Value - 1) * pageSize.Value).Take(pageSize.Value);
     }
 

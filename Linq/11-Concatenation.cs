@@ -1,4 +1,6 @@
+using Shared;
 
+namespace Linq;
 
 public class Concatenation
 {
