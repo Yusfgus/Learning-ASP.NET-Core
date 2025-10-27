@@ -16,6 +16,8 @@ class Program
             Console.Write("""
             Enter a choice:
             1) Select Using RawSql.
+            2) Insert Using RawSql.
+            3) Insert Using ExecuteScalar.
             Any other key to exit.
             ---> 
             """);
@@ -26,6 +28,12 @@ class Program
             {
                 case "1":
                     Select.RawSql();
+                    break;
+                case "2":
+                    Insert.RawSql();
+                    break;
+                case "3":
+                    Insert.ExecuteScalar();
                     break;
                 default:
                     flag = false;
