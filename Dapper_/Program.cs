@@ -21,6 +21,7 @@ class Program
             4) Update Using RawSql.
             5) Delete Using RawSql.
             6) Execute Multiple Query.
+            7) Transaction of Update.
             Any other key to exit.
             ---> 
             """);
@@ -46,6 +47,9 @@ class Program
                     break;
                 case "6":
                     MultipleQuery.RawSql();
+                    break;
+                case "7":
+                    Transaction.RawSql();
                     break;
                 default:
                     flag = false;
