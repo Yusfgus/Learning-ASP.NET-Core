@@ -21,6 +21,7 @@ class Program
             2) Select wallet by id.
             3) Insert wallet.
             4) Update wallet.
+            5) Delete wallet.
             Any other key to exit.
             ---> 
             """);
@@ -40,6 +41,9 @@ class Program
                     break;
                 case "4":
                     Update.Run();
+                    break;
+                case "5":
+                    Delete.Run();
                     break;
                 default:
                     flag = false;

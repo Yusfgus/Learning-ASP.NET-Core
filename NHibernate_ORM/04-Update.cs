@@ -7,7 +7,7 @@ public class Update
 {
     public static void Run()
     {
-        Utils.printTitle(title: "Insert", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Update", color: ConsoleColor.Blue, width: 70);
 
         Wallet walletToUpdate = new Wallet();
 
