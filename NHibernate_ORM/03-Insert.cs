@@ -24,6 +24,7 @@ public class Insert
             {
                 object obj = session.Save(walletToInsert);
                 Console.WriteLine(obj);  // id
+                Console.WriteLine(walletToInsert);
 
                 transaction.Commit();
             }

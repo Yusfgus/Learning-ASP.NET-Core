@@ -20,6 +20,7 @@ class Program
             1) Select all wallet.
             2) Select wallet by id.
             3) Insert wallet.
+            4) Update wallet.
             Any other key to exit.
             ---> 
             """);
@@ -36,6 +37,9 @@ class Program
                     break;
                 case "3":
                     Insert.Run();
+                    break;
+                case "4":
+                    Update.Run();
                     break;
                 default:
                     flag = false;

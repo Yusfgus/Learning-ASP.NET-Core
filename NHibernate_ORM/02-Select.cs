@@ -32,7 +32,8 @@ public class Select
         {
             using (ITransaction transaction = session.BeginTransaction())
             {
-                Wallet? wallet = session.Query<Wallet>().FirstOrDefault(x => x.Id == id);
+                // Wallet? wallet = session.Query<Wallet>().FirstOrDefault(x => x.Id == id);
+                Wallet wallet = session.Get<Wallet>(id);
 
                 Console.WriteLine(wallet);
             }
