@@ -19,12 +19,12 @@ class Program
             
             Enter a choice:
             1) Select Using RawSql.
-            2) Insert Using RawSql.
-            3) Insert Using ExecuteScalar.
-            4) Insert Using Stored Procedure.
-            5) Update Using RawSql.
-            6) Delete Using RawSql.
-            7) Select Using DataAdapter.
+            2) Select Using DataAdapter.
+            3) Insert Using RawSql.
+            4) Insert Using ExecuteScalar.
+            5) Insert Using Stored Procedure.
+            6) Update Using RawSql.
+            7) Delete Using RawSql.
             8) Update Using Transaction.
             Any other key to exit.
             ---> 
@@ -38,22 +38,22 @@ class Program
                     Select.RawSql();
                     break;
                 case "2":
-                    Insert.RawSql();
+                    DataAdapter.Select();
                     break;
                 case "3":
-                    Insert.ExecuteScalar();
+                    Insert.RawSql();
                     break;
                 case "4":
-                    Insert.StoredProcedure();
+                    Insert.ExecuteScalar();
                     break;
                 case "5":
-                    Update.RawSql();
+                    Insert.StoredProcedure();
                     break;
                 case "6":
-                    Delete.RawSql();
+                    Update.RawSql();
                     break;
                 case "7":
-                    DataAdapter.Select();
+                    Delete.RawSql();
                     break;
                 case "8":
                     Transaction.Update();
@@ -62,6 +62,8 @@ class Program
                     flag = false;
                     break;
             }
+
+            Console.WriteLine("──────────────────────────────────────────────────────────────────");
         }
 
 
