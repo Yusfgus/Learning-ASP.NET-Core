@@ -9,7 +9,7 @@ class Program
         Utils.printTitle(title: "Hello World! ( Dapper )", color: ConsoleColor.Red, width: 80);
         Connection.SetConnection();
 
-        char choice;
+        string? choice;
         bool flag = true;
         while (flag)
         {
@@ -19,26 +19,29 @@ class Program
             2) Insert Using RawSql.
             3) Insert Using ExecuteScalar.
             4) Update Using RawSql.
+            5) Delete Using RawSql.
             Any other key to exit.
             ---> 
             """);
 
-            choice = Console.ReadKey().KeyChar;
-            Console.WriteLine();
+            choice = Console.ReadLine();
 
             switch (choice)
             {
-                case '1':
+                case "1":
                     Select.RawSql();
                     break;
-                case '2':
+                case "2":
                     Insert.RawSql();
                     break;
-                case '3':
+                case "3":
                     Insert.ExecuteScalar();
                     break;
-                case '4':
+                case "4":
                     Update.RawSql();
+                    break;
+                case "5":
+                    Delete.RawSql();
                     break;
                 default:
                     flag = false;

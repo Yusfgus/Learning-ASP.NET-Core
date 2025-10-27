@@ -32,32 +32,7 @@ public abstract class Update
         if (rowsAffected > 0)
             Console.WriteLine($"wallet {{ {walletToUpdate} }} updated successfully");
         else
-            Console.WriteLine($"ERROR: wallet {{ {walletToUpdate} }} was not added");
-    }
-
-    public static void ExecuteScalar()
-    {
-        Utils.printTitle(title: "Insert ( ExecuteScalar )", color: ConsoleColor.Blue, width: 70);
-
-        var walletToUpdate = new Wallet();
-
-        Console.Write("Enter wallet holder: ");
-        walletToUpdate.Holder = Console.ReadLine();
-
-        Console.Write("Enter wallet balance: ");
-        walletToUpdate.Balance = Convert.ToInt32(Console.ReadLine());
-
-
-        var sql = "INSERT INTO WALLETS (Holder, Balance) " +
-                "VALUES (@Holder, @Balance) " + 
-                "Select Cast(scope_identity() As int)";
-
-        // var parameters = new { Holder = walletToUpdate.Holder, Balance = walletToUpdate.Balance };
-        // walletToUpdate.Id = Connection.db.Query<int>(sql, walletToUpdate).Single();
-        
-        walletToUpdate.Id = Connection.db.Query<int>(sql, walletToUpdate).Single();  // Note: params names must be the same as fields
-
-        Console.WriteLine($"wallet {{ {walletToUpdate} }} added successfully");
+            Console.WriteLine($"ERROR: wallet {{ {walletToUpdate} }} was not updated");
     }
 
 }
