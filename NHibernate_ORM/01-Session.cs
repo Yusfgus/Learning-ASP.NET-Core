@@ -11,17 +11,23 @@ namespace NHibernate_ORM;
 
 public abstract class Session
 {
-    public static ISession session;
+    private static string? conStr = String.Empty;
 
-    public static void CreateSession()
+    public static void GetConnectionString()
     {
+        if (conStr != String.Empty)
+            return;
+            
         var configuration = new ConfigurationBuilder()
-                            .AddJsonFile("appsettings.json")
-                            .Build();
+                    .AddJsonFile("appsettings.json")
+                    .Build();
 
-        string? conStr = configuration.GetSection("constr").Value;
+        conStr = configuration.GetSection("constr").Value;
         Console.WriteLine(conStr);
+    }
 
+    public static ISession CreateSession(bool log = false)
+    {
         ModelMapper mapper = new ModelMapper();
 
         // list all of type mappings from assembly
@@ -30,8 +36,8 @@ public abstract class Session
         // Compile class mapping
         HbmMapping domainMapping = mapper.CompileMappingForAllExplicitlyAddedEntities();
 
-        // optional
-        Console.WriteLine(domainMapping.AsString());
+        // log xml (optional)
+        // Console.WriteLine(domainMapping.AsString());
 
         // allow the application to specify properties and mapping documents to be used when creating
         Configuration hbConfig = new Configuration();
@@ -48,11 +54,11 @@ public abstract class Session
             // connection string
             c.ConnectionString = conStr;
 
-            // log sql statement to console
-            c.LogSqlInConsole = true;
+            // log sql statement to console (optional)
+            c.LogSqlInConsole = log;
 
-            // format logged sql statement
-            c.LogFormattedSql = true;
+            // format logged sql statement (optional)
+            c.LogFormattedSql = log;
         });
 
         // add mapping to NHibernate configuration
@@ -61,7 +67,9 @@ public abstract class Session
         // instantiate a new ISessionFactory (use properties, settings and mapping)
         ISessionFactory sessionFactory = hbConfig.BuildSessionFactory();
 
-        session = sessionFactory.OpenSession();
+        ISession session = sessionFactory.OpenSession();
+
+        return session;
     }
 
 }

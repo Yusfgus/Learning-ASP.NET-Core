@@ -1,4 +1,5 @@
-﻿using Shared;
+﻿using NHibernate;
+using Shared;
 
 namespace NHibernate_ORM;
 
@@ -8,7 +9,7 @@ class Program
     {
         Utils.printTitle(title: "Hello World! ( NHibernate )", color: ConsoleColor.Red, width: 80);
 
-        Session.CreateSession();
+        Session.GetConnectionString();
 
         string? choice;
         bool flag = true;
@@ -16,7 +17,8 @@ class Program
         {
             Console.Write("""
             Enter a choice:
-            1) .
+            1) Select all data.
+            2) Select data by id.
             Any other key to exit.
             ---> 
             """);
@@ -26,7 +28,10 @@ class Program
             switch (choice)
             {
                 case "1":
-                    
+                    Select.AllData();
+                    break;
+                case "2":
+                    Select.ById();
                     break;
                 default:
                     flag = false;
