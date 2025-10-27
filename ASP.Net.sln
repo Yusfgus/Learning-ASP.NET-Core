@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO.NET", "ADO.NET\ADO.NET.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper_ORM", "Dapper_ORM\Dapper_ORM.csproj", "{A6AEC6CA-8D4B-4C73-B5F9-8A2988273536}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate_ORM", "NHibernate_ORM\NHibernate_ORM.csproj", "{01AC2DBA-0CB8-4B86-94D3-8FE45046972B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{A6AEC6CA-8D4B-4C73-B5F9-8A2988273536}.Release|x64.Build.0 = Release|Any CPU
 		{A6AEC6CA-8D4B-4C73-B5F9-8A2988273536}.Release|x86.ActiveCfg = Release|Any CPU
 		{A6AEC6CA-8D4B-4C73-B5F9-8A2988273536}.Release|x86.Build.0 = Release|Any CPU
+		{01AC2DBA-0CB8-4B86-94D3-8FE45046972B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01AC2DBA-0CB8-4B86-94D3-8FE45046972B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01AC2DBA-0CB8-4B86-94D3-8FE45046972B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{01AC2DBA-0CB8-4B86-94D3-8FE45046972B}.Debug|x64.Build.0 = Debug|Any CPU
+		{01AC2DBA-0CB8-4B86-94D3-8FE45046972B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{01AC2DBA-0CB8-4B86-94D3-8FE45046972B}.Debug|x86.Build.0 = Debug|Any CPU
+		{01AC2DBA-0CB8-4B86-94D3-8FE45046972B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01AC2DBA-0CB8-4B86-94D3-8FE45046972B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01AC2DBA-0CB8-4B86-94D3-8FE45046972B}.Release|x64.ActiveCfg = Release|Any CPU
+		{01AC2DBA-0CB8-4B86-94D3-8FE45046972B}.Release|x64.Build.0 = Release|Any CPU
+		{01AC2DBA-0CB8-4B86-94D3-8FE45046972B}.Release|x86.ActiveCfg = Release|Any CPU
+		{01AC2DBA-0CB8-4B86-94D3-8FE45046972B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
