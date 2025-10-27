@@ -22,6 +22,7 @@ class Program
             3) Insert wallet.
             4) Update wallet.
             5) Delete wallet.
+            6) Transaction of Update.
             Any other key to exit.
             ---> 
             """);
@@ -44,6 +45,9 @@ class Program
                     break;
                 case "5":
                     Delete.Run();
+                    break;
+                case "6":
+                    Transaction.Run();
                     break;
                 default:
                     flag = false;

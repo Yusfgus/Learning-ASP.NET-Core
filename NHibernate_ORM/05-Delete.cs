@@ -9,16 +9,14 @@ public class Delete
     {
         Utils.printTitle(title: "Delete", color: ConsoleColor.Blue, width: 70);
 
-        Wallet walletToDelete = new Wallet();
-
         Console.Write("Enter wallet id: ");
-        walletToDelete.Id = Convert.ToInt32(Console.ReadLine());
+        int id = Convert.ToInt32(Console.ReadLine());
 
         using (ISession session = Session.CreateSession())
         {
             using (ITransaction transaction = session.BeginTransaction())
             {
-                Wallet wallet = session.Get<Wallet>(walletToDelete.Id);
+                Wallet wallet = session.Get<Wallet>(id);
 
                 session.Delete(wallet);
 
