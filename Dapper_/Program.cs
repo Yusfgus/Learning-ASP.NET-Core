@@ -20,6 +20,7 @@ class Program
             3) Insert Using ExecuteScalar.
             4) Update Using RawSql.
             5) Delete Using RawSql.
+            6) Execute Multiple Query.
             Any other key to exit.
             ---> 
             """);
@@ -42,6 +43,9 @@ class Program
                     break;
                 case "5":
                     Delete.RawSql();
+                    break;
+                case "6":
+                    MultipleQuery.RawSql();
                     break;
                 default:
                     flag = false;
