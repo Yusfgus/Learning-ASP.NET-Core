@@ -17,8 +17,9 @@ class Program
         {
             Console.Write("""
             Enter a choice:
-            1) Select all data.
-            2) Select data by id.
+            1) Select all wallet.
+            2) Select wallet by id.
+            3) Insert wallet.
             Any other key to exit.
             ---> 
             """);
@@ -32,6 +33,9 @@ class Program
                     break;
                 case "2":
                     Select.ById();
+                    break;
+                case "3":
+                    Insert.Run();
                     break;
                 default:
                     flag = false;
