@@ -1,4 +1,4 @@
-namespace Dapper_.Classes;
+namespace Dapper_ORM.Classes;
 
 public class Wallet
 {

@@ -1,11 +1,11 @@
 using Shared;
 using Microsoft.Data.SqlClient;
-using Dapper_.Classes;
+using Dapper_ORM.Classes;
 using System.Data;
 using Dapper;
 using System.Transactions;
 
-namespace Dapper_;
+namespace Dapper_ORM;
 
 public abstract class Transaction
 {

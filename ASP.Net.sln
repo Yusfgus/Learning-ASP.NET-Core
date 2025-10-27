@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADO.NET", "ADO.NET\ADO.NET.csproj", "{56D52469-8807-42DD-952A-FE2DBB232310}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper_", "Dapper_\Dapper_.csproj", "{A6AEC6CA-8D4B-4C73-B5F9-8A2988273536}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapper_ORM", "Dapper_ORM\Dapper_ORM.csproj", "{A6AEC6CA-8D4B-4C73-B5F9-8A2988273536}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

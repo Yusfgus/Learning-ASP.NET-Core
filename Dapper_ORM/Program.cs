@@ -1,6 +1,6 @@
 ﻿using Shared;
 
-namespace Dapper_;
+namespace Dapper_ORM;
 
 class Program
 {

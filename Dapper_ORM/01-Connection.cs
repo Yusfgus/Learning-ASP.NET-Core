@@ -2,7 +2,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Data.SqlClient;
 using System.Data;
 
-namespace Dapper_;
+namespace Dapper_ORM;
 
 public abstract class Connection
 {
