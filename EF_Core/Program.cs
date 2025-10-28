@@ -45,7 +45,7 @@ class Program
                     Update.Run02();
                     break;
                 case "6":
-                    Console.WriteLine("Coming soon...");
+                    Delete.Run();
                     break;
                 default:
                     flag = false;

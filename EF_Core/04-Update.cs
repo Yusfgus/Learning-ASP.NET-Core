@@ -20,7 +20,8 @@ public class Update
 
         using (var context = new AppDbContext())
         {
-            context.Update(walletToUpdate);
+            // context.Update(walletToUpdate);  // also worked
+            context.Wallets.Update(walletToUpdate);
 
             context.SaveChanges();
 
@@ -44,8 +45,6 @@ public class Update
         using (var context = new AppDbContext())
         {
             Wallet? wallet = context.Wallets.SingleOrDefault(x => x.Id == walletToUpdate.Id);
-            if(wallet is not null)
-                Console.WriteLine("No wallet found with this Id");
 
             wallet!.Holder = walletToUpdate.Holder;
             wallet!.Balance = walletToUpdate.Balance;
