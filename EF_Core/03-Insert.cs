@@ -17,7 +17,7 @@ public class Insert
         Console.Write("Enter wallet balance: ");
         walletToInsert.Balance = Convert.ToInt32(Console.ReadLine());
 
-        using (var context = new AppDbContext())
+        using (var context = new AppDbContext01())
         {
             context.Wallets.Add(walletToInsert);
 

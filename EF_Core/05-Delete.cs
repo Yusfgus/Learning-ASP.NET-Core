@@ -12,7 +12,7 @@ public class Delete
         Console.Write("Enter wallet id: ");
         int id = Convert.ToInt32(Console.ReadLine());
 
-        using (var context = new AppDbContext())
+        using (var context = new AppDbContext01())
         {
             Wallet? wallet = context.Wallets.SingleOrDefault(x => x.Id == id);
 

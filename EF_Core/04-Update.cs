@@ -18,7 +18,7 @@ public class Update
         Console.Write("Enter new balance: ");
         walletToUpdate.Balance = Convert.ToInt32(Console.ReadLine());
 
-        using (var context = new AppDbContext())
+        using (var context = new AppDbContext01())
         {
             // context.Update(walletToUpdate);  // also worked
             context.Wallets.Update(walletToUpdate);
@@ -42,7 +42,7 @@ public class Update
         Console.Write("Enter new balance: ");
         walletToUpdate.Balance = Convert.ToInt32(Console.ReadLine());
 
-        using (var context = new AppDbContext())
+        using (var context = new AppDbContext01())
         {
             Wallet? wallet = context.Wallets.SingleOrDefault(x => x.Id == walletToUpdate.Id);
 

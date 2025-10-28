@@ -16,7 +16,7 @@ public class Transaction
         Console.Write("Enter amount to transfer: ");
         decimal amount = Convert.ToDecimal(Console.ReadLine());
 
-        using (var context = new AppDbContext())
+        using (var context = new AppDbContext01())
         {
             using (var transaction = context.Database.BeginTransaction())
             {

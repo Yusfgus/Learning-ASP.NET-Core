@@ -4,12 +4,15 @@ using Microsoft.Extensions.Configuration;
 
 namespace EF_Core;
 
-public class AppDbContext : DbContext
+public class AppDbContext01 : DbContext
 {
     public DbSet<Wallet> Wallets { get; set; } = null!;
 
+    // Internal Configuration
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
+        base.OnConfiguring(optionsBuilder);
+
         var configuration = new ConfigurationBuilder()
            .AddJsonFile("appsettings.json")
            .Build();
@@ -17,5 +20,16 @@ public class AppDbContext : DbContext
         var constr = configuration.GetSection("constr").Value;
 
         optionsBuilder.UseSqlServer(constr);
+    }
+}
+
+public class AppDbContext02 : DbContext
+{
+    public DbSet<Wallet> Wallets { get; set; } = null!;
+
+    // External Configuration
+    public AppDbContext02(DbContextOptions options): base(options)
+    {
+        
     }
 }
