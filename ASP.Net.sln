@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "Linq\Linq.csproj", "{F53C3458-F38B-429E-A3D7-623D3EC47DB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF-Core", "EF-Core\EF-Core.csproj", "{1ADB4186-6BC7-4159-AB30-B01AB61D64BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core", "EF_Core\EF_Core.csproj", "{1ADB4186-6BC7-4159-AB30-B01AB61D64BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{5548071B-0317-4257-AC21-A10B7A88A0A3}"
 EndProject

@@ -17,7 +17,7 @@ public static class Utils
         if (text.Length >= width)
             return text;
 
-        int rightSpaces = (width - text.Length) / 2 + (width - text.Length) % 2;
-        return text.PadLeft(width - rightSpaces, c).PadRight(width, c);
+        int leftSpaces = (width - text.Length) / 2;
+        return text.PadLeft(width - leftSpaces, c).PadRight(width, c);
     }
 }
