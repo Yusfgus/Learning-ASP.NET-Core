@@ -21,6 +21,7 @@ class Program
             5) Update wallet.
             6) Update wallet using tracking.
             7) Delete wallet.
+            8) Transaction of Update.
             Any other key to exit.
             ---> 
             """);
@@ -49,6 +50,9 @@ class Program
                     break;
                 case "7":
                     Delete.Run();
+                    break;
+                case "8":
+                    Transaction.Run();
                     break;
                 default:
                     flag = false;
