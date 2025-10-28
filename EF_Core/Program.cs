@@ -16,11 +16,11 @@ class Program
             Enter a choice:
             1) Select all wallet.
             2) Select wallet by id.
-            3) Insert wallet.
-            4) Update wallet.
-            5) Update wallet using tracking.
-            6) Delete wallet.
-            7) Transaction of Update.
+            3) Select with Where.
+            4) Insert wallet.
+            5) Update wallet.
+            6) Update wallet using tracking.
+            7) Delete wallet.
             Any other key to exit.
             ---> 
             """);
@@ -36,15 +36,18 @@ class Program
                     Select.ById();
                     break;
                 case "3":
-                    Insert.Run();
+                    Select.Where();
                     break;
                 case "4":
-                    Update.Run01();
+                    Insert.Run();
                     break;
                 case "5":
-                    Update.Run02();
+                    Update.Run01();
                     break;
                 case "6":
+                    Update.Run02();
+                    break;
+                case "7":
                     Delete.Run();
                     break;
                 default:

@@ -14,7 +14,7 @@ public abstract class Select
             context.Wallets.Print("Wallets");
         }
     }
-    
+
     public static void ById()
     {
         Utils.printTitle(title: "Select ( By ID )", color: ConsoleColor.Blue, width: 70);
@@ -28,6 +28,18 @@ public abstract class Select
             Wallet? wallet = context.Wallets.SingleOrDefault(x => x.Id == id);
 
             Console.WriteLine(wallet);
+        }
+    }
+
+    public static void Where()
+    {
+        Utils.printTitle(title: "Select ( Where )", color: ConsoleColor.Blue, width: 70);
+
+        using (var context = new AppDbContext())
+        {
+            IQueryable<Wallet> result = context.Wallets.Where(x => x.Balance > 2000);
+
+            result.Print("Wallets Where Balance > 2000");
         }
     }
 }
