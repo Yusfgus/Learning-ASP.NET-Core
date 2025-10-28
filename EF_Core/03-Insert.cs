@@ -1,15 +1,14 @@
-using NHibernate;
-using NHibernate_ORM.Classes;
 using Shared;
+using EF_Core.Entities;
 
-namespace NHibernate_ORM;
+namespace EF_Core;
 
 public class Insert
 {
     public static void Run()
     {
         Utils.printTitle(title: "Insert", color: ConsoleColor.Blue, width: 70);
-
+        
         var walletToInsert = new Wallet();
 
         Console.Write("Enter wallet holder: ");
@@ -18,16 +17,13 @@ public class Insert
         Console.Write("Enter wallet balance: ");
         walletToInsert.Balance = Convert.ToInt32(Console.ReadLine());
 
-        using (ISession session = Session.CreateSession())
+        using (var context = new AppDbContext())
         {
-            using (ITransaction transaction = session.BeginTransaction())
-            {
-                object obj = session.Save(walletToInsert);
-                Console.WriteLine(obj);  // id
-                Console.WriteLine(walletToInsert);
+            context.Wallets.Add(walletToInsert);
 
-                transaction.Commit();
-            }
+            context.SaveChanges();
+
+            Console.WriteLine($"Wallet {{ {walletToInsert} }} added successfully");
         }
     }
 }

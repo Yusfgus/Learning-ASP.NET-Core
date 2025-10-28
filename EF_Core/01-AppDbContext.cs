@@ -2,7 +2,7 @@ using EF_Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace EF_Core.Data;
+namespace EF_Core;
 
 public class AppDbContext : DbContext
 {

@@ -1,7 +1,8 @@
 using NHibernate;
-using NHibernate_ORM;
 using NHibernate_ORM.Classes;
 using Shared;
+
+namespace NHibernate_ORM;
 
 public class Delete
 {

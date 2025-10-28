@@ -18,8 +18,9 @@ class Program
             2) Select wallet by id.
             3) Insert wallet.
             4) Update wallet.
-            5) Delete wallet.
-            6) Transaction of Update.
+            5) Update wallet using tracking.
+            6) Delete wallet.
+            7) Transaction of Update.
             Any other key to exit.
             ---> 
             """);
@@ -35,13 +36,13 @@ class Program
                     Select.ById();
                     break;
                 case "3":
-                    Console.WriteLine("Coming soon...");
+                    Insert.Run();
                     break;
                 case "4":
-                    Console.WriteLine("Coming soon...");
+                    Update.Run01();
                     break;
                 case "5":
-                    Console.WriteLine("Coming soon...");
+                    Update.Run02();
                     break;
                 case "6":
                     Console.WriteLine("Coming soon...");
