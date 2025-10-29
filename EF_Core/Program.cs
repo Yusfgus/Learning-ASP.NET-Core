@@ -25,6 +25,7 @@ class Program
             6) Update wallet using tracking.
             7) Delete wallet.
             8) Transaction of Update.
+            9) Concurrency
             Any other key to exit.
             ───> 
             """);
@@ -56,6 +57,9 @@ class Program
                     break;
                 case "8":
                     Transaction.Run();
+                    break;
+                case "9":
+                    Concurrency.Run();
                     break;
                 default:
                     flag = false;
