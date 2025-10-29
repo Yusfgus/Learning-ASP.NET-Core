@@ -7,7 +7,7 @@ public class Concurrency
 {
     public static void Run()
     {
-        Utils.printTitle(title: "Insert ( using Context Factory )", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Insert ( using Context Concurrency )", color: ConsoleColor.Blue, width: 70);
 
         var context = new AppDbContext01();
 
@@ -24,7 +24,7 @@ public class Concurrency
     private static async Task Job1(AppDbContext01 context)
     {
         System.Console.WriteLine("in Job 1");
-        
+
         Wallet walletToInsert = new Wallet { Holder = "Job1", Balance = 1 };
 
         context.Wallets.Add(walletToInsert);
