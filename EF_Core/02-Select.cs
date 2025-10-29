@@ -12,15 +12,9 @@ public abstract class Select
     {
         Utils.printTitle(title: "Select All Data ( using External DbContext configuration )", color: ConsoleColor.Blue, width: 70);
 
-        var configuration = new ConfigurationBuilder()
-           .AddJsonFile("appsettings.json")
-           .Build();
-
-        var constr = configuration.GetSection("constr").Value;
-
         var optionsBuilder = new DbContextOptionsBuilder();
 
-        optionsBuilder.UseSqlServer(constr);
+        optionsBuilder.UseSqlServer(Connection.connectionString);
 
         var options = optionsBuilder.Options;
 
@@ -37,16 +31,10 @@ public abstract class Select
         Console.Write("Enter wallet id: ");
         int id = Convert.ToInt32(Console.ReadLine());
 
-        var config = new ConfigurationBuilder()
-          .AddJsonFile("appsettings.json")
-          .Build();
-
-        var connectionString = config.GetSection("constr").Value;
-
         var services = new ServiceCollection();
 
         services.AddDbContext<AppDbContext02>(options =>
-            options.UseSqlServer(connectionString)
+            options.UseSqlServer(Connection.connectionString)
         );
 
         IServiceProvider serviceProvider = services.BuildServiceProvider();
@@ -60,15 +48,9 @@ public abstract class Select
         }
     }
 
-    public static void Where()
+    public static void Query()
     {
-        Utils.printTitle(title: "Select ( Where )", color: ConsoleColor.Blue, width: 70);
-
-        var config = new ConfigurationBuilder()
-          .AddJsonFile("appsettings.json")
-          .Build();
-
-        var connectionString = config.GetSection("constr").Value;
+        Utils.printTitle(title: "Select + Query ( using Dependency Injection + Internal DbContext configuration )", color: ConsoleColor.Blue, width: 70);
 
         var services = new ServiceCollection();
 

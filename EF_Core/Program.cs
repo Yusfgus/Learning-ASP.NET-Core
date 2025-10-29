@@ -7,6 +7,8 @@ class Program
     static void Main()
     {
         Utils.printTitle(title: "Hello World! ( EF_Core )", color: ConsoleColor.Red, width: 80);
+
+        Connection.SetConnectionString();
         
         string? choice;
         bool flag = true;
@@ -14,6 +16,7 @@ class Program
         {
             Console.Write("""
             Enter a choice:
+            ───────────────
             1) Select all wallet.
             2) Select wallet by id.
             3) Select with Where.
@@ -23,7 +26,7 @@ class Program
             7) Delete wallet.
             8) Transaction of Update.
             Any other key to exit.
-            ---> 
+            ───> 
             """);
 
             choice = Console.ReadLine();
@@ -37,7 +40,7 @@ class Program
                     Select.ById();
                     break;
                 case "3":
-                    Select.Where();
+                    Select.Query();
                     break;
                 case "4":
                     Insert.Run();

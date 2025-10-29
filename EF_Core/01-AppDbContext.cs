@@ -4,6 +4,22 @@ using Microsoft.Extensions.Configuration;
 
 namespace EF_Core;
 
+public abstract class Connection
+{
+    public static string connectionString = String.Empty;
+
+    public static void SetConnectionString()
+    {
+        var config = new ConfigurationBuilder()
+          .AddJsonFile("appsettings.json")
+          .Build();
+
+        connectionString = config.GetSection("constr").Value!;
+
+        Console.WriteLine(connectionString);
+    }
+}
+
 public class AppDbContext01 : DbContext
 {
     public DbSet<Wallet> Wallets { get; set; } = null!;
@@ -13,13 +29,7 @@ public class AppDbContext01 : DbContext
     {
         base.OnConfiguring(optionsBuilder);
 
-        var configuration = new ConfigurationBuilder()
-           .AddJsonFile("appsettings.json")
-           .Build();
-
-        var constr = configuration.GetSection("constr").Value;
-
-        optionsBuilder.UseSqlServer(constr);
+        optionsBuilder.UseSqlServer(Connection.connectionString);
     }
 }
 
