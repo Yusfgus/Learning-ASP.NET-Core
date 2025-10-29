@@ -25,7 +25,12 @@ class Program
             6) Update wallet using tracking.
             7) Delete wallet.
             8) Transaction of Update.
-            9) Concurrency
+            9) DbContext Internal Configuration.
+            10) DbContext External Configuration.
+            11) DbContext Dependency Injection.
+            12) DbContext Context Factory.
+            13) DbContext Concurrency
+            14) DbContext Context Pooling.
             Any other key to exit.
             ───> 
             """);
@@ -59,7 +64,22 @@ class Program
                     Transaction.Run();
                     break;
                 case "9":
-                    Concurrency.Run();
+                    myDbContext.InternalDbContextConfig();
+                    break;
+                case "10":
+                    myDbContext.ExternalDbContextConfig();
+                    break;
+                case "11":
+                    myDbContext.DependencyInjection();
+                    break;
+                case "12":
+                    myDbContext.ContextFactory();
+                    break;
+                case "13":
+                    myDbContext.Concurrency();
+                    break;
+                case "14":
+                    myDbContext.ContextPooling();
                     break;
                 default:
                     flag = false;

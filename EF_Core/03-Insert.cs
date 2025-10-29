@@ -1,8 +1,5 @@
 using Shared;
 using EF_Core.Entities;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
 
 namespace EF_Core;
 
@@ -10,7 +7,7 @@ public class Insert
 {
     public static void Run()
     {
-        Utils.printTitle(title: "Insert ( using Context Factory )", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Insert", color: ConsoleColor.Blue, width: 70);
         
         var walletToInsert = new Wallet();
 
@@ -20,17 +17,7 @@ public class Insert
         Console.Write("Enter wallet balance: ");
         walletToInsert.Balance = Convert.ToInt32(Console.ReadLine());
 
-        var services = new ServiceCollection();
-
-        services.AddDbContextFactory<AppDbContext02>(options =>
-            options.UseSqlServer(Connection.connectionString)
-        );
-
-        IServiceProvider serviceProvider = services.BuildServiceProvider();
-
-        var contextFactory = serviceProvider.GetService<IDbContextFactory<AppDbContext02>>();
-
-        using (var context = contextFactory!.CreateDbContext())
+        using (var context = new AppDbContext01())
         {
             context.Wallets.Add(walletToInsert);
 
