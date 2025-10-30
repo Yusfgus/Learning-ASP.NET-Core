@@ -1,4 +1,5 @@
-﻿using Shared;
+﻿using System;
+using Shared;
 
 namespace EF_Core;
 
@@ -10,7 +11,7 @@ class Program
 
         Connection.SetConnectionString();
         
-        string? choice;
+        string choice;
         bool flag = true;
         while (flag)
         {

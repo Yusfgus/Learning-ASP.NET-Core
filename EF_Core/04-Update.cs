@@ -1,5 +1,7 @@
 using Shared;
 using EF_Core.Entities;
+using System;
+using System.Linq;
 
 namespace EF_Core;
 
@@ -44,7 +46,7 @@ public class Update
 
         using (var context = new AppDbContext01())
         {
-            Wallet? wallet = context.Wallets.SingleOrDefault(x => x.Id == walletToUpdate.Id);
+            Wallet wallet = context.Wallets.SingleOrDefault(x => x.Id == walletToUpdate.Id);
 
             wallet!.Holder = walletToUpdate.Holder;
             wallet!.Balance = walletToUpdate.Balance;

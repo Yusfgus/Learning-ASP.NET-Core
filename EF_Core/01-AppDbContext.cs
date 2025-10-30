@@ -1,3 +1,4 @@
+using System;
 using EF_Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -16,7 +17,7 @@ public abstract class Connection
 
         connectionString = config.GetSection("constr").Value!;
 
-        Console.WriteLine(connectionString);
+        Console.WriteLine(connectionString + '\n');
     }
 }
 

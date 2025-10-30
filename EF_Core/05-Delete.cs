@@ -1,5 +1,7 @@
 using Shared;
 using EF_Core.Entities;
+using System;
+using System.Linq;
 
 namespace EF_Core;
 
@@ -14,7 +16,7 @@ public class Delete
 
         using (var context = new AppDbContext01())
         {
-            Wallet? wallet = context.Wallets.SingleOrDefault(x => x.Id == id);
+            Wallet wallet = context.Wallets.SingleOrDefault(x => x.Id == id);
 
             // context.Remove(wallet!); // also worked
             context.Wallets.Remove(wallet!);

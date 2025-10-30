@@ -2,6 +2,8 @@ using Shared;
 using EF_Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System.Threading.Tasks;
+using System;
 
 namespace EF_Core;
 
@@ -43,7 +45,7 @@ public class myDbContext
 
         IServiceProvider serviceProvider = services.BuildServiceProvider();
 
-        using (var context = serviceProvider.GetService<AppDbContext01>()!)
+        using (var context = serviceProvider.GetService<AppDbContext01>())
         {
             context.Wallets.Print("Wallets");
         }

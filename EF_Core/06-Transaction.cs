@@ -1,5 +1,7 @@
 using Shared;
 using EF_Core.Entities;
+using System.Linq;
+using System;
 
 namespace EF_Core;
 
@@ -20,8 +22,8 @@ public class Transaction
         {
             using (var transaction = context.Database.BeginTransaction())
             {
-                Wallet? fromWallet = context.Wallets.SingleOrDefault(x => x.Id == fromId);
-                Wallet? toWallet = context.Wallets.SingleOrDefault(x => x.Id == toId);
+                Wallet fromWallet = context.Wallets.SingleOrDefault(x => x.Id == fromId);
+                Wallet toWallet = context.Wallets.SingleOrDefault(x => x.Id == toId);
 
                 Console.WriteLine(fromWallet);
                 Console.WriteLine(toWallet);
