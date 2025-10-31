@@ -1,7 +1,7 @@
 ﻿using System;
 using Shared;
 
-namespace EF_Core;
+namespace EF_Core.CRUD;
 
 class Program
 {

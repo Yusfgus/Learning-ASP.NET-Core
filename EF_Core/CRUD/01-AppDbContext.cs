@@ -1,9 +1,9 @@
 using System;
-using EF_Core.Entities;
+using EF_Core.CRUD.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace EF_Core;
+namespace EF_Core.CRUD;
 
 public abstract class Connection
 {

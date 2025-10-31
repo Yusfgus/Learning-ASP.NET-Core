@@ -1,4 +1,4 @@
-namespace EF_Core.Entities;
+namespace EF_Core.CRUD.Entities;
 
 public class Wallet
 {

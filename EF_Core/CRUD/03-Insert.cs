@@ -1,8 +1,8 @@
 using Shared;
-using EF_Core.Entities;
+using EF_Core.CRUD.Entities;
 using System;
 
-namespace EF_Core;
+namespace EF_Core.CRUD;
 
 public class Insert
 {
