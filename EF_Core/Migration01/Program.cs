@@ -1,14 +1,14 @@
 ﻿using System;
-using EF_Core.Migration.Data;
+using EF_Core.Migration01.Data;
 using Shared;
 
-namespace EF_Core.Migration;
+namespace EF_Core.Migration01;
 
 class Program
 {
     static void Main()
     {
-        Utils.printTitle(title: "EF_Core ( Migration )", color: ConsoleColor.Red, width: 80);
+        Utils.printTitle(title: "EF_Core ( Migration01 )", color: ConsoleColor.Red, width: 80);
 
         // Connection.SetConnectionString();
         

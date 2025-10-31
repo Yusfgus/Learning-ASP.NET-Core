@@ -1,9 +1,9 @@
 using System;
-using EF_Core.Migration.Entities;
+using EF_Core.Migration01.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace EF_Core.Migration.Data;
+namespace EF_Core.Migration01.Data;
 
 public class AppDbContext: DbContext
 {

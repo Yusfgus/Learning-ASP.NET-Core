@@ -1,4 +1,4 @@
-namespace EF_Core.Migration.Entities;
+namespace EF_Core.Migration01.Entities;
 
 public class Course
 {
