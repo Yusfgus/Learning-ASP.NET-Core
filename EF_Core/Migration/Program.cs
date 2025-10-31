@@ -1,7 +1,8 @@
 ﻿using System;
+using EF_Core.Migration.Data;
 using Shared;
 
-namespace EF_Core.CRUD;
+namespace EF_Core.Migration;
 
 class Program
 {
