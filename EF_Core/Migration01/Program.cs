@@ -19,7 +19,7 @@ class Program
             Console.Write("""
             Enter a choice:
             ───────────────
-            1) .
+            1) Display Section with Course.
             Any other key to exit.
             ───> 
             """);
@@ -29,7 +29,7 @@ class Program
             switch (choice)
             {
                 case "1":
-                    Console.WriteLine("Not implemented yet");
+                    Display.SectionCourse();
                     break;
                 default:
                     flag = false;

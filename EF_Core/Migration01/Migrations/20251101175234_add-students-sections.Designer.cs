@@ -4,6 +4,7 @@ using EF_Core.Migration01.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Migration01.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251101175234_add-students-sections")]
+    partial class addstudentssections
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -567,21 +570,17 @@ namespace Migration01.Migrations
 
             modelBuilder.Entity("EF_Core.Migration01.Entities.Enrollment", b =>
                 {
-                    b.HasOne("EF_Core.Migration01.Entities.Section", "Section")
+                    b.HasOne("EF_Core.Migration01.Entities.Section", null)
                         .WithMany()
                         .HasForeignKey("SectionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EF_Core.Migration01.Entities.Student", "Student")
+                    b.HasOne("EF_Core.Migration01.Entities.Student", null)
                         .WithMany()
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Section");
-
-                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("EF_Core.Migration01.Entities.Instructor", b =>
@@ -612,21 +611,17 @@ namespace Migration01.Migrations
 
             modelBuilder.Entity("EF_Core.Migration01.Entities.SectionSchedule", b =>
                 {
-                    b.HasOne("EF_Core.Migration01.Entities.Schedule", "Schedule")
+                    b.HasOne("EF_Core.Migration01.Entities.Schedule", null)
                         .WithMany("SectionSchedules")
                         .HasForeignKey("ScheduleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EF_Core.Migration01.Entities.Section", "Section")
+                    b.HasOne("EF_Core.Migration01.Entities.Section", null)
                         .WithMany("SectionSchedules")
                         .HasForeignKey("SectionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Schedule");
-
-                    b.Navigation("Section");
                 });
 
             modelBuilder.Entity("EF_Core.Migration01.Entities.Course", b =>

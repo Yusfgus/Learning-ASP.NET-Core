@@ -19,7 +19,7 @@ public class SectionScheduleConfiguration : IEntityTypeConfiguration<SectionSche
         builder.Property(x => x.EndTime).HasColumnType("time");
 
         // default data
-        builder.HasData(LoadSectionSchedules());
+        // builder.HasData(LoadSectionSchedules());
     }
 
     private static List<SectionSchedule> LoadSectionSchedules() => new List<SectionSchedule>()

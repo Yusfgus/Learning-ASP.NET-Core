@@ -38,6 +38,12 @@ public class SectionConfiguration : IEntityTypeConfiguration<Section>
                 .UsingEntity<SectionSchedule>();  // Join table
 
 
+        // Many-to-Many
+        builder.HasMany(x => x.Students)
+                .WithMany(x => x.Sections)
+                .UsingEntity<Enrollment>();  // Join table
+
+
         // default data
         builder.HasData(LoadSections());
     }

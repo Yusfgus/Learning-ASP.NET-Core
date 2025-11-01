@@ -9,4 +9,7 @@ public class SectionSchedule
     public int ScheduleId { get; set; }
     public TimeSpan StartTime { get; set; }
     public TimeSpan EndTime { get; set; }
+
+    public Section Section { get; set; } = null!;
+    public Schedule Schedule { get; set; } = null!;
 }
