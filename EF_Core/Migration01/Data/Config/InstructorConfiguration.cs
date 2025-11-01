@@ -18,8 +18,8 @@ public class InstructorConfiguration : IEntityTypeConfiguration<Instructor>
         builder.Property(x => x.FName).HasColumnType("VARCHAR").HasMaxLength(50).IsRequired();
         builder.Property(x => x.LName).HasColumnType("VARCHAR").HasMaxLength(50).IsRequired();
 
-        builder.HasOne(x => x.office)  // in instructor
-                .WithOne(x => x.instructor) // in office
+        builder.HasOne(x => x.Office)  // in instructor
+                .WithOne(x => x.Instructor) // in office
                 .HasForeignKey<Instructor>(x => x.OfficeId) // in instructor
                 .IsRequired(false);
 
