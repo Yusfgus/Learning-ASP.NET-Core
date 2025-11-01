@@ -10,7 +10,7 @@ public class SectionConfiguration : IEntityTypeConfiguration<Section>
     public void Configure(EntityTypeBuilder<Section> builder)
     {
         builder.ToTable("Sections");
-        
+
         builder.HasKey(x => x.Id);  // set as primary key
         builder.Property(x => x.Id).ValueGeneratedNever();
 
@@ -19,15 +19,23 @@ public class SectionConfiguration : IEntityTypeConfiguration<Section>
                                             .HasMaxLength(255)
                                             .IsRequired();  // NOT NULL
 
+        // One-to-Many
         builder.HasOne(x => x.Course)  // in section
                 .WithMany(x => x.Sections) // in course
                 .HasForeignKey(x => x.CourseId) // in section
                 .IsRequired();  // required (section can't exist without course)
 
+        // One-to-Many
         builder.HasOne(x => x.Instructor)  // in section
                 .WithMany(x => x.Sections) // in instructor
                 .HasForeignKey(x => x.InstructorId) // in section
                 .IsRequired(false); // optional (section can exist without instructor)
+
+
+        // Many-to-Many
+        builder.HasMany(x => x.Schedules)
+                .WithMany(x => x.Sections)
+                .UsingEntity<SectionSchedule>();  // Join table
 
 
         // default data
