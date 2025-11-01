@@ -15,7 +15,13 @@ public class InstructorConfiguration : IEntityTypeConfiguration<Instructor>
         builder.HasKey(x => x.Id);
         builder.Property(x => x.Id).ValueGeneratedNever();
 
-        builder.Property(x => x.Name).HasColumnType("VARCHAR").HasMaxLength(50).IsRequired();
+        builder.Property(x => x.FName).HasColumnType("VARCHAR").HasMaxLength(50).IsRequired();
+        builder.Property(x => x.LName).HasColumnType("VARCHAR").HasMaxLength(50).IsRequired();
+
+        builder.HasOne(x => x.office)  // in instructor
+                .WithOne(x => x.instructor) // in office
+                .HasForeignKey<Instructor>(x => x.OfficeId) // in instructor
+                .IsRequired(false);
 
         // default data
         builder.HasData(LoadInstructors());
@@ -23,10 +29,10 @@ public class InstructorConfiguration : IEntityTypeConfiguration<Instructor>
 
     private static List<Instructor> LoadInstructors() => new List<Instructor>()
     {
-        new Instructor(1, "Ahmed Abdullah"),
-        new Instructor(2, "Yamen Mohammed"),
-        new Instructor(3, "Khalid Hassan"),
-        new Instructor(4, "Nadia Ali"),
-        new Instructor(5, "Omar Ibrahim"),
+        new Instructor(1, "Ahmed", "Abdullah", 1),
+        new Instructor(2, "Yamen", "Mohammed", 2),
+        new Instructor(3, "Khalid", "Hassan", 3),
+        new Instructor(4, "Nadia", "Ali", 4),
+        new Instructor(5, "Omar", "Ibrahim", 5),
     };
 }
