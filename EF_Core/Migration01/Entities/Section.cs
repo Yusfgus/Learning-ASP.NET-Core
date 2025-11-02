@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace EF_Core.Migration01.Entities;
@@ -8,14 +9,15 @@ public class Section
     public string? SectionName { get; set; }
     public int CourseId { get; set; }
     public int? InstructorId { get; set; }
-
+    public int ScheduleId { get; set; }
+    public TimeSpan StartTime { get; set; }
+    public TimeSpan EndTime { get; set; }
 
     public Course Course { get; set; } = null!;
 
     public Instructor? Instructor { get; set; }
     
-    public ICollection<Schedule> Schedules { get; set; } = new List<Schedule>();
-    public ICollection<SectionSchedule> SectionSchedules { get; set; } = new List<SectionSchedule>();
+    public Schedule Schedule { get; set; } = null!;
 
     public ICollection<Student> Students { get; set; } = new List<Student>();
 }

@@ -22,7 +22,7 @@ public abstract class Display
             }
         }
     }
-    
+
     public static void Course()
     {
         Utils.printTitle(title: "Display Courses", color: ConsoleColor.Blue, width: 70);
@@ -44,42 +44,39 @@ public abstract class Display
 
         using (var context = new AppDbContext())
         {
-            foreach (Course course in context.Courses.Include(c => c.Sections)
-                                                        .ThenInclude(sec => sec.Instructor)
-                                                    .Include(c => c.Sections)
-                                                        .ThenInclude(sec => sec.SectionSchedules)
-                                                        .ThenInclude(s => s.Schedule)
-            )
-            {
-                foreach (Section section in course.Sections)
-                {
-                    Instructor? instructor = section.Instructor;
-                    string instructorName = instructor is not null? $"{instructor!.FName} {instructor!.LName}": String.Empty;
+            var sections = context.Sections
+                                .Include(x => x.Course)
+                                .Include(x => x.Instructor)
+                                .Include(x => x.Schedule);
 
-                    foreach (var sectionSchedule in section.SectionSchedules)
-                    {
-                        ct.PrintLine(ConsoleTable.LineState.Middle);
-                        ct.PrintRow(
-                            course.Id.ToString()!,
-                            course.CourseName!,
-                            section.SectionName!,
-                            instructorName,
-                            sectionSchedule.Schedule.Title!,
-                            sectionSchedule.StartTime.ToString(),
-                            sectionSchedule.EndTime.ToString(),
-                            sectionSchedule.Schedule.SUN ? "✔️" : "",
-                            sectionSchedule.Schedule.MON ? "✔️" : "",
-                            sectionSchedule.Schedule.TUE ? "✔️" : "",
-                            sectionSchedule.Schedule.WED ? "✔️" : "",
-                            sectionSchedule.Schedule.THU ? "✔️" : "",
-                            sectionSchedule.Schedule.FRI ? "✔️" : "",
-                            sectionSchedule.Schedule.SAT ? "✔️" : ""
-                        );
-                    }
-                }
-                
+            foreach (Section section in sections)
+            {
+                Instructor? instructor = section.Instructor;
+                string instructorName = instructor is not null ? $"{instructor!.FName} {instructor!.LName}" : String.Empty;
+
+                ct.PrintLine(ConsoleTable.LineState.Middle);
+                ct.PrintRow(
+                    section.Id.ToString()!,
+                    section.Course.CourseName!,
+                    section.SectionName!,
+                    instructorName,
+                    section.Schedule.Title!,
+                    section.StartTime.ToString("hh\\:mm"),
+                    section.EndTime.ToString("hh\\:mm"),
+                    section.Schedule.SUN ? "✔️" : "",
+                    section.Schedule.MON ? "✔️" : "",
+                    section.Schedule.TUE ? "✔️" : "",
+                    section.Schedule.WED ? "✔️" : "",
+                    section.Schedule.THU ? "✔️" : "",
+                    section.Schedule.FRI ? "✔️" : "",
+                    section.Schedule.SAT ? "✔️" : ""
+                );
+
             }
         }
         ct.PrintLine(ConsoleTable.LineState.Bottom);
     }
+
+
+
 }
