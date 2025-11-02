@@ -43,11 +43,11 @@ CREATE TABLE Instructors (
 );
 
 -- Inserting data for Instructors
-INSERT INTO Instructors (Id, Name, OfficeId) VALUES (1, 'Ahmed Abdullah', 1);
-INSERT INTO Instructors (Id, Name, OfficeId) VALUES (2, 'Yamen Mohammed', 2);
-INSERT INTO Instructors (Id, Name, OfficeId) VALUES (3, 'Khalid Hassan', 3);
-INSERT INTO Instructors (Id, Name, OfficeId) VALUES (4, 'Nadia Ali', 4);
-INSERT INTO Instructors (Id, Name, OfficeId) VALUES (5, 'Omar Ibrahim', 5);
+INSERT INTO Instructors (Id, FName, LName, OfficeId) VALUES (1, 'Ahmed', 'Abdullah', 1);
+INSERT INTO Instructors (Id, FName, LName, OfficeId) VALUES (2, 'Yamen', 'Mohammed', 2);
+INSERT INTO Instructors (Id, FName, LName, OfficeId) VALUES (3, 'Khalid', 'Hassan', 3);
+INSERT INTO Instructors (Id, FName, LName, OfficeId) VALUES (4, 'Nadia', 'Ali', 4);
+INSERT INTO Instructors (Id, FName, LName, OfficeId) VALUES (5, 'Omar', 'Ibrahim', 5);
 
 
 

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Migration01.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251101175709_update-join-tables")]
-    partial class updatejointables
+    [Migration("20251102163323_merge-migrations")]
+    partial class mergemigrations
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -364,7 +364,13 @@ namespace Migration01.Migrations
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
 
+                    b.Property<TimeSpan>("EndTime")
+                        .HasColumnType("time");
+
                     b.Property<int?>("InstructorId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ScheduleId")
                         .HasColumnType("int");
 
                     b.Property<string>("SectionName")
@@ -372,11 +378,16 @@ namespace Migration01.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("VARCHAR");
 
+                    b.Property<TimeSpan>("StartTime")
+                        .HasColumnType("time");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CourseId");
 
                     b.HasIndex("InstructorId");
+
+                    b.HasIndex("ScheduleId");
 
                     b.ToTable("Sections", (string)null);
 
@@ -385,105 +396,112 @@ namespace Migration01.Migrations
                         {
                             Id = 1,
                             CourseId = 1,
+                            EndTime = new TimeSpan(0, 10, 0, 0, 0),
                             InstructorId = 1,
-                            SectionName = "S_MA1"
+                            ScheduleId = 1,
+                            SectionName = "S_MA1",
+                            StartTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
                             Id = 2,
                             CourseId = 1,
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
                             InstructorId = 2,
-                            SectionName = "S_MA2"
+                            ScheduleId = 3,
+                            SectionName = "S_MA2",
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
                         },
                         new
                         {
                             Id = 3,
                             CourseId = 2,
+                            EndTime = new TimeSpan(0, 15, 0, 0, 0),
                             InstructorId = 1,
-                            SectionName = "S_PH1"
+                            ScheduleId = 4,
+                            SectionName = "S_PH1",
+                            StartTime = new TimeSpan(0, 10, 0, 0, 0)
                         },
                         new
                         {
                             Id = 4,
                             CourseId = 2,
+                            EndTime = new TimeSpan(0, 12, 0, 0, 0),
                             InstructorId = 3,
-                            SectionName = "S_PH2"
+                            ScheduleId = 1,
+                            SectionName = "S_PH2",
+                            StartTime = new TimeSpan(0, 10, 0, 0, 0)
                         },
                         new
                         {
                             Id = 5,
                             CourseId = 3,
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
                             InstructorId = 2,
-                            SectionName = "S_CH1"
+                            ScheduleId = 1,
+                            SectionName = "S_CH1",
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
                         },
                         new
                         {
                             Id = 6,
                             CourseId = 3,
+                            EndTime = new TimeSpan(0, 10, 0, 0, 0),
                             InstructorId = 3,
-                            SectionName = "S_CH2"
+                            ScheduleId = 2,
+                            SectionName = "S_CH2",
+                            StartTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
                             Id = 7,
                             CourseId = 4,
+                            EndTime = new TimeSpan(0, 14, 0, 0, 0),
                             InstructorId = 4,
-                            SectionName = "S_BI1"
+                            ScheduleId = 3,
+                            SectionName = "S_BI1",
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
                         },
                         new
                         {
                             Id = 8,
                             CourseId = 4,
+                            EndTime = new TimeSpan(0, 14, 0, 0, 0),
                             InstructorId = 5,
-                            SectionName = "S_BI2"
+                            ScheduleId = 4,
+                            SectionName = "S_BI2",
+                            StartTime = new TimeSpan(0, 10, 0, 0, 0)
                         },
                         new
                         {
                             Id = 9,
                             CourseId = 5,
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
                             InstructorId = 4,
-                            SectionName = "S_CS1"
+                            ScheduleId = 4,
+                            SectionName = "S_CS1",
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
                         },
                         new
                         {
                             Id = 10,
                             CourseId = 5,
+                            EndTime = new TimeSpan(0, 15, 0, 0, 0),
                             InstructorId = 5,
-                            SectionName = "S_CS2"
+                            ScheduleId = 3,
+                            SectionName = "S_CS2",
+                            StartTime = new TimeSpan(0, 12, 0, 0, 0)
                         },
                         new
                         {
                             Id = 11,
                             CourseId = 5,
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
                             InstructorId = 4,
-                            SectionName = "S_CS3"
+                            ScheduleId = 5,
+                            SectionName = "S_CS3",
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
                         });
-                });
-
-            modelBuilder.Entity("EF_Core.Migration01.Entities.SectionSchedule", b =>
-                {
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
-
-                    b.Property<TimeSpan>("EndTime")
-                        .HasColumnType("time");
-
-                    b.Property<int>("ScheduleId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SectionId")
-                        .HasColumnType("int");
-
-                    b.Property<TimeSpan>("StartTime")
-                        .HasColumnType("time");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ScheduleId");
-
-                    b.HasIndex("SectionId");
-
-                    b.ToTable("SectionSchedules", (string)null);
                 });
 
             modelBuilder.Entity("EF_Core.Migration01.Entities.Student", b =>
@@ -608,28 +626,17 @@ namespace Migration01.Migrations
                         .WithMany("Sections")
                         .HasForeignKey("InstructorId");
 
-                    b.Navigation("Course");
-
-                    b.Navigation("Instructor");
-                });
-
-            modelBuilder.Entity("EF_Core.Migration01.Entities.SectionSchedule", b =>
-                {
                     b.HasOne("EF_Core.Migration01.Entities.Schedule", "Schedule")
-                        .WithMany("SectionSchedules")
+                        .WithMany("Sections")
                         .HasForeignKey("ScheduleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EF_Core.Migration01.Entities.Section", "Section")
-                        .WithMany("SectionSchedules")
-                        .HasForeignKey("SectionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Course");
+
+                    b.Navigation("Instructor");
 
                     b.Navigation("Schedule");
-
-                    b.Navigation("Section");
                 });
 
             modelBuilder.Entity("EF_Core.Migration01.Entities.Course", b =>
@@ -649,12 +656,7 @@ namespace Migration01.Migrations
 
             modelBuilder.Entity("EF_Core.Migration01.Entities.Schedule", b =>
                 {
-                    b.Navigation("SectionSchedules");
-                });
-
-            modelBuilder.Entity("EF_Core.Migration01.Entities.Section", b =>
-                {
-                    b.Navigation("SectionSchedules");
+                    b.Navigation("Sections");
                 });
 #pragma warning restore 612, 618
         }
