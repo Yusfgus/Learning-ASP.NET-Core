@@ -19,7 +19,9 @@ class Program
             Console.Write("""
             Enter a choice:
             ───────────────
-            1) Display Section with Course.
+            1) Display Sections with Courses.
+            2) Display Courses.
+            3) Assignment.
             Any other key to exit.
             ───> 
             """);
@@ -30,6 +32,12 @@ class Program
             {
                 case "1":
                     Display.SectionCourse();
+                    break;
+                case "2":
+                    Display.Course();
+                    break;
+                case "3":
+                    Display.CourseInDetails();
                     break;
                 default:
                     flag = false;

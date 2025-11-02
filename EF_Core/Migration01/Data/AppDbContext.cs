@@ -25,7 +25,7 @@ public class AppDbContext: DbContext
           .Build();
 
         string connectionString = config.GetSection("constr").Value!;
-        Console.WriteLine(connectionString + '\n');
+        // Console.WriteLine(connectionString + '\n');
 
         optionsBuilder.UseSqlServer(connectionString);
     }

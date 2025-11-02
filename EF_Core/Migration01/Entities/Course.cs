@@ -8,4 +8,9 @@ public class Course
     public string? CourseName { get; set; }
     public decimal Price { get; set; }
     public ICollection<Section> Sections { get; set; } = new List<Section>();
+
+    public override string ToString()
+    {
+        return $"{Id}, {CourseName}, {Price}";
+    }
 }
