@@ -23,15 +23,15 @@ public class CourseConfiguration : IEntityTypeConfiguration<Course>
         builder.Property(x => x.Price).HasPrecision(15, 2);
 
         // default data
-        builder.HasData(LoadCourses());
+        // builder.HasData(LoadCourses());
     }
 
-    private static List<Course> LoadCourses() => new List<Course>()
-    {
-        new Course {Id = 1, CourseName = "Mathematics", Price = 2000m},
-        new Course {Id = 2, CourseName = "Physics", Price = 2000m},
-        new Course {Id = 3, CourseName = "Chemistry", Price = 1500m},
-        new Course {Id = 4, CourseName = "Biology", Price = 1200m},
-        new Course {Id = 5, CourseName = "CS-50", Price = 3000m},
-    };
+    // private static List<Course> LoadCourses() => new List<Course>()
+    // {
+    //     new Course {Id = 1, CourseName = "Mathematics", Price = 2000m},
+    //     new Course {Id = 2, CourseName = "Physics", Price = 2000m},
+    //     new Course {Id = 3, CourseName = "Chemistry", Price = 1500m},
+    //     new Course {Id = 4, CourseName = "Biology", Price = 1200m},
+    //     new Course {Id = 5, CourseName = "CS-50", Price = 3000m},
+    // };
 }
