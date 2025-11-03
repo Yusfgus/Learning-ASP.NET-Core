@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using EF_Core.Migration01.Enums;
+using EF_Core.MitegatorAcademy.Enums;
 
-namespace EF_Core.Migration01.Entities;
+namespace EF_Core.MitegatorAcademy.Entities;
 
 public class Schedule
 {

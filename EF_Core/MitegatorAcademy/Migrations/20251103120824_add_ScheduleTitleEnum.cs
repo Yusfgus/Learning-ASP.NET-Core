@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Migration01.Migrations
+namespace MitegatorAcademy.Migrations
 {
     /// <inheritdoc />
     public partial class add_ScheduleTitleEnum : Migration

@@ -1,14 +1,14 @@
 ﻿using System;
-using EF_Core.Migration01.Data;
+using EF_Core.MitegatorAcademy.Data;
 using Shared;
 
-namespace EF_Core.Migration01;
+namespace EF_Core.MitegatorAcademy;
 
 class Program
 {
     static void Main()
     {
-        Utils.printTitle(title: "EF_Core ( Migration01 )", color: ConsoleColor.Red, width: 80);
+        Utils.printTitle(title: "EF_Core ( MitegatorAcademy )", color: ConsoleColor.Red, width: 80);
 
         // Connection.SetConnectionString();
         

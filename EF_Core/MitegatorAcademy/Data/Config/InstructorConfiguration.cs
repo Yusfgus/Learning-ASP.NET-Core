@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using EF_Core.Migration01.Entities;
+using EF_Core.MitegatorAcademy.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace EF_Core.Migration01.Data.Config;
+namespace EF_Core.MitegatorAcademy.Data.Config;
 
 public class InstructorConfiguration : IEntityTypeConfiguration<Instructor>
 {

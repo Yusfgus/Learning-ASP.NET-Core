@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD", "CRUD\CRUD.csproj", "{F7BE8F82-C8FF-455A-BBC8-1566BF561A3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Migration01", "Migration01\Migration01.csproj", "{514AD322-60CA-4AF4-ADE7-474AB16D9CB6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MitegatorAcademy", "MitegatorAcademy\MitegatorAcademy.csproj", "{514AD322-60CA-4AF4-ADE7-474AB16D9CB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

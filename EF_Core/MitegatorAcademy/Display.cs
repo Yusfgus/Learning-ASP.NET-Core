@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
-using EF_Core.Migration01.Data;
-using EF_Core.Migration01.Entities;
+using EF_Core.MitegatorAcademy.Data;
+using EF_Core.MitegatorAcademy.Entities;
 using Microsoft.EntityFrameworkCore;
 using Shared;
 
-namespace EF_Core.Migration01;
+namespace EF_Core.MitegatorAcademy;
 
 public abstract class Display
 {

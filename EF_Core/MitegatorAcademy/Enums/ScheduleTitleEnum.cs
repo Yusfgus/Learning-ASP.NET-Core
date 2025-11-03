@@ -1,4 +1,4 @@
-namespace EF_Core.Migration01.Enums;
+namespace EF_Core.MitegatorAcademy.Enums;
 
 public enum ScheduleTitleEnum
 {

@@ -1,9 +1,9 @@
 using System;
-using EF_Core.Migration01.Entities;
+using EF_Core.MitegatorAcademy.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace EF_Core.Migration01.Data;
+namespace EF_Core.MitegatorAcademy.Data;
 
 public class AppDbContext: DbContext
 {
