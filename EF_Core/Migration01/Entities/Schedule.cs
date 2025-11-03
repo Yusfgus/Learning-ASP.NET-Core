@@ -1,11 +1,12 @@
 using System.Collections.Generic;
+using EF_Core.Migration01.Enums;
 
 namespace EF_Core.Migration01.Entities;
 
 public class Schedule
 {
     public int Id { get; set; }
-    public string? Title { get; set; }
+    public ScheduleTitleEnum Title { get; set; }
     public bool SUN { get; set; }
     public bool MON { get; set; }
     public bool TUE { get; set; }

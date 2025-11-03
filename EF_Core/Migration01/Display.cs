@@ -60,7 +60,7 @@ public abstract class Display
                     section.Course.CourseName!,
                     section.SectionName!,
                     instructorName,
-                    section.Schedule.Title!,
+                    section.Schedule.Title.ToString(),
                     section.TimeSlot.StartTime.ToString("hh\\:mm"),
                     section.TimeSlot.EndTime.ToString("hh\\:mm"),
                     section.Schedule.SUN ? "✔️" : "",

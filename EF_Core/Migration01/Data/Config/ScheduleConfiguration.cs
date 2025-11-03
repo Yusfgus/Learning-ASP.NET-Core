@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using EF_Core.Migration01.Entities;
+using EF_Core.Migration01.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -14,11 +16,11 @@ public class ScheduleConfiguration : IEntityTypeConfiguration<Schedule>
         builder.HasKey(x => x.Id);  // set as primary key
         builder.Property(x => x.Id).ValueGeneratedNever();
 
-        // builder.Property(x => x.CourseName).HasMaxLength(100); // nvarchar(100)
         builder.Property(x => x.Title)
-                .HasColumnType("VARCHAR") // varchar(100)
-                .HasMaxLength(100)
-                .IsRequired();  // NOT NULL
+                .HasConversion(
+                    x => x.ToString(), // when saving in database
+                    v => (ScheduleTitleEnum)Enum.Parse(typeof(ScheduleTitleEnum), v)  // when reading from database
+                );
 
 
         // default data
