@@ -6,15 +6,15 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 namespace EF_Core.MitegatorAcademy.Data.Config;
 
 public class EnrollmentConfiguration : IEntityTypeConfiguration<Enrollment>
+{
+    public void Configure(EntityTypeBuilder<Enrollment> builder)
     {
-        public void Configure(EntityTypeBuilder<Enrollment> builder)
-        {
-            builder.ToTable("Enrollments");
+        builder.ToTable("Enrollments");
 
-            builder.HasKey(x => new { x.SectionId, x.StudentId });
-            
+        builder.HasKey(x => new { x.SectionId, x.ParticipantId });
+
             // builder.HasData(LoadEnrollments());
-        }
+    }
 
         // private static List<Enrollment> LoadEnrollments()
         // {
@@ -32,4 +32,4 @@ public class EnrollmentConfiguration : IEntityTypeConfiguration<Enrollment>
         //         new Enrollment() { StudentId = 10, SectionId = 10 }
         //     };
         // }
-    }
+}

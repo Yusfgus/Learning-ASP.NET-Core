@@ -46,12 +46,12 @@ namespace MitegatorAcademy.Migrations
                     b.Property<int>("SectionId")
                         .HasColumnType("int");
 
-                    b.Property<int>("StudentId")
+                    b.Property<int>("ParticipantId")
                         .HasColumnType("int");
 
-                    b.HasKey("SectionId", "StudentId");
+                    b.HasKey("SectionId", "ParticipantId");
 
-                    b.HasIndex("StudentId");
+                    b.HasIndex("ParticipantId");
 
                     b.ToTable("Enrollments", (string)null);
                 });
@@ -100,6 +100,49 @@ namespace MitegatorAcademy.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Offices", (string)null);
+                });
+
+            modelBuilder.Entity("EF_Core.MitegatorAcademy.Entities.Participant", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("VARCHAR");
+
+                    b.Property<string>("LName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("VARCHAR");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Participants", (string)null);
+
+                    b.UseTptMappingStrategy();
+                });
+
+            modelBuilder.Entity("EF_Core.MitegatorAcademy.Entities.Quiz", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseId");
+
+                    b.ToTable((string)null);
+
+                    b.UseTpcMappingStrategy();
                 });
 
             modelBuilder.Entity("EF_Core.MitegatorAcademy.Entities.Schedule", b =>
@@ -167,43 +210,92 @@ namespace MitegatorAcademy.Migrations
                     b.ToTable("Sections", (string)null);
                 });
 
-            modelBuilder.Entity("EF_Core.MitegatorAcademy.Entities.Student", b =>
+            modelBuilder.Entity("EF_Core.MitegatorAcademy.Entities.Corporate", b =>
                 {
-                    b.Property<int>("Id")
+                    b.HasBaseType("EF_Core.MitegatorAcademy.Entities.Participant");
+
+                    b.Property<string>("Company")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("JobTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("Corporates");
+                });
+
+            modelBuilder.Entity("EF_Core.MitegatorAcademy.Entities.Individual", b =>
+                {
+                    b.HasBaseType("EF_Core.MitegatorAcademy.Entities.Participant");
+
+                    b.Property<bool>("IsIntern")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("University")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("YearOfGraduation")
                         .HasColumnType("int");
 
-                    b.Property<string>("FName")
+                    b.ToTable("Individuals");
+                });
+
+            modelBuilder.Entity("EF_Core.MitegatorAcademy.Entities.MultipleChoiceQuiz", b =>
+                {
+                    b.HasBaseType("EF_Core.MitegatorAcademy.Entities.Quiz");
+
+                    b.Property<string>("CorrectAnswer")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("nvarchar(1)");
 
-                    b.Property<string>("LName")
+                    b.Property<string>("OptionA")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("VARCHAR");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.Property<string>("OptionB")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("Students", (string)null);
+                    b.Property<string>("OptionC")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OptionD")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("MultipleChoiceQuizzes");
+                });
+
+            modelBuilder.Entity("EF_Core.MitegatorAcademy.Entities.TrueAndFalseQuiz", b =>
+                {
+                    b.HasBaseType("EF_Core.MitegatorAcademy.Entities.Quiz");
+
+                    b.Property<bool>("CorrectAnswer")
+                        .HasColumnType("bit");
+
+                    b.ToTable("TrueAndFalseQuizzes");
                 });
 
             modelBuilder.Entity("EF_Core.MitegatorAcademy.Entities.Enrollment", b =>
                 {
+                    b.HasOne("EF_Core.MitegatorAcademy.Entities.Participant", "Participant")
+                        .WithMany()
+                        .HasForeignKey("ParticipantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("EF_Core.MitegatorAcademy.Entities.Section", "Section")
                         .WithMany()
                         .HasForeignKey("SectionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EF_Core.MitegatorAcademy.Entities.Student", "Student")
-                        .WithMany()
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Participant");
 
                     b.Navigation("Section");
-
-                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("EF_Core.MitegatorAcademy.Entities.Instructor", b =>
@@ -213,6 +305,17 @@ namespace MitegatorAcademy.Migrations
                         .HasForeignKey("EF_Core.MitegatorAcademy.Entities.Instructor", "OfficeId");
 
                     b.Navigation("Office");
+                });
+
+            modelBuilder.Entity("EF_Core.MitegatorAcademy.Entities.Quiz", b =>
+                {
+                    b.HasOne("EF_Core.MitegatorAcademy.Entities.Course", "Course")
+                        .WithMany()
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
                 });
 
             modelBuilder.Entity("EF_Core.MitegatorAcademy.Entities.Section", b =>
@@ -261,6 +364,24 @@ namespace MitegatorAcademy.Migrations
                     b.Navigation("Schedule");
 
                     b.Navigation("TimeSlot")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("EF_Core.MitegatorAcademy.Entities.Corporate", b =>
+                {
+                    b.HasOne("EF_Core.MitegatorAcademy.Entities.Participant", null)
+                        .WithOne()
+                        .HasForeignKey("EF_Core.MitegatorAcademy.Entities.Corporate", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("EF_Core.MitegatorAcademy.Entities.Individual", b =>
+                {
+                    b.HasOne("EF_Core.MitegatorAcademy.Entities.Participant", null)
+                        .WithOne()
+                        .HasForeignKey("EF_Core.MitegatorAcademy.Entities.Individual", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 

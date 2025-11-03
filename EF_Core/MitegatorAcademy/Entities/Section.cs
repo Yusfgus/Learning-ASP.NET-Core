@@ -29,5 +29,5 @@ public class Section
     
     public Schedule Schedule { get; set; } = null!;
 
-    public ICollection<Student> Students { get; set; } = new List<Student>();
+    public ICollection<Participant> Participants { get; set; } = new List<Participant>();
 }
