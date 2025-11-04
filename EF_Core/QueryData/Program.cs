@@ -18,6 +18,7 @@ class Program
             Enter a choice:
             ───────────────
             1) Client Vs Server Evaluation.
+            2) Tracking Vs No Tracking.
             Any other key to exit.
             ───> 
             """);
@@ -28,6 +29,9 @@ class Program
             {
                 case "1":
                     ClientVsServerEvaluation.Run();
+                    break;
+                case "2":
+                    TrackingVsNoTracking.Run();
                     break;
                 default:
                     flag = false;
