@@ -46,7 +46,7 @@ public abstract class TrackingVsNoTracking
 
     private static void Tracking()
     {
-        Utils.printTitle(title: "", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Change section name (As Tracking)", color: ConsoleColor.Blue, width: 70);
 
         Console.Write("Enter section id: ");
         int id = Convert.ToInt32(Console.ReadLine());
@@ -76,7 +76,7 @@ public abstract class TrackingVsNoTracking
 
     private static void NoTracking()
     {
-        Utils.printTitle(title: "", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Change section name (As No Tracking)", color: ConsoleColor.Blue, width: 70);
 
         Console.Write("Enter section id: ");
         int id = Convert.ToInt32(Console.ReadLine());

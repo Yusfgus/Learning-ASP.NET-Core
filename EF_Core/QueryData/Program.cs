@@ -19,6 +19,7 @@ class Program
             ───────────────
             1) Client Vs Server Evaluation.
             2) Tracking Vs No Tracking.
+            3) Related Data Eager (Include & ThenInclude).
             Any other key to exit.
             ───> 
             """);
@@ -32,6 +33,9 @@ class Program
                     break;
                 case "2":
                     TrackingVsNoTracking.Run();
+                    break;
+                case "3":
+                    RelatedDataEager.Run();
                     break;
                 default:
                     flag = false;
