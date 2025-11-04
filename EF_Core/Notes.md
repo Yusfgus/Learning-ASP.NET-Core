@@ -110,39 +110,39 @@ public class CorporateConfiguration : IEntityTypeConfiguration<Corporate>
     }
 }
 ```
-### Result: Table for each type
+### Result: Table for all types
 ---
 
 
 ## 3- Table Per Concrete ( TPC )
+```code
+public abstract class Quiz {}
 
+public class MultipleChoiceQuiz : Quiz {}
+
+public class TrueAndFalseQuiz : Quiz {}
+
+```
 ```code
 public class AppDbContext : DbContext
 {
     // ...
-    public DbSet<Participant> Participants { get; set; }
-    public DbSet<Individual> Individuals { get; set; }
-    public DbSet<Corporate> Cooperates { get; set; }    
+    public DbSet<MultipleChoiceQuiz> MultipleChoiceQuizzes { get; set; }
+    public DbSet<TrueAndFalseQuiz> TrueAndFalseQuizzes { get; set; }
     // ...
 }
 ```
 ```code
-public class ParticipantConfiguration : IEntityTypeConfiguration<Participant>
+public class QuizConfiguration : IEntityTypeConfiguration<Quiz>
 {
-    public void Configure(EntityTypeBuilder<Participant> builder)
+    public void Configure(EntityTypeBuilder<Quiz> builder)
     {
         // ...
-        builder.HasDiscriminator<string>("ParticipantType")
-            .HasValue<Individual>("INDV")
-            .HasValue<Corporate>("COPR");
-
-        builder.Property("ParticipantType")  // instead of Discriminator
-                .HasColumnType("VARCHAR")
-                .HasMaxLength(4);
+        builder.UseTpcMappingStrategy();
         // ...
     }
 }
 ```
-### Result: One table for all types with Discriminator property
+### Result: One table for all non-abstract types
 ---
 

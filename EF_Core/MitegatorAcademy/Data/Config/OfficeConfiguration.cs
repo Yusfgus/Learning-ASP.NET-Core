@@ -23,15 +23,6 @@ public class OfficeConfiguration : IEntityTypeConfiguration<Office>
                                                 .IsRequired();  // NOT NULL
 
         // default data
-        // builder.HasData(LoadCourses());
+        // builder.HasData(SeedData.LoadOffices());
     }
-
-    // private static List<Office> LoadCourses() => new List<Office>()
-    // {
-    //     new Office(1, "Off_05", "building A"),
-    //     new Office(2, "Off_12", "building B"),
-    //     new Office(3, "Off_32", "Administration"),
-    //     new Office(4, "Off_44", "IT Department"),
-    //     new Office(5, "Off_43", "IT Department"),
-    // };
 }

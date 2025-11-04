@@ -24,15 +24,6 @@ public class InstructorConfiguration : IEntityTypeConfiguration<Instructor>
                 .IsRequired(false);
 
         // default data
-        // builder.HasData(LoadInstructors());
+        // builder.HasData(SeedData.LoadInstructors());
     }
-
-    // private static List<Instructor> LoadInstructors() => new List<Instructor>()
-    // {
-    //     new Instructor(1, "Ahmed", "Abdullah", 1),
-    //     new Instructor(2, "Yamen", "Mohammed", 2),
-    //     new Instructor(3, "Khalid", "Hassan", 3),
-    //     new Instructor(4, "Nadia", "Ali", 4),
-    //     new Instructor(5, "Omar", "Ibrahim", 5),
-    // };
 }
