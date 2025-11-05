@@ -24,6 +24,7 @@ class Program
             5) Lazy Loading.
             6) Split Queries (Specify columns).
             7) Join.
+            8) Select Many.
             Any other key to exit.
             ───> 
             """);
@@ -52,6 +53,9 @@ class Program
                     break;
                 case "7":
                     Join.Run();
+                    break;
+                case "8":
+                    SelectMany.Run();
                     break;
                 default:
                     flag = false;
