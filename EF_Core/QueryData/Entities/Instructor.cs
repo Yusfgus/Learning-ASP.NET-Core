@@ -2,9 +2,8 @@ using System.Collections.Generic;
 
 namespace EF_Core.QueryData.Entities;
 
-public class Instructor
+public class Instructor : Entity
 {
-    public int Id { get; set; }
     public string? FName { get; set; }
     public string? LName { get; set; }
     public int OfficeId { get; set; }

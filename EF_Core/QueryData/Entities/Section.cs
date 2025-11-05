@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace EF_Core.QueryData.Entities;
 
-public class Section
+public class Section : Entity
 {
-    public int Id { get; set; }
     public string? SectionName { get; set; }
     public int CourseId { get; set; }
     public int? InstructorId { get; set; }

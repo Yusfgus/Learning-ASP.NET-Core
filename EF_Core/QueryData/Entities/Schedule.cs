@@ -3,9 +3,8 @@ using EF_Core.QueryData.Enums;
 
 namespace EF_Core.QueryData.Entities;
 
-public class Schedule
+public class Schedule : Entity
 {
-    public int Id { get; set; }
     public ScheduleTitleEnum Title { get; set; }
     public bool SUN { get; set; }
     public bool MON { get; set; }
