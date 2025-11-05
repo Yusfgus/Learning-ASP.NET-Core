@@ -94,7 +94,7 @@ public abstract class SplitQueries
                 }).ToList();
         }
     }
-    
+
     private static void Run03()
     {
         Utils.printTitle("Using AsSplitQuery()");
@@ -108,6 +108,7 @@ public abstract class SplitQueries
                 .ToList();
         }
     }
+    
     private static void Run04()
     {
         Utils.printTitle("Using QuerySplittingBehavior.SplitQuery (Global for project)");
