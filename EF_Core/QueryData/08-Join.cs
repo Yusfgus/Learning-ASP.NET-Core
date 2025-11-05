@@ -124,7 +124,21 @@ public abstract class Join
 
         using (var context = new AppDbContext())
         {
-            
+            var result01 = from s in context.Sections.AsNoTracking()  // 200
+                           from inst in context.Instructors.AsNoTracking() // 100
+                           select new { s.SectionName, inst.FName };
+
+            // SELECT [s].[SectionName], [i].[FName]
+            // FROM [Sections] AS [s]
+            // CROSS JOIN [Instructors] AS [i]
+
+            var result02 = context.Sections.AsNoTracking()
+                            .SelectMany(
+                                s => context.Instructors.AsNoTracking(),
+                                (s, inst) => new { s.SectionName, inst.FName }
+                            );
+
+            Console.WriteLine(result01.ToList().Count() + " rows returned"); // 200 * 100
         }
     }
 }
