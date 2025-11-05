@@ -22,6 +22,7 @@ class Program
             3) Related Data Eager (Include & ThenInclude).
             4) Explicit Loading.
             5) Lazy Loading.
+            5) Split Queries (Specify columns).
             Any other key to exit.
             ───> 
             """);
@@ -44,6 +45,9 @@ class Program
                     break;
                 case "5":
                     LazyLoading.Run();
+                    break;
+                case "6":
+                    SplitQueries.Run();
                     break;
                 default:
                     flag = false;

@@ -50,7 +50,7 @@ public abstract class ClientVsServerEvaluation
 
     private static void Run01()
     {
-        Utils.printTitle(title: "Select Sections with Course Id", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Select Sections with Course Id");
 
         using (var context = new AppDbContext())
         {
@@ -69,7 +69,7 @@ public abstract class ClientVsServerEvaluation
             //FROM[Sections] AS[s]
             //WHERE[s].[CourseId] = @__courseId_0
 
-            Console.WriteLine(result.ToQueryString());
+            // Console.WriteLine(result.ToQueryString());
 
             foreach (var item in result)
             {
@@ -80,7 +80,7 @@ public abstract class ClientVsServerEvaluation
 
     private static void Run02()
     {
-        Utils.printTitle(title: "Use External Function (TotalDays)", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Use External Function (TotalDays)");
 
         using (var context = new AppDbContext())
         {
@@ -99,7 +99,7 @@ public abstract class ClientVsServerEvaluation
             //  FROM [Sections] AS [s]
             //  WHERE [s].[CourseId] = @__courseId_0
 
-           Console.WriteLine(result.ToQueryString());
+        //    Console.WriteLine(result.ToQueryString());
 
             foreach (var item in result)
             {
@@ -114,7 +114,7 @@ public abstract class ClientVsServerEvaluation
 
     private static void Run03()
     {
-        Utils.printTitle(title: "Use Built in Function (Substring)", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Use Built in Function (Substring)");
 
         using (var context = new AppDbContext())
         {
@@ -132,7 +132,7 @@ public abstract class ClientVsServerEvaluation
             //  FROM [Sections] AS [s]
             //  WHERE [s].[CourseId] = @__courseId_0
 
-            Console.WriteLine(result.ToQueryString());
+            // Console.WriteLine(result.ToQueryString());
 
             foreach (var item in result)
             {

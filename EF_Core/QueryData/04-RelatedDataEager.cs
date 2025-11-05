@@ -46,7 +46,7 @@ public abstract class RelatedDataEager
 
     private static void Include()
     {
-        Utils.printTitle(title: "Select Section with Participants (Include)", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Select Section with Participants (Include)");
 
         Console.Write("Enter section id: ");
         int sectionId = Convert.ToInt32(Console.ReadLine());
@@ -57,7 +57,7 @@ public abstract class RelatedDataEager
                    .Include(x => x.Participants)
                    .Where(x => x.Id == sectionId);
 
-            Console.WriteLine(sectionQuery.ToQueryString() + '\n');
+            // Console.WriteLine(sectionQuery.ToQueryString() + '\n');
 
             var section = sectionQuery.FirstOrDefault();
 
@@ -69,7 +69,7 @@ public abstract class RelatedDataEager
 
     private static void WithInclude()
     {
-        Utils.printTitle(title: "Select Section with Instructor and his Office (ThenInclude)", color: ConsoleColor.Blue, width: 70);
+        Utils.printTitle(title: "Select Section with Instructor and his Office (ThenInclude)");
 
         Console.Write("Enter section id: ");
         int sectionId = Convert.ToInt32(Console.ReadLine());
@@ -81,7 +81,7 @@ public abstract class RelatedDataEager
                     .ThenInclude(x => x.Office)
                     .Where(x => x.Id == sectionId);
 
-                Console.WriteLine(sectionQuery.ToQueryString() + '\n');
+                // Console.WriteLine(sectionQuery.ToQueryString() + '\n');
 
                 var section = sectionQuery.FirstOrDefault();
 

@@ -22,7 +22,7 @@ public abstract class ExplicitLoading
 
             IQueryable<Participant> query = context.Entry(section).Collection(x => x.Participants).Query();
 
-            Console.WriteLine(query.ToQueryString() + '\n');
+            // Console.WriteLine(query.ToQueryString() + '\n');
 
             Console.WriteLine($"section: {section.SectionName}");
             Console.WriteLine($"--------------------");

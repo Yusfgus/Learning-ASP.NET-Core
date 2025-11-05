@@ -26,7 +26,17 @@ public class AppDbContext: DbContext
         string connectionString = config.GetSection("constr").Value!;
         // Console.WriteLine(connectionString + '\n');
 
-        optionsBuilder.UseSqlServer(connectionString);
+        optionsBuilder.UseSqlServer(connectionString)
+            .LogTo(WriteSqlQuery, Microsoft.Extensions.Logging.LogLevel.Information);  // log sql queries in the console
+    }
+
+    public void WriteSqlQuery(string s)
+    {
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
+        Console.WriteLine("=================================== Sql Query ====================================");
+        Console.WriteLine(s);
+        Console.WriteLine("==================================================================================");
+        Console.ResetColor();
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -37,6 +47,7 @@ public class AppDbContext: DbContext
         // // Method 1 (add one by one)
         // modelBuilder.ApplyConfiguration(new CourseConfiguration());
         // modelBuilder.ApplyConfiguration(new InstructorConfiguration());
+        // ...
 
         // Method 2 (search for configurations in the assembly/project)
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
