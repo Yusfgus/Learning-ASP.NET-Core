@@ -63,8 +63,7 @@ public abstract class RelatedDataEager
 
             Console.WriteLine($"section: {section.SectionName}");
             Console.WriteLine($"--------------------");
-            foreach (var participant in section.Participants)
-                Console.WriteLine($"[{participant.Id}] {participant.FName} {participant.LName}");
+            section.Participants.Print("Participants");
         }
     }
 

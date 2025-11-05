@@ -20,6 +20,7 @@ class Program
             1) Client Vs Server Evaluation.
             2) Tracking Vs No Tracking.
             3) Related Data Eager (Include & ThenInclude).
+            4) Explicit Loading.
             Any other key to exit.
             ───> 
             """);
@@ -36,6 +37,9 @@ class Program
                     break;
                 case "3":
                     RelatedDataEager.Run();
+                    break;
+                case "4":
+                    ExplicitLoading.Run();
                     break;
                 default:
                     flag = false;
