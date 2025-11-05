@@ -21,6 +21,7 @@ class Program
             2) Tracking Vs No Tracking.
             3) Related Data Eager (Include & ThenInclude).
             4) Explicit Loading.
+            5) Lazy Loading.
             Any other key to exit.
             ───> 
             """);
@@ -40,6 +41,9 @@ class Program
                     break;
                 case "4":
                     ExplicitLoading.Run();
+                    break;
+                case "5":
+                    LazyLoading.Run();
                     break;
                 default:
                     flag = false;
