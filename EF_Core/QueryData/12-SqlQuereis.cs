@@ -25,6 +25,7 @@ public abstract class SqlQueries
             ───────────────
             1) Sql Query.
             2) Sql Query Parameters.
+            3) Stored Procedures.
             ───> 
             """);
 
@@ -37,6 +38,9 @@ public abstract class SqlQueries
                     break;
                 case "2":
                     SqlQueryParameters();
+                    break;
+                case "3":
+                    StoredProcedures();
                     break;
                 default:
                     flag = false;
@@ -73,7 +77,7 @@ public abstract class SqlQueries
                 .ToList();
         }
     }
-    
+
     private static void SqlQueryParameters()
     {
         Utils.printTitle("Sql Query Parameters");
@@ -86,7 +90,7 @@ public abstract class SqlQueries
                 .FirstOrDefault();
 
             Console.WriteLine($"{c1.CourseName} ({c1.HoursToComplete})");
-            
+
             //====================================================================================
 
             Console.WriteLine("\nFromSqlInterpolated() without Parameters ( safe ✅ )");
@@ -115,5 +119,28 @@ public abstract class SqlQueries
             Console.WriteLine($"{c4.CourseName} ({c4.HoursToComplete})");
         }
     }
-    
+
+    private static void StoredProcedures()
+    {
+        Utils.printTitle("Stored Procedures");
+
+        using (var context = new AppDbContext())
+        {
+            var startDateParam = new SqlParameter("@StartDate", System.Data.SqlDbType.Date)
+            {
+                Value = new DateTime(2023, 01, 01)
+            };
+            var endDateParam = new SqlParameter("@EndDate", System.Data.SqlDbType.Date)
+            {
+                Value = new DateTime(2023, 06, 30)
+            };
+
+            var sections = context.SectionDetails
+                .FromSql($"Exec dbo.sp_GetSectionWithinDateRange {startDateParam}, {endDateParam}")
+                .ToList();
+
+            sections.Print("Section");
+        }
+    }
+
 }
