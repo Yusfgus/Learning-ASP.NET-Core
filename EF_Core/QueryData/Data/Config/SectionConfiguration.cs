@@ -63,6 +63,10 @@ public class SectionConfiguration : IEntityTypeConfiguration<Section>
 		});
 
 
+		// // adds (WHERE StartDate >= date of two years ago) in the end of every query on the sections
+		// var twoYearsDate = DateOnly.FromDateTime(DateTime.Now.AddYears(-2));
+		// builder.HasQueryFilter(x => x.DateRange.StartDate >= twoYearsDate);
+		
 		// default data
 		// builder.HasData(SeedData.LoadSections());
 	}

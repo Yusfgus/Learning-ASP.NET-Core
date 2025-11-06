@@ -29,6 +29,7 @@ public abstract class SqlQueries
             4) View.
             5) Scaler Valued Function.
             6) Table Valued Function.
+            7) Global Query Filter.
             ───> 
             """);
 
@@ -53,6 +54,9 @@ public abstract class SqlQueries
                     break;
                 case "6":
                     TableValuedFunction();
+                    break;
+                case "7":
+                    GlobalQueryFilter();
                     break;
                 default:
                     flag = false;
@@ -208,6 +212,19 @@ public abstract class SqlQueries
                 Console.WriteLine(section);
             }
         }
+    }
+
+    private static void GlobalQueryFilter()
+    {
+        Utils.printTitle("Global Query Filter");
+
+        Console.WriteLine("""
+        Steps:
+        1) Navigate to Entity Configuration class. ex: SectionConfiguration
+        2) Navigate to Configure() function.
+        3) add: builder.HasQueryFilter(x => x.property + condition);
+            ex: builder.HasQueryFilter(x => x.Id >= 5);
+        """);
     }
 
 }
