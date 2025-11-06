@@ -26,6 +26,8 @@ class Program
             7) Join.
             8) Select Many.
             9) Group By.
+            10) Pagination.
+            11) Sql Queries.
             Any other key to exit.
             ───> 
             """);
@@ -60,6 +62,12 @@ class Program
                     break;
                 case "9":
                     GroupBy.Run();
+                    break;
+                case "10":
+                    Pagination.Run();
+                    break;
+                case "11":
+                    SqlQueries.Run();
                     break;
                 default:
                     flag = false;
