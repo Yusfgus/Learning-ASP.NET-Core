@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using EF_Core.QueryData.Entities;
 using EF_Core.QueryData.Enums;
 using Microsoft.EntityFrameworkCore;
@@ -16,10 +15,10 @@ public class ScheduleConfiguration : IEntityTypeConfiguration<Schedule>
         builder.HasKey(x => x.Id);  // set as primary key
         builder.Property(x => x.Id).ValueGeneratedNever();
 
-        builder.Property(x => x.Title)
+        builder.Property(x => x.ScheduleType)
                 .HasConversion(
                     x => x.ToString(), // when saving in database
-                    v => (ScheduleTitleEnum)Enum.Parse(typeof(ScheduleTitleEnum), v)  // when reading from database
+                    v => (ScheduleTypeEnum)Enum.Parse(typeof(ScheduleTypeEnum), v)  // when reading from database
                 );
 
 

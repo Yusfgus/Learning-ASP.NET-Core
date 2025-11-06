@@ -40,7 +40,7 @@ public abstract class GroupBy
                                                 TotalSections = g.Count()
                                             }
                                      );
-                         
+            
             foreach(var item in instructorSections)
             {
                 // Console.WriteLine(item.Instructor.FullName);

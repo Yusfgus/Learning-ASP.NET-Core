@@ -5,7 +5,7 @@ namespace EF_Core.QueryData.Entities;
 
 public class Schedule : Entity
 {
-    public ScheduleTitleEnum Title { get; set; }
+    public ScheduleTypeEnum ScheduleType { get; set; }
     public bool SUN { get; set; }
     public bool MON { get; set; }
     public bool TUE { get; set; }
