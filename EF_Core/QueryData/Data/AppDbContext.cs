@@ -9,6 +9,7 @@ public class AppDbContext: DbContext
 {
     public DbSet<Office> Offices { get; set; }
     public DbSet<Course> Courses { get; set; }
+    public DbSet<CourseOverview> CourseOverviews { get; set; }
     public DbSet<Instructor> Instructors { get; set; }
     public DbSet<Section> Sections { get; set; }
     public DbSet<SectionDetails> SectionDetails { get; set; }

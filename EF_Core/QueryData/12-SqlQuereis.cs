@@ -26,6 +26,7 @@ public abstract class SqlQueries
             1) Sql Query.
             2) Sql Query Parameters.
             3) Stored Procedures.
+            4) View.
             ───> 
             """);
 
@@ -41,6 +42,9 @@ public abstract class SqlQueries
                     break;
                 case "3":
                     StoredProcedures();
+                    break;
+                case "4":
+                    View();
                     break;
                 default:
                     flag = false;
@@ -140,6 +144,18 @@ public abstract class SqlQueries
                 .ToList();
 
             sections.Print("Section");
+        }
+    }
+
+    private static void View()
+    {
+        Utils.printTitle("View");
+
+        using (var context = new AppDbContext())
+        {
+            var courseOverviews = context.CourseOverviews.ToList();
+
+            courseOverviews.Print("Course Overviews");
         }
     }
 
