@@ -28,6 +28,7 @@ public abstract class SqlQueries
             3) Stored Procedures.
             4) View.
             5) Scaler Valued Function.
+            6) Table Valued Function.
             ───> 
             """);
 
@@ -49,6 +50,9 @@ public abstract class SqlQueries
                     break;
                 case "5":
                     ScalerValuedFunction();
+                    break;
+                case "6":
+                    TableValuedFunction();
                     break;
                 default:
                     flag = false;
@@ -181,7 +185,7 @@ public abstract class SqlQueries
                             i.FullName,
                             DateRange = $"{startDate.ToShortDateString()}-{endDate:d}",
                             TimeRange = $"{startTime.ToString("hh\\:mm")}-{endDate:hh\\:mm}",
-                            Status = AppDbContext.GetInstructorAvailability(i.Id, startDate, endDate, startTime, endTime)
+                            Status = context.GetInstructorAvailability(i.Id, startDate, endDate, startTime, endTime)
                         })
                         .ToList();
 
@@ -189,6 +193,19 @@ public abstract class SqlQueries
             {
                 Console.WriteLine(
                     $"[{item.Id}]\t{item.FullName,-20}\t{item.DateRange}\t{item.TimeRange}\t{item.Status}");
+            }
+        }
+    }
+
+    private static void TableValuedFunction()
+    {
+        Utils.printTitle("Table Valued Function");
+
+        using (var context = new AppDbContext())
+        {
+            foreach(var section in context.GetSectionsExceedingParticipantCount(21))
+            {
+                Console.WriteLine(section);
             }
         }
     }

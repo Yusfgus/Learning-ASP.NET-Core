@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using EF_Core.QueryData.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -53,16 +54,26 @@ public class AppDbContext: DbContext
 
         // Method 2 (search for configurations in the assembly/project)
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+
+        modelBuilder.HasDbFunction(
+            typeof(AppDbContext)
+            .GetMethod(nameof(GetSectionsExceedingParticipantCount), new[] { typeof(int) })!
+        );
     }
 
     [DbFunction("fn_InstructorAvailability", Schema = "dbo")]
-    public static string GetInstructorAvailability(int instructorId,
-                                                    DateTime startDate,
-                                                    DateTime endDate,
-                                                    TimeSpan startTime,
-                                                    TimeSpan endTime)
+    public string GetInstructorAvailability(int instructorId,
+                                            DateTime startDate,
+                                            DateTime endDate,
+                                            TimeSpan startTime,
+                                            TimeSpan endTime)
     {
         // Doesn't need an implementation due to function mapping
         throw new NotImplementedException();
+    }
+
+    public IQueryable<Section> GetSectionsExceedingParticipantCount(int minParticipants)
+    {
+        return FromExpression(() => GetSectionsExceedingParticipantCount(minParticipants));
     }
 }

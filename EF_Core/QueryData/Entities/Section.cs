@@ -19,7 +19,7 @@ public class Section : Entity
 
     public override string ToString()
     {
-        return $"[{Id}] {SectionName}";
+        return $"[{Id}]\t{SectionName}\t{DateRange}\t{TimeSlot}"; ;
     }
 }
 
@@ -41,6 +41,6 @@ public class DateRange
 
     public override string ToString()
     {
-        return $"{StartDate.ToString("yyyy-MM-dd")} - {EndDate.ToString("yyyy-MM-dd")}";
+        return $"{StartDate.ToString("yyyy/MM/dd")} - {EndDate:yyyy/MM/dd}";
     }
 }
