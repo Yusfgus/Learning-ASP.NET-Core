@@ -16,6 +16,11 @@ public class Section : Entity
     public Instructor? Instructor { get; set; }
     public Schedule Schedule { get; set; } = null!;
     public ICollection<Participant> Participants { get; set; } = new List<Participant>();
+
+    public override string ToString()
+    {
+        return $"[{Id}] {SectionName}";
+    }
 }
 
 public class TimeSlot

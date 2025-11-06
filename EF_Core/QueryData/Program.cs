@@ -25,6 +25,7 @@ class Program
             6) Split Queries (Specify columns).
             7) Join.
             8) Select Many.
+            9) Group By.
             Any other key to exit.
             ───> 
             """);
@@ -56,6 +57,9 @@ class Program
                     break;
                 case "8":
                     SelectMany.Run();
+                    break;
+                case "9":
+                    GroupBy.Run();
                     break;
                 default:
                     flag = false;
