@@ -54,4 +54,15 @@ public class AppDbContext: DbContext
         // Method 2 (search for configurations in the assembly/project)
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
     }
+
+    [DbFunction("fn_InstructorAvailability", Schema = "dbo")]
+    public static string GetInstructorAvailability(int instructorId,
+                                                    DateTime startDate,
+                                                    DateTime endDate,
+                                                    TimeSpan startTime,
+                                                    TimeSpan endTime)
+    {
+        // Doesn't need an implementation due to function mapping
+        throw new NotImplementedException();
+    }
 }

@@ -27,6 +27,7 @@ public abstract class SqlQueries
             2) Sql Query Parameters.
             3) Stored Procedures.
             4) View.
+            5) Scaler Valued Function.
             ───> 
             """);
 
@@ -45,6 +46,9 @@ public abstract class SqlQueries
                     break;
                 case "4":
                     View();
+                    break;
+                case "5":
+                    ScalerValuedFunction();
                     break;
                 default:
                     flag = false;
@@ -156,6 +160,36 @@ public abstract class SqlQueries
             var courseOverviews = context.CourseOverviews.ToList();
 
             courseOverviews.Print("Course Overviews");
+        }
+    }
+
+    private static void ScalerValuedFunction()
+    {
+        Utils.printTitle("Scaler Valued Function");
+
+        var startDate = new DateTime(2023, 09, 24);
+        var endDate = new DateTime(2023, 12, 26);
+        var startTime = new TimeSpan(08, 00, 00);
+        var endTime = new TimeSpan(11, 00, 00);
+
+        using (var context = new AppDbContext())
+        {
+            var result = context.Instructors
+                        .Select(i => new
+                        {
+                            i.Id,
+                            i.FullName,
+                            DateRange = $"{startDate.ToShortDateString()}-{endDate:d}",
+                            TimeRange = $"{startTime.ToString("hh\\:mm")}-{endDate:hh\\:mm}",
+                            Status = AppDbContext.GetInstructorAvailability(i.Id, startDate, endDate, startTime, endTime)
+                        })
+                        .ToList();
+
+            foreach (var item in result)
+            {
+                Console.WriteLine(
+                    $"[{item.Id}]\t{item.FullName,-20}\t{item.DateRange}\t{item.TimeRange}\t{item.Status}");
+            }
         }
     }
 
