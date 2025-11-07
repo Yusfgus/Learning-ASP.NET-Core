@@ -18,6 +18,8 @@ class Program
             ───────────────
             1) Basic Save.
             2) Change Tracking.
+            3) Cascade Delete.
+            4) Efficient Update.
             Any other key to exit.
             ───> 
             """);
@@ -31,6 +33,12 @@ class Program
                     break;
                 case "2":
                     ChangeTracking.Run();
+                    break;
+                case "3":
+                    CascadeDelete.Run();
+                    break;
+                case "4":
+                    EfficientUpdate.Run();
                     break;
                 default:
                     flag = false;
