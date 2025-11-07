@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace EF_Core.SaveData.Data.Config
 {
-    public class AuthorConfiguration : IEntityTypeConfiguration<Author>
+    public class AuthorV2Configuration : IEntityTypeConfiguration<AuthorV2>
     {
-        public void Configure(EntityTypeBuilder<Author> builder)
+        public void Configure(EntityTypeBuilder<AuthorV2> builder)
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedNever();
@@ -21,7 +21,7 @@ namespace EF_Core.SaveData.Data.Config
                 .HasMaxLength(50)
                 .IsRequired();
 
-            builder.ToTable("Authors");
+            builder.ToTable("AuthorV2s");
         }
     }
 }

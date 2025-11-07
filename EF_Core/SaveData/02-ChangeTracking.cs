@@ -4,10 +4,7 @@ using System.Linq;
 using C01.BasicSaveWithTracking.Helpers;
 using EF_Core.SaveData.Data;
 using EF_Core.SaveData.Entities;
-using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
-using Microsoft.EntityFrameworkCore.Query.Internal;
 using Shared;
 
 namespace EF_Core.SaveData;
@@ -252,7 +249,7 @@ public abstract class ChangeTracking
 
         DatabaseHelper.RecreateCleanDatabase();
         DatabaseHelper.PopulateDatabase();
-        Console.ReadKey();
+        Console.WriteLine("Check database then press any key to continue... "); Console.ReadKey();
 
         using (var context = new AppDbContext())
         {
