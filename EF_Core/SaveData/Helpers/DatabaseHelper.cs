@@ -12,8 +12,10 @@ namespace C01.BasicSaveWithTracking.Helpers
         {
             using var context = new AppDbContext();
 
-            context.Database.EnsureDeleted();
-            context.Database.EnsureCreated();
+            if(context.Database.EnsureDeleted())
+                System.Console.WriteLine("Database deleted successfully");
+            if(context.Database.EnsureCreated())
+                System.Console.WriteLine("Database created successfully");
         }
 
         public static void PopulateDatabase()
@@ -64,8 +66,9 @@ namespace C01.BasicSaveWithTracking.Helpers
 
                 context.Add(new Author { Id = 3, FName = "Aditya", LName = "Bhargava" });
 
-
                 context.SaveChanges();
+
+                System.Console.WriteLine("Database populated successfully");
             }
         }
 

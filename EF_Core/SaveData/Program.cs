@@ -17,6 +17,7 @@ class Program
             Enter a choice:
             ───────────────
             1) Basic Save.
+            2) Change Tracking.
             Any other key to exit.
             ───> 
             """);
@@ -27,6 +28,9 @@ class Program
             {
                 case "1":
                     BasicSave.Run();
+                    break;
+                case "2":
+                    ChangeTracking.Run();
                     break;
                 default:
                     flag = false;
