@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveData", "SaveData\SaveDa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interceptors", "Interceptors\Interceptors.csproj", "{D7B55336-C1DE-4636-9F12-0EF7E6EF26A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaction", "Transaction\Transaction.csproj", "{41B30069-B74B-4116-AFE4-3205D5EDB40C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{D7B55336-C1DE-4636-9F12-0EF7E6EF26A4}.Release|x64.Build.0 = Release|Any CPU
 		{D7B55336-C1DE-4636-9F12-0EF7E6EF26A4}.Release|x86.ActiveCfg = Release|Any CPU
 		{D7B55336-C1DE-4636-9F12-0EF7E6EF26A4}.Release|x86.Build.0 = Release|Any CPU
+		{41B30069-B74B-4116-AFE4-3205D5EDB40C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41B30069-B74B-4116-AFE4-3205D5EDB40C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41B30069-B74B-4116-AFE4-3205D5EDB40C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{41B30069-B74B-4116-AFE4-3205D5EDB40C}.Debug|x64.Build.0 = Debug|Any CPU
+		{41B30069-B74B-4116-AFE4-3205D5EDB40C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{41B30069-B74B-4116-AFE4-3205D5EDB40C}.Debug|x86.Build.0 = Debug|Any CPU
+		{41B30069-B74B-4116-AFE4-3205D5EDB40C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41B30069-B74B-4116-AFE4-3205D5EDB40C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41B30069-B74B-4116-AFE4-3205D5EDB40C}.Release|x64.ActiveCfg = Release|Any CPU
+		{41B30069-B74B-4116-AFE4-3205D5EDB40C}.Release|x64.Build.0 = Release|Any CPU
+		{41B30069-B74B-4116-AFE4-3205D5EDB40C}.Release|x86.ActiveCfg = Release|Any CPU
+		{41B30069-B74B-4116-AFE4-3205D5EDB40C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
