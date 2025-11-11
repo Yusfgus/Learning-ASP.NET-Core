@@ -23,7 +23,7 @@ public abstract class CascadeDelete
             1) Delete Principle with Dependent Entity ( FK Required ).
             2) Delete Principle with Dependent Entity ( FK Optional ).
             3) Sever Relationship From Principle Entity ( FK Optional ).
-            3) Sever Relationship From Dependent Entity ( FK Optional ).
+            4) Sever Relationship From Dependent Entity ( FK Optional ).
             ───> 
             """);
 

@@ -57,8 +57,8 @@ public abstract class Join
         using (var context = new AppDbContext())
         {
             var result01 = from c in context.Courses.AsNoTracking()
-                                  join s in context.Sections.AsNoTracking() on c.Id equals s.CourseId
-                                  select new { c.CourseName, s.SectionName };
+                           join s in context.Sections.AsNoTracking() on c.Id equals s.CourseId
+                           select new { c.CourseName, s.SectionName };
 
             // SELECT [c].[CourseName], [s].[SectionName]
             // FROM [Courses] AS [c]

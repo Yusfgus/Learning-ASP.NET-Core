@@ -102,7 +102,7 @@ public abstract class SqlQueries
         {
             Console.WriteLine("FromSql() without Parameters ( safe ✅ )");
             var c1 = context.Courses
-                .FromSql($"SELECT * FROM dbo.Courses Where Id = {1}")
+                .FromSql($"SELECT * FROM dbo.Courses Where Id = {1}") // passed as normal FormattableString
                 .FirstOrDefault();
 
             Console.WriteLine($"{c1.CourseName} ({c1.HoursToComplete})");
@@ -111,7 +111,7 @@ public abstract class SqlQueries
 
             Console.WriteLine("\nFromSqlInterpolated() without Parameters ( safe ✅ )");
             var c2 = context.Courses
-                .FromSqlInterpolated($"SELECT * FROM dbo.Courses Where Id = {1}")
+                .FromSqlInterpolated($"SELECT * FROM dbo.Courses Where Id = {1}") // passed as normal FormattableString
                 .FirstOrDefault();
 
             Console.WriteLine($"{c2.CourseName} ({c2.HoursToComplete})");
@@ -121,7 +121,7 @@ public abstract class SqlQueries
             Console.WriteLine("\nFromSqlRaw() without Parameters ( unsafe ❌ )");
             // var courseId = "1; DELETE FROM dbo.Courses";
             var c3 = context.Courses
-                .FromSqlRaw($"SELECT * FROM dbo.Courses Where Id = {1}")
+                .FromSqlRaw($"SELECT * FROM dbo.Courses Where Id = {1}") // passed as normal string
                 .FirstOrDefault();
 
             //====================================================================================
@@ -155,6 +155,10 @@ public abstract class SqlQueries
                 .FromSql($"Exec dbo.sp_GetSectionWithinDateRange {startDateParam}, {endDateParam}")
                 .ToList();
 
+            // var sections = context.SectionDetails
+            //     .FromSql($"Exec dbo.sp_GetSectionWithinDateRange {new DateTime(2023, 01, 01)}, {new DateTime(2023, 06, 30)}")
+            //     .ToList();
+
             sections.Print("Section");
         }
     }
@@ -165,7 +169,9 @@ public abstract class SqlQueries
 
         using (var context = new AppDbContext())
         {
-            var courseOverviews = context.CourseOverviews.ToList();
+            // has a entity class, a configurations class and a DbSet in the context (like normal tables)
+            var courseOverviews = context.CourseOverviews
+                                    .ToList();
 
             courseOverviews.Print("Course Overviews");
         }
@@ -189,6 +195,7 @@ public abstract class SqlQueries
                             i.FullName,
                             DateRange = $"{startDate.ToShortDateString()}-{endDate:d}",
                             TimeRange = $"{startTime.ToString("hh\\:mm")}-{endDate:hh\\:mm}",
+                            // from database function
                             Status = context.GetInstructorAvailability(i.Id, startDate, endDate, startTime, endTime)
                         })
                         .ToList();
@@ -222,7 +229,7 @@ public abstract class SqlQueries
         Steps:
         1) Navigate to Entity Configuration class. ex: SectionConfiguration
         2) Navigate to Configure() function.
-        3) add: builder.HasQueryFilter(x => x.property + condition);
+        3) add: builder.HasQueryFilter(x => condition(x.property) );
             ex: builder.HasQueryFilter(x => x.Id >= 5);
         """);
     }

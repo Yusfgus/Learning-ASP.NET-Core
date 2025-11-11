@@ -20,10 +20,10 @@ public abstract class EfficientUpdate
             Console.Write("""
             Enter a choice:
             ───────────────
-            1) Update Many ( Typical Implementation ).
-            2) Update Many ( EF7+ Implementation ).
-            3) Update Many ( EF7+ Raw Sql ).
-            4) Delete Many ( EF7+ Implementation ).
+            1) Increase books price by 10% ( Typical Implementation ).
+            2) Increase books price by 10% ( EF7+ Implementation ).
+            3) Increase books price by 10% ( EF7+ Raw Sql ).
+            4) Delete books ( EF7+ Implementation ).
             ───> 
             """);
 
@@ -32,16 +32,16 @@ public abstract class EfficientUpdate
             switch (choice)
             {
                 case "1":
-                    UpdateMany_Typical_Implementation();
+                    Typical_Implementation();
                     break;
                 case "2":
-                    UpdateMany_EF7_Implementation();
+                    EF7_Implementation();
                     break;
                 case "3":
-                    UpdateMany_EF7_RawSql();
+                    EF7_RawSql();
                     break;
                 case "4":
-                    DeleteMany_EF7_Implementation();
+                    Delete_EF7_Implementation();
                     break;
                 default:
                     flag = false;
@@ -53,9 +53,9 @@ public abstract class EfficientUpdate
     }
 
 
-    private static void UpdateMany_Typical_Implementation()
+    private static void Typical_Implementation()
     {
-        Utils.printTitle("Update Many ( Typical Implementation )");
+        Utils.printTitle("Typical Implementation");
 
         DatabaseHelper.RecreateCleanDatabase();
         DatabaseHelper.PopulateDatabase();
@@ -76,9 +76,9 @@ public abstract class EfficientUpdate
         }
     }
 
-    private static void UpdateMany_EF7_Implementation()
+    private static void EF7_Implementation()
     {
-        Utils.printTitle("Update Many ( EF7+ Implementation )");
+        Utils.printTitle("EF7+ Implementation");
 
         DatabaseHelper.RecreateCleanDatabase();
         DatabaseHelper.PopulateDatabase();
@@ -95,9 +95,9 @@ public abstract class EfficientUpdate
         }
     }
 
-    private static void UpdateMany_EF7_RawSql()
+    private static void EF7_RawSql()
     {
-        Utils.printTitle("Update Many ( EF7+ Raw Sql )");
+        Utils.printTitle("EF7+ Raw Sql");
 
         DatabaseHelper.RecreateCleanDatabase();
         DatabaseHelper.PopulateDatabase();
@@ -113,9 +113,9 @@ public abstract class EfficientUpdate
         }
     }
 
-    private static void DeleteMany_EF7_Implementation()
+    private static void Delete_EF7_Implementation()
     {
-        Utils.printTitle("Delete Many ( EF7+ Implementation )");
+        Utils.printTitle("Delete Many ( EF7+ Implementation");
 
         DatabaseHelper.RecreateCleanDatabase();
         DatabaseHelper.PopulateDatabase();

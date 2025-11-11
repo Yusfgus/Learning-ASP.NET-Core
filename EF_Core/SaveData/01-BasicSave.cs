@@ -62,7 +62,7 @@ public abstract class BasicSave
 
     private static void Insert()
     {
-        Utils.printTitle(" Basic Insert");
+        Utils.printTitle("Basic Insert");
 
         // DatabaseHelper.RecreateCleanDatabase();
 

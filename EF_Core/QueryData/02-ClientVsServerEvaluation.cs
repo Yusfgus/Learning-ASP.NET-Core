@@ -128,9 +128,9 @@ public abstract class ClientVsServerEvaluation
                     Section = x.SectionName.Substring(4)
                 });
 
-            //  SELECT [s].[Id], [s].[SectionName], [s].[StartDate], [s].[EndDate]
-            //  FROM [Sections] AS [s]
-            //  WHERE [s].[CourseId] = @__courseId_0
+            // SELECT [s].[Id], SUBSTRING([s].[SectionName], 4 + 1, LEN([s].[SectionName])) AS [Section]
+            // FROM [Sections] AS [s]
+            // WHERE [s].[CourseId] = @__courseId_0
 
             // Console.WriteLine(result.ToQueryString());
 

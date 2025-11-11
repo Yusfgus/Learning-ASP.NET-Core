@@ -64,6 +64,12 @@ public abstract class SplitQueries
                 .Include(c => c.Sections)
                 .Include(c => c.Reviews)
                 .ToList();
+
+            // SELECT [c].[Id], [c].[CourseName], [c].[HoursToComplete], [c].[Price], [s].[Id], [s].[CourseId], [s].[InstructorId], [s].[ScheduleId], [s].[SectionName], [s].[EndDate], [s].[StartDate], [s].[EndTime], [s].[StartTime], [r].[Id], [r].[CourseId], [r].[CreatedAt], [r].[Feedback]
+            // FROM [Courses] AS [c]
+            // LEFT JOIN [Sections] AS [s] ON [c].[Id] = [s].[CourseId]
+            // LEFT JOIN [Reviews] AS [r] ON [c].[Id] = [r].[CourseId]
+            // ORDER BY [c].[Id], [s].[Id]
         }
     }
     
@@ -92,6 +98,12 @@ public abstract class SplitQueries
                         r.CreatedAt,
                     })
                 }).ToList();
+
+                // SELECT [c].[Id], [c].[CourseName], [c].[HoursToComplete], [s].[Id], [s].[SectionName], [s].[EndDate], [s].[StartDate], [s].[EndTime], [s].[StartTime], [r].[Feedback], [r].[CreatedAt], [r].[Id]
+                // FROM [Courses] AS [c]
+                // LEFT JOIN [Sections] AS [s] ON [c].[Id] = [s].[CourseId]
+                // LEFT JOIN [Reviews] AS [r] ON [c].[Id] = [r].[CourseId]
+                // ORDER BY [c].[Id], [s].[Id]
         }
     }
 
@@ -106,6 +118,20 @@ public abstract class SplitQueries
                 .Include(c => c.Reviews)
                 .AsSplitQuery()
                 .ToList();
+
+            // SELECT [c].[Id], [c].[CourseName], [c].[HoursToComplete], [c].[Price]
+            // FROM [Courses] AS [c]
+            // ORDER BY [c].[Id]
+
+            // SELECT [s].[Id], [s].[CourseId], [s].[InstructorId], [s].[ScheduleId], [s].[SectionName], [s].[EndDate], [s].[StartDate], [s].[EndTime], [s].[StartTime], [c].[Id]
+            // FROM [Courses] AS [c]
+            // INNER JOIN [Sections] AS [s] ON [c].[Id] = [s].[CourseId]
+            // ORDER BY [c].[Id]
+
+            // SELECT [r].[Id], [r].[CourseId], [r].[CreatedAt], [r].[Feedback], [c].[Id]
+            // FROM [Courses] AS [c]
+            // INNER JOIN [Reviews] AS [r] ON [c].[Id] = [r].[CourseId]
+            // ORDER BY [c].[Id]
         }
     }
     

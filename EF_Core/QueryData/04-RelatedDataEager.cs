@@ -59,6 +59,19 @@ public abstract class RelatedDataEager
 
             // Console.WriteLine(sectionQuery.ToQueryString() + '\n');
 
+            // SELECT [s0].[Id], [s0].[CourseId], [s0].[InstructorId], [s0].[ScheduleId], [s0].[SectionName], [s0].[EndDate], [s0].[StartDate], [s0].[EndTime], [s0].[StartTime], [s1].[SectionId], [s1].[ParticipantId], [s1].[Id], [s1].[FName], [s1].[LName]
+            // FROM (
+            //     SELECT TOP(1) [s].[Id], [s].[CourseId], [s].[InstructorId], [s].[ScheduleId], [s].[SectionName], [s].[EndDate], [s].[StartDate], [s].[EndTime], [s].[StartTime]
+            //     FROM [Sections] AS [s]
+            //     WHERE [s].[Id] = @__sectionId_0
+            // ) AS [s0]
+            // LEFT JOIN (
+            //     SELECT [e].[SectionId], [e].[ParticipantId], [p].[Id], [p].[FName], [p].[LName]
+            //     FROM [Enrollments] AS [e]
+            //     INNER JOIN [Participants] AS [p] ON [e].[ParticipantId] = [p].[Id]
+            // ) AS [s1] ON [s0].[Id] = [s1].[SectionId]
+            // ORDER BY [s0].[Id], [s1].[SectionId], [s1].[ParticipantId]
+
             var section = sectionQuery.FirstOrDefault();
 
             Console.WriteLine($"section: {section.SectionName}");
@@ -76,12 +89,18 @@ public abstract class RelatedDataEager
 
         using (var context = new AppDbContext())
         {
-              var sectionQuery = context.Sections
-                    .Include(x => x.Instructor)
-                    .ThenInclude(x => x.Office)
-                    .Where(x => x.Id == sectionId);
+            var sectionQuery = context.Sections
+                  .Include(x => x.Instructor)
+                  .ThenInclude(x => x.Office)
+                  .Where(x => x.Id == sectionId);
 
                 // Console.WriteLine(sectionQuery.ToQueryString() + '\n');
+                
+                // SELECT TOP(1) [s].[Id], [s].[CourseId], [s].[InstructorId], [s].[ScheduleId], [s].[SectionName], [s].[EndDate], [s].[StartDate], [s].[EndTime], [s].[StartTime], [i].[Id], [i].[FName], [i].[LName], [i].[OfficeId], [o].[Id], [o].[OfficeLocation], [o].[OfficeName]
+                // FROM [Sections] AS [s]
+                // LEFT JOIN [Instructors] AS [i] ON [s].[InstructorId] = [i].[Id]
+                // LEFT JOIN [Offices] AS [o] ON [i].[OfficeId] = [o].[Id]
+                // WHERE [s].[Id] = @__sectionId_0
 
                 var section = sectionQuery.FirstOrDefault();
 

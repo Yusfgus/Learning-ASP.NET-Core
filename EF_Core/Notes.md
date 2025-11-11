@@ -1,6 +1,6 @@
 
 
-# Hierarchy
+# Hierarchy ( Inheritance )
 
 ```code
 public class Participant {}

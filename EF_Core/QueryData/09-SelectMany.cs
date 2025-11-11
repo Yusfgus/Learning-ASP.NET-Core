@@ -34,7 +34,7 @@ public abstract class SelectMany
             // WHERE [c].[CourseName] LIKE '%frontend%'
 
             var frontendParticipants =
-                context.Courses                                 // all courses
+                context.Courses.AsNoTracking()                  // all courses
                 .Where(c => c.CourseName.Contains("frontend"))  // frontend courses (angular, react)
                 .SelectMany(c => c.Sections)                    // sections for each of these courses
                 .SelectMany(s => s.Participants)                // participants for each of these sections
