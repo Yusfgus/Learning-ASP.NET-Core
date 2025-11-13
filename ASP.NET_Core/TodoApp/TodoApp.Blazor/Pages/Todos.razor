@@ -1,0 +1,45 @@
+@page "/todos"
+
+<div class="container p-3 m-3">
+    <ul class="list-group">
+        @foreach(var todo in _todos)
+        {
+            <li class="list-group-item position-relative p-3 m-1 border border-1">
+                <div class="d-flex">
+                    <div class="flex-grow-1">
+                        <p class="m-0 p-0 @(todo.Completed? "text-decoration-line-through": "")">
+                            @todo.Description
+                        </p>
+                    </div>
+                    <div>
+                        <p class="m-0 p-0">
+                            <span class="badge bg-primary">
+                                <small>
+                                    <i>
+                                        @todo.CreatedAt
+                                    </i>
+                                </small>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </li>
+        }
+    </ul>
+</div>
+
+@code{
+    private List<TodoApp.Blazor.Models.Todo> _todos { get; set; } = [];
+    
+    protected override void OnInitialized()
+    {
+        _todos =
+        [
+            new TodoApp.Blazor.Models.Todo { Id = 1, Description = "Finish EF Core practice project", CreatedAt = DateTime.Now.AddDays(-2), Completed = false },
+            new TodoApp.Blazor.Models.Todo { Id = 2, Description = "Read about Clean Architecture", CreatedAt = DateTime.Now.AddDays(-1), Completed = true },
+            new TodoApp.Blazor.Models.Todo { Id = 3, Description = "Implement repository pattern", CreatedAt = DateTime.Now, Completed = false },
+            new TodoApp.Blazor.Models.Todo { Id = 4, Description = "Review ChangeTracker behavior", CreatedAt = DateTime.Now.AddHours(-3), Completed = true },
+            new TodoApp.Blazor.Models.Todo { Id = 5, Description = "Push code to GitHub", CreatedAt = DateTime.Now.AddMinutes(-30), Completed = false }
+        ];
+    }
+}
