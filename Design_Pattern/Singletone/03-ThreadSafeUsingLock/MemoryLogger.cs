@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Design_Pattern.Singleton.NotThreadSafe;
+namespace Design_Pattern.Singleton.ThreadSafeUsingLock;
 
 public class MemoryLogger
 {
     private static MemoryLogger _instance = null;
+    private static readonly object _lock = new object();
     private MemoryLogger(){}
     public static MemoryLogger GetLogger
     {
         get 
         {
-            if(_instance is null)
-                _instance = new MemoryLogger();
+            lock(_lock)
+            {
+                if(_instance is null)
+                    _instance = new MemoryLogger();
+            }
 
             return _instance;
         }
