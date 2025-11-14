@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-ThreadSafeUsingLock", "0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-ThreadSafeUsingDoubleCheckedLock", "04-ThreadSafeUsingDoubleCheckedLock\04-ThreadSafeUsingDoubleCheckedLock.csproj", "{111516E6-D659-4FFD-A7B7-8F83E3A983E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-ThreadSafeUsingEagerLoading", "05-ThreadSafeUsingEagerLoading\05-ThreadSafeUsingEagerLoading.csproj", "{4C423A82-75C6-4FFE-A66E-95E37FEE88EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{111516E6-D659-4FFD-A7B7-8F83E3A983E2}.Release|x64.Build.0 = Release|Any CPU
 		{111516E6-D659-4FFD-A7B7-8F83E3A983E2}.Release|x86.ActiveCfg = Release|Any CPU
 		{111516E6-D659-4FFD-A7B7-8F83E3A983E2}.Release|x86.Build.0 = Release|Any CPU
+		{4C423A82-75C6-4FFE-A66E-95E37FEE88EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C423A82-75C6-4FFE-A66E-95E37FEE88EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C423A82-75C6-4FFE-A66E-95E37FEE88EA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4C423A82-75C6-4FFE-A66E-95E37FEE88EA}.Debug|x64.Build.0 = Debug|Any CPU
+		{4C423A82-75C6-4FFE-A66E-95E37FEE88EA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4C423A82-75C6-4FFE-A66E-95E37FEE88EA}.Debug|x86.Build.0 = Debug|Any CPU
+		{4C423A82-75C6-4FFE-A66E-95E37FEE88EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C423A82-75C6-4FFE-A66E-95E37FEE88EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C423A82-75C6-4FFE-A66E-95E37FEE88EA}.Release|x64.ActiveCfg = Release|Any CPU
+		{4C423A82-75C6-4FFE-A66E-95E37FEE88EA}.Release|x64.Build.0 = Release|Any CPU
+		{4C423A82-75C6-4FFE-A66E-95E37FEE88EA}.Release|x86.ActiveCfg = Release|Any CPU
+		{4C423A82-75C6-4FFE-A66E-95E37FEE88EA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
