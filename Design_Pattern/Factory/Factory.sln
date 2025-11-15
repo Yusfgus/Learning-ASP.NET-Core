@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-SimpleFactory", "02-Simp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-FactoryMethod", "03-FactoryMethod\03-FactoryMethod.csproj", "{FC94CF5F-3AC0-4235-99BF-08BFB86E2079}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-AbstractFactory", "04-AbstractFactory\04-AbstractFactory.csproj", "{BC5C89AF-2B9B-40FE-AD02-28B74E8F9F9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{FC94CF5F-3AC0-4235-99BF-08BFB86E2079}.Release|x64.Build.0 = Release|Any CPU
 		{FC94CF5F-3AC0-4235-99BF-08BFB86E2079}.Release|x86.ActiveCfg = Release|Any CPU
 		{FC94CF5F-3AC0-4235-99BF-08BFB86E2079}.Release|x86.Build.0 = Release|Any CPU
+		{BC5C89AF-2B9B-40FE-AD02-28B74E8F9F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC5C89AF-2B9B-40FE-AD02-28B74E8F9F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC5C89AF-2B9B-40FE-AD02-28B74E8F9F9C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BC5C89AF-2B9B-40FE-AD02-28B74E8F9F9C}.Debug|x64.Build.0 = Debug|Any CPU
+		{BC5C89AF-2B9B-40FE-AD02-28B74E8F9F9C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BC5C89AF-2B9B-40FE-AD02-28B74E8F9F9C}.Debug|x86.Build.0 = Debug|Any CPU
+		{BC5C89AF-2B9B-40FE-AD02-28B74E8F9F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC5C89AF-2B9B-40FE-AD02-28B74E8F9F9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC5C89AF-2B9B-40FE-AD02-28B74E8F9F9C}.Release|x64.ActiveCfg = Release|Any CPU
+		{BC5C89AF-2B9B-40FE-AD02-28B74E8F9F9C}.Release|x64.Build.0 = Release|Any CPU
+		{BC5C89AF-2B9B-40FE-AD02-28B74E8F9F9C}.Release|x86.ActiveCfg = Release|Any CPU
+		{BC5C89AF-2B9B-40FE-AD02-28B74E8F9F9C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
