@@ -1,4 +1,4 @@
-﻿namespace Design_Pattern.Factory.Problem;
+﻿namespace Design_Pattern.Factory.SimpleFactory;
 
 public interface IMainCourse : IDish
 {

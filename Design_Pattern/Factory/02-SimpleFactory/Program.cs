@@ -1,13 +1,13 @@
 ﻿using Shared;
 
-namespace Design_Pattern.Factory.Problem;
+namespace Design_Pattern.Factory.SimpleFactory;
 
 class Program
 {
     public static void Main(string[] args)
     {
         Utils.printTitle("Design Pattern", width: 80, color: ConsoleColor.Red);
-        Utils.printTitle("Factory ( Problem )", width: 70, color: ConsoleColor.Blue);
+        Utils.printTitle("Factory ( Simple Factory )", width: 70, color: ConsoleColor.Blue);
 
         (IAppetizer Appetizer, IMainCourse MainCourse, IDessert Dessert) meal = new();
 
@@ -26,16 +26,16 @@ class Program
             switch (choice)
             {
                 case 1:
-                    meal.Appetizer = new ChickenSalad("Small", "350-450", 08.99m, new() { "Chicken", "Lettuce", "Tomatoes", "Cucumbers", "Salad dressing" });
+                    meal.Appetizer = DishFactory.CreateAppetizer("ChickenSalad");
                     break;
                 case 2:
-                    meal.Appetizer = new ButterCracker("Small", "70-80", 09.99m, new() { "Flour", "Butter", "Salt" });
+                    meal.Appetizer = DishFactory.CreateAppetizer("ButterCracker");
                     break;
                 case 3:
-                    meal.Appetizer = new CheeseTwist("Small", "100-150", 07.99m, new() { "Puff pastry", "Cheese", "Egg", "Salt" });
+                    meal.Appetizer = DishFactory.CreateAppetizer("CheeseTwist");
                     break;
                 case 4:
-                    meal.Appetizer = new PotatoBite("Small", "200-250", 05.99m, new() { "Potato", "Cheese", "Breadcrumbs", "Egg" });
+                    meal.Appetizer = DishFactory.CreateAppetizer("PotatoBite");
                     break;
                 default:
                     break;
@@ -56,16 +56,16 @@ class Program
             switch (choice)
             {
                 case 5:
-                    meal.MainCourse = new Lasagna("Large", "300-600", 14.99m, new() { "Pasta", "Cheese", "Tomato", "Beef" });
+                    meal.MainCourse = DishFactory.CreateMainCourse("Lasagna");
                     break;
                 case 6:
-                    meal.MainCourse = new Steak("Medium", "500-700", 17.99m, new() { "Beef steak", "Salt", "Pepper" });
+                    meal.MainCourse = DishFactory.CreateMainCourse("Steak");
                     break;
                 case 7:
-                    meal.MainCourse = new Molokhiya("Medium", "100-200", 16.99m, new() { "Molokhiya leaves", "Chicken broth", "Garlic", "Coriander" });
+                    meal.MainCourse = DishFactory.CreateMainCourse("Molokhiya");
                     break;
                 case 8:
-                    meal.MainCourse = new GrilledChicken("Large", "200-300", 15.99m, new() { "Chicken", "Salt", "Pepper", "Paprika" });
+                    meal.MainCourse = DishFactory.CreateMainCourse("GrilledChicken");
                     break;
                 default:
                     break;
@@ -81,22 +81,21 @@ class Program
         Console.WriteLine($" ├ [12] IceCream");
         Console.WriteLine($" └ Any other key to skip");
 
-
         if (int.TryParse(Console.ReadLine(), out choice))
         {
             switch (choice)
             {
                 case 9:
-                    meal.Dessert = new FruitSalad("Medium", "100-150", 07.99m, new() { "Apple", "Banana", "Orange", "Berries" });
+                    meal.Dessert = DishFactory.CreateDessert("FruitSalad");
                     break;
                 case 10:
-                    meal.Dessert = new Tiramisu("Small", "400-600", 08.99m, new() { "Ladyfingers", "Coffee", "Egg yolks", "Mascarpone cheese", "Cocoa powder" });
+                    meal.Dessert = DishFactory.CreateDessert("Tiramisu");
                     break;
                 case 11:
-                    meal.Dessert = new Browny("Medium", "150-250", 07.99m, new() { "Sugar", "Butter", "Cocoa powder", "Eggs", "Flour", "Vanilla extract" });
+                    meal.Dessert = DishFactory.CreateDessert("Browny");
                     break;
                 case 12:
-                    meal.Dessert = new IceCream("Small", "200-250", 06.99m, new() { "Milk", "Sugar", "Cream", "Egg yolks", "Vanilla extract" });
+                    meal.Dessert = DishFactory.CreateDessert("IceCream");
                     break;
                 default:
                     break;
@@ -108,9 +107,6 @@ class Program
         meal.MainCourse?.Serve();
         meal.Dessert?.Serve();
     }
+
 }
-
-
-
-
 
