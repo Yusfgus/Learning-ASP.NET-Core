@@ -1,4 +1,4 @@
-namespace Design_Pattern.Strategy.Problem;
+namespace Design_Pattern.Strategy.Solution;
 public enum RoutePreference
 {
     Walking = 1,
