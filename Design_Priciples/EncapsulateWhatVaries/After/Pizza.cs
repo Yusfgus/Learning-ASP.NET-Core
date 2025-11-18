@@ -1,27 +1,29 @@
 using System;
 using System.Threading;
 
-namespace DesignPrinciples.EncapsulateWhatVaries.Before;
+namespace DesignPrinciples.EncapsulateWhatVaries.After;
 
 class Pizza
 {
     public virtual string Title => $"{nameof(Pizza)}";
     public virtual decimal Price => 10m;
 
-    public static Pizza Order(string type)
+    public static Pizza Create(PizzaType type)
     {
-        // changeable
-
         Pizza pizza;
-        if (type.Equals("cheese"))
+        if (type.Equals(PizzaType.Cheese))
             pizza = new CheesePizza();
-        else if (type.Equals("vegetarian"))
+        else if (type.Equals(PizzaType.Vegetarian))
             pizza = new VegetarianPizza();
         else
             pizza = new ChickenPizza();
+        
+        return pizza;
+    }
 
-
-        // constant
+    public static Pizza Order(PizzaType type)
+    {
+        Pizza pizza = Create(type);
 
         Prepare();
         Cook();

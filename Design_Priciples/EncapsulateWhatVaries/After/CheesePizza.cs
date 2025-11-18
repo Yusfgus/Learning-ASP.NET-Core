@@ -1,4 +1,4 @@
-namespace DesignPrinciples.EncapsulateWhatVaries.Before;
+namespace DesignPrinciples.EncapsulateWhatVaries.After;
 
 class CheesePizza : Pizza
 {
