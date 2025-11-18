@@ -1,4 +1,5 @@
 ﻿using System;
+using Shared;
 using System.Threading;
 
 namespace Design_Pattern.FavorCompositionOverInheritance.Before;
@@ -7,11 +8,13 @@ class Program
 {
     static void Main(string[] args)
     {
+        Utils.printTitle("Design Principles", 80, ConsoleColor.Red);
+        Utils.printTitle("Favor Composition Over Inheritance ( Before )", 70, ConsoleColor.Blue);
+
         int len = Enum.GetNames(typeof(PizzaType)).Length;
         int choice;
         while(true)
         {
-            Console.Clear();
             choice = ReadChoice();
             if (choice >= 1 && choice <= len)
             {
@@ -23,6 +26,10 @@ class Program
             else 
                 break;
         }
+
+        // Limitation
+        // can't make a chicken with cheese pizza :(
+        // unless we create class ChickenWithCheesePizza :<
     }
 
     private static int ReadChoice()
