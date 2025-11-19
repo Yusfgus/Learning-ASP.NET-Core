@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Design_Pattern.FavorCompositionOverInheritance.After;
+namespace Design_Principles.FavorCompositionOverInheritance.After;
 
 class Pizza
 {

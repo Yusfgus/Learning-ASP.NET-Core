@@ -1,7 +1,7 @@
 ﻿using System;
 using Shared;
 
-namespace Design_Pattern.LooseVsTightCoupling.Before;
+namespace Design_Principles.LooseVsTightCoupling.Before;
 
 class Program
 {

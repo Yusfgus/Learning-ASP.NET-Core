@@ -2,7 +2,7 @@
 using System.Threading;
 using Shared;
 
-namespace DesignPrinciples.EncapsulateWhatVaries.After;
+namespace Design_Principles.EncapsulateWhatVaries.After;
 
 class Program
 {

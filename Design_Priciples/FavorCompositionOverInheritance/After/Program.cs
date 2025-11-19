@@ -2,7 +2,7 @@
 using Shared;
 using System.Threading;
 
-namespace Design_Pattern.FavorCompositionOverInheritance.After;
+namespace Design_Principles.FavorCompositionOverInheritance.After;
 
 class Program
 {

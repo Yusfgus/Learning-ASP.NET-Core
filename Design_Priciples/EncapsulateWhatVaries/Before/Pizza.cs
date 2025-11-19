@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 
-namespace DesignPrinciples.EncapsulateWhatVaries.Before;
+namespace Design_Principles.EncapsulateWhatVaries.Before;
 
 class Pizza
 {

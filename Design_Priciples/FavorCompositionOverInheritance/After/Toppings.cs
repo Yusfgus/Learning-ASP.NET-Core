@@ -1,4 +1,4 @@
-namespace Design_Pattern.FavorCompositionOverInheritance.After;
+namespace Design_Principles.FavorCompositionOverInheritance.After;
 
 public class Tomato : ITopping
 {

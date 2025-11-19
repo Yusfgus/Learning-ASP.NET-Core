@@ -1,4 +1,4 @@
-namespace Design_Pattern.FavorCompositionOverInheritance.Before;
+namespace Design_Principles.FavorCompositionOverInheritance.Before;
 
 class Pizza
 {

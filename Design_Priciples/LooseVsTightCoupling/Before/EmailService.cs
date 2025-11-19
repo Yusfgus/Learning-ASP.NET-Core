@@ -1,6 +1,6 @@
 using System;
 
-namespace Design_Pattern.LooseVsTightCoupling.Before;
+namespace Design_Principles.LooseVsTightCoupling.Before;
 
 class EmailService
 {
