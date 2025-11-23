@@ -1,0 +1,10 @@
+
+
+GET https://localhost:7096/authors/uncle-bob?title=clean-code
+Content-type:: application/json
+x-API-Version: v1.5
+
+{
+    "sort": "asc",
+    "filter": "all"
+}
