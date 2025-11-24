@@ -1,0 +1,109 @@
+@baseURL = https://localhost:5161
+
+###########################################################
+### System Environment Variables
+###########################################################
+GET {{baseURL}}/SYS_ENV_VAR
+# Permanent (Windows):
+#     setx SYS_ENV_VAR "system environment variable"
+# Notes:
+#   - Good for Production
+#   - Requires restart of terminal/editor
+#   - Lower priority than project env vars & user secrets
+
+
+###########################################################
+### Project-Specific Environment Variables (launchSettings.json)
+###########################################################
+GET {{baseURL}}/PROJ_ENV_VAR
+# File:
+#   ./Properties/launchSettings.json
+# Notes:
+#   - Local development only
+#   - Applied when using Visual Studio or `dotnet run`
+#   - Overrides system-level env variables
+
+
+###########################################################
+### Command Line Configuration
+###########################################################
+GET {{baseURL}}/CMD_VAR
+# Usage:
+#   dotnet run --CMD_VAR=abcd12345
+# Notes:
+#   - Highest priority (overrides everything)
+#   - Temporary: applies only during this execution
+#   - Perfect for quick testing
+
+
+###########################################################
+### User Secrets (Development only)
+###########################################################
+GET {{baseURL}}/USERSECRETS_VAR
+# Commands:
+#   dotnet user-secrets init
+#   dotnet user-secrets set "USERSECRETS_VAR" "secret-value"
+# File:
+#   C:\Users\<User>\AppData\Roaming\Microsoft\UserSecrets\<Id>\secrets.json
+# Notes:
+#   - Stores sensitive values (API keys, DB passwords)
+#   - Only loaded when ASPNETCORE_ENVIRONMENT=Development
+#   - Higher priority than env vars, but lower than command-line
+
+
+###########################################################
+### File-Based Providers (JSON / INI / XML)
+###########################################################
+GET {{baseURL}}/General:AppHostProvider
+# Auto-loaded by default:
+#   appsettings.json
+#   appsettings.{Environment}.json
+#
+# Add more:
+#   builder.Configuration
+#       .AddJsonFile("custom.json", optional: true, reloadOnChange: true)
+#       .AddIniFile("extra.ini", optional: true)
+#       .AddXmlFile("legacy.xml", optional: true);
+#
+# Notes:
+#   - Supports reloadOnChange
+#   - Good for structured configuration
+#   - Overridden by env vars, secrets, and command-line
+
+
+###########################################################
+### In-Memory Provider
+###########################################################
+GET {{baseURL}}/INMEMORY_VAR
+# Example (Program.cs):
+#   var inMemory = new Dictionary<string, string?>
+#   {
+#       { "INMEMORY_VAR", "Hello from memory!" }
+#   };
+#   builder.Configuration.AddInMemoryCollection(inMemory);
+#
+# Notes:
+#   - Great for unit tests & dynamic configuration
+#   - Overrides: JSON files, but overridden by env vars & command-line
+#   - Useful when generating config at runtime
+
+
+###########################################################
+### Host Configuration Priority (Highest → Lowest)
+###########################################################
+# 1. ASPNETCORE_ prefixed environment variables
+# 2. Command-line arguments
+# 3. DOTNET_ prefixed environment variables
+
+
+###########################################################
+### Configuration Priority (Highest → Lowest)
+###########################################################
+# 1. In-Memory providers
+# 2. Command-line arguments
+# 3. Non-prefixed environment variables (launchSettings.json)
+# 4. User Secrets (Development)
+# 5. appsettings.{Environment}.json
+# 6. appsettings.json
+# 7. Additional config files (json / ini / xml)
+# 8. Host configuration fallback
