@@ -1,0 +1,29 @@
+@baseURL = https://localhost:7115
+
+
+### Get get-value-by-key IConfiguration["key"]
+GET {{baseURL}}/get-value-by-key
+
+
+### Get get-value-by-path IConfiguration["path"]
+GET {{baseURL}}/get-value-by-path
+
+
+### Get get-connection-string IConfiguration.GetConnectionString("name")
+GET {{baseURL}}/get-connection-string
+
+
+### Get get-single-value IConfiguration.GetValue<T>("key")
+GET {{baseURL}}/get-single-value
+
+
+### Get get-section IConfiguration.GetSection("name").Get<T>();
+GET {{baseURL}}/get-section
+
+
+### Get bind IConfiguration.GetSection("name").Bind(instance);
+GET {{baseURL}}/bind
+
+
+### Get get-value-by-key/key IConfiguration[key]
+GET {{baseURL}}/get-value-by-key/SYS_ENV_VAR
