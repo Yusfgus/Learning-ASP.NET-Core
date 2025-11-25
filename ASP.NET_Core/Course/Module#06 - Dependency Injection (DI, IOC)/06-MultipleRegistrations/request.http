@@ -1,0 +1,10 @@
+@baseUrl = https://localhost:7165
+
+### Get single
+GET {{baseUrl}}/single
+
+### Get multiple
+GET {{baseUrl}}/multiple
+
+### Get registered services count
+GET {{baseUrl}}/idependency-registrations
