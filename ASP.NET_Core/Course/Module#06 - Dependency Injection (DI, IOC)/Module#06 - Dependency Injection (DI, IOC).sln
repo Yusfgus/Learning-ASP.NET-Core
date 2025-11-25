@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-InversionOfControlPrinci
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-GroupingServices", "04-GroupingServices\04-GroupingServices.csproj", "{7B458D66-8C00-4B5C-A4AE-A6B851761364}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-ExtensionsVsDescriptors", "05-ExtensionsVsDescriptors\05-ExtensionsVsDescriptors.csproj", "{3886E8D5-C1CD-45F8-AAF4-1B77BD32EB17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{7B458D66-8C00-4B5C-A4AE-A6B851761364}.Release|x64.Build.0 = Release|Any CPU
 		{7B458D66-8C00-4B5C-A4AE-A6B851761364}.Release|x86.ActiveCfg = Release|Any CPU
 		{7B458D66-8C00-4B5C-A4AE-A6B851761364}.Release|x86.Build.0 = Release|Any CPU
+		{3886E8D5-C1CD-45F8-AAF4-1B77BD32EB17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3886E8D5-C1CD-45F8-AAF4-1B77BD32EB17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3886E8D5-C1CD-45F8-AAF4-1B77BD32EB17}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3886E8D5-C1CD-45F8-AAF4-1B77BD32EB17}.Debug|x64.Build.0 = Debug|Any CPU
+		{3886E8D5-C1CD-45F8-AAF4-1B77BD32EB17}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3886E8D5-C1CD-45F8-AAF4-1B77BD32EB17}.Debug|x86.Build.0 = Debug|Any CPU
+		{3886E8D5-C1CD-45F8-AAF4-1B77BD32EB17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3886E8D5-C1CD-45F8-AAF4-1B77BD32EB17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3886E8D5-C1CD-45F8-AAF4-1B77BD32EB17}.Release|x64.ActiveCfg = Release|Any CPU
+		{3886E8D5-C1CD-45F8-AAF4-1B77BD32EB17}.Release|x64.Build.0 = Release|Any CPU
+		{3886E8D5-C1CD-45F8-AAF4-1B77BD32EB17}.Release|x86.ActiveCfg = Release|Any CPU
+		{3886E8D5-C1CD-45F8-AAF4-1B77BD32EB17}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
