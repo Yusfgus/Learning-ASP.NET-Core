@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-DependencyHell", "01-Dep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-DependencyInversionPrinciple", "02-DependencyInversionPrinciple\02-DependencyInversionPrinciple.csproj", "{4778F96C-340A-43F5-A4C9-2B6F658C4F4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-InversionOfControlPrinciple", "03-InversionOfControlPrinciple\03-InversionOfControlPrinciple.csproj", "{59179EC9-F75D-47DC-AF01-8EEC2E174024}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{4778F96C-340A-43F5-A4C9-2B6F658C4F4C}.Release|x64.Build.0 = Release|Any CPU
 		{4778F96C-340A-43F5-A4C9-2B6F658C4F4C}.Release|x86.ActiveCfg = Release|Any CPU
 		{4778F96C-340A-43F5-A4C9-2B6F658C4F4C}.Release|x86.Build.0 = Release|Any CPU
+		{59179EC9-F75D-47DC-AF01-8EEC2E174024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59179EC9-F75D-47DC-AF01-8EEC2E174024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59179EC9-F75D-47DC-AF01-8EEC2E174024}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{59179EC9-F75D-47DC-AF01-8EEC2E174024}.Debug|x64.Build.0 = Debug|Any CPU
+		{59179EC9-F75D-47DC-AF01-8EEC2E174024}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{59179EC9-F75D-47DC-AF01-8EEC2E174024}.Debug|x86.Build.0 = Debug|Any CPU
+		{59179EC9-F75D-47DC-AF01-8EEC2E174024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59179EC9-F75D-47DC-AF01-8EEC2E174024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59179EC9-F75D-47DC-AF01-8EEC2E174024}.Release|x64.ActiveCfg = Release|Any CPU
+		{59179EC9-F75D-47DC-AF01-8EEC2E174024}.Release|x64.Build.0 = Release|Any CPU
+		{59179EC9-F75D-47DC-AF01-8EEC2E174024}.Release|x86.ActiveCfg = Release|Any CPU
+		{59179EC9-F75D-47DC-AF01-8EEC2E174024}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
