@@ -1,0 +1,7 @@
+@baseUrl = https://localhost:7165
+
+### Get v1
+GET {{baseUrl}}/v1
+
+### Get v2
+GET {{baseUrl}}/v2
