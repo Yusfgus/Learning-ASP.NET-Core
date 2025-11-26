@@ -1,0 +1,5 @@
+@baseUrl = https://localhost:7165
+
+### Get 
+GET {{baseUrl}}/check
+
