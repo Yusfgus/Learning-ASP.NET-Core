@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-CreateMiddleware", "01-C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-TerminalMiddleware", "02-TerminalMiddleware\02-TerminalMiddleware.csproj", "{D0EA1215-B88D-4610-9994-0C037470925F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-NeverCallNextAfterResponse", "03-NeverCallNextAfterResponse\03-NeverCallNextAfterResponse.csproj", "{460C27DE-82FF-4659-80F1-FAA9923470D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{D0EA1215-B88D-4610-9994-0C037470925F}.Release|x64.Build.0 = Release|Any CPU
 		{D0EA1215-B88D-4610-9994-0C037470925F}.Release|x86.ActiveCfg = Release|Any CPU
 		{D0EA1215-B88D-4610-9994-0C037470925F}.Release|x86.Build.0 = Release|Any CPU
+		{460C27DE-82FF-4659-80F1-FAA9923470D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{460C27DE-82FF-4659-80F1-FAA9923470D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{460C27DE-82FF-4659-80F1-FAA9923470D8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{460C27DE-82FF-4659-80F1-FAA9923470D8}.Debug|x64.Build.0 = Debug|Any CPU
+		{460C27DE-82FF-4659-80F1-FAA9923470D8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{460C27DE-82FF-4659-80F1-FAA9923470D8}.Debug|x86.Build.0 = Debug|Any CPU
+		{460C27DE-82FF-4659-80F1-FAA9923470D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{460C27DE-82FF-4659-80F1-FAA9923470D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{460C27DE-82FF-4659-80F1-FAA9923470D8}.Release|x64.ActiveCfg = Release|Any CPU
+		{460C27DE-82FF-4659-80F1-FAA9923470D8}.Release|x64.Build.0 = Release|Any CPU
+		{460C27DE-82FF-4659-80F1-FAA9923470D8}.Release|x86.ActiveCfg = Release|Any CPU
+		{460C27DE-82FF-4659-80F1-FAA9923470D8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
