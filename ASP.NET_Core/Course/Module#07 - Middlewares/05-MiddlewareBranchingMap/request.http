@@ -1,0 +1,10 @@
+@baseUrl = https://localhost:7267
+
+### Get 
+GET {{baseUrl}}/
+
+### Get branch 1
+GET {{baseUrl}}/branch1
+
+### Get branch 2
+GET {{baseUrl}}/branch2
