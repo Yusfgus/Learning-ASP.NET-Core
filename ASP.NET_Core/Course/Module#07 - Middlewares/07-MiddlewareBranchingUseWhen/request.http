@@ -1,0 +1,5 @@
+@baseUrl = https://localhost:7267
+
+### Get UseWhen
+GET {{baseUrl}}/branch1
+
