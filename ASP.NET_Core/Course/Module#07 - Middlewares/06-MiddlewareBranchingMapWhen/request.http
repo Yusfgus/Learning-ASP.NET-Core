@@ -1,0 +1,7 @@
+@baseUrl = https://localhost:7267
+
+### Get Map
+GET {{baseUrl}}/checkout
+
+### Get MapWhen
+GET {{baseUrl}}/checkout?mode=new

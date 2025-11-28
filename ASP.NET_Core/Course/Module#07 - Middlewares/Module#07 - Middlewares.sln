@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-MiddlewareChaining", "04
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-MiddlewareBranchingMap", "05-MiddlewareBranchingMap\05-MiddlewareBranchingMap.csproj", "{DAB7FEA2-8115-4342-9811-2332BE8B50E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-MiddlewareBranchingMapWhen", "06-MiddlewareBranchingMapWhen\06-MiddlewareBranchingMapWhen.csproj", "{1C7E9ED8-36E2-4946-9629-9E900C8E547A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{DAB7FEA2-8115-4342-9811-2332BE8B50E0}.Release|x64.Build.0 = Release|Any CPU
 		{DAB7FEA2-8115-4342-9811-2332BE8B50E0}.Release|x86.ActiveCfg = Release|Any CPU
 		{DAB7FEA2-8115-4342-9811-2332BE8B50E0}.Release|x86.Build.0 = Release|Any CPU
+		{1C7E9ED8-36E2-4946-9629-9E900C8E547A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C7E9ED8-36E2-4946-9629-9E900C8E547A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C7E9ED8-36E2-4946-9629-9E900C8E547A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1C7E9ED8-36E2-4946-9629-9E900C8E547A}.Debug|x64.Build.0 = Debug|Any CPU
+		{1C7E9ED8-36E2-4946-9629-9E900C8E547A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1C7E9ED8-36E2-4946-9629-9E900C8E547A}.Debug|x86.Build.0 = Debug|Any CPU
+		{1C7E9ED8-36E2-4946-9629-9E900C8E547A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C7E9ED8-36E2-4946-9629-9E900C8E547A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C7E9ED8-36E2-4946-9629-9E900C8E547A}.Release|x64.ActiveCfg = Release|Any CPU
+		{1C7E9ED8-36E2-4946-9629-9E900C8E547A}.Release|x64.Build.0 = Release|Any CPU
+		{1C7E9ED8-36E2-4946-9629-9E900C8E547A}.Release|x86.ActiveCfg = Release|Any CPU
+		{1C7E9ED8-36E2-4946-9629-9E900C8E547A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

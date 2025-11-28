@@ -9,7 +9,7 @@ var app = builder.Build();
 
 app.Map("/branch1", GetBranch1);
 
-app.Map("/branch2", b2 => 
+app.Map("/branch2", (IApplicationBuilder b2) => 
 {
     GetCommonBranch(b2);
     GetBranch2(b2);
