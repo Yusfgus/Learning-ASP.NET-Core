@@ -1,0 +1,15 @@
+
+@baseUrl = https://localhost:7012
+
+
+### Get book
+GET {{baseUrl}}/book/Clean Code A Handbook of Agile Software Craftsmanship
+
+
+### Get book
+GET {{baseUrl}}/book/clean-code-a-handbook-of-agile-software-craftsmanship
+
+
+### Get generate
+GET {{baseUrl}}/generate
+
