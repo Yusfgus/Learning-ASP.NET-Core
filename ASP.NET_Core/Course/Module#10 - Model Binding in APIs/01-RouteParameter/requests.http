@@ -1,0 +1,48 @@
+@baseUrl = https://localhost:7179
+
+//=================================================
+//=========== Minimal API =========================
+//=================================================
+
+### Implicit Binding
+GET {{baseUrl}}/product-minimal-1/42
+
+### Query with same name as Parameter
+GET {{baseUrl}}/product-minimal-1/42?id=20
+
+//=================================================
+
+### Explicit Binding
+GET {{baseUrl}}/product-minimal-2/30
+
+### Query with same name as Parameter
+GET {{baseUrl}}/product-minimal-2/30?id=20
+
+//=================================================
+
+### Query with same name as Parameter [FromQuery]
+GET {{baseUrl}}/product-minimal-3/10?id=20
+
+
+//=================================================
+//=========== Controllers =========================
+//=================================================
+
+### Implicit Binding
+GET {{baseUrl}}/product-controller-1/42
+
+### Query with same name as Parameter
+GET {{baseUrl}}/product-controller-1/42?id=20
+
+//=================================================
+
+### Explicit Binding
+GET {{baseUrl}}/product-controller-2/30
+
+### Query with same name as Parameter
+GET {{baseUrl}}/product-controller-2/30?id=20
+
+//=================================================
+
+### Query with same name as Parameter [FromQuery]
+GET {{baseUrl}}/product-controller-3/10?id=20
