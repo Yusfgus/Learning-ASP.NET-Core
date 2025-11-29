@@ -1,0 +1,7 @@
+
+@baseUrl = https://localhost:7012
+
+
+### Get order
+GET {{baseUrl}}/order/100
+
