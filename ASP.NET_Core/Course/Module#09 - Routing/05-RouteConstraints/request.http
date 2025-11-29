@@ -1,0 +1,107 @@
+
+@baseUrl = https://localhost:7012
+
+
+### integer constraint
+GET {{baseUrl}}/int/123
+
+### integer constraint
+GET {{baseUrl}}/int/string
+
+//=====================================================
+
+### boolean constraint
+GET {{baseUrl}}/bool/true
+
+### boolean constraint
+GET {{baseUrl}}/bool/string
+
+//=====================================================
+
+### datetime constraint
+GET {{baseUrl}}/datetime/2025-11-29
+
+### datetime constraint
+GET {{baseUrl}}/datetime/2025-11-29 4:45:30 PM
+
+//=====================================================
+
+### decimal constraint
+GET {{baseUrl}}/decimal/20.5
+
+//=====================================================
+
+### double constraint
+GET {{baseUrl}}/double/20.5
+
+//=====================================================
+
+### float constraint
+GET {{baseUrl}}/float/20.5
+
+//=====================================================
+
+### Guid constraint
+GET {{baseUrl}}/guid/CD2C1638-1638-72D5-1638-DEADBEEF1638
+
+//=====================================================
+
+### long constraint
+GET {{baseUrl}}/long/123456
+
+//=====================================================
+
+### minlength constraints 
+GET {{baseUrl}}/minlength/Rick
+
+//=====================================================
+
+### maxlength constraints
+GET {{baseUrl}}/maxlength/MyFile
+
+//=====================================================
+
+### length constraints
+GET {{baseUrl}}/length/somefile.txt
+
+//=====================================================
+
+### lengthrange constraints
+GET {{baseUrl}}/lengthrange/somefile.txt
+
+//=====================================================
+
+### min constraints
+GET {{baseUrl}}/min/19
+
+//=====================================================
+
+### max constraints
+GET {{baseUrl}}/max/91
+
+//=====================================================
+
+### range constraints
+GET {{baseUrl}}/range/110
+
+//=====================================================
+
+### alpha constraints
+GET {{baseUrl}}/alpha/Rick
+
+//=====================================================
+
+### regex constraints
+GET {{baseUrl}}/regex/123-45-6789
+
+//=====================================================
+
+### required constraints
+GET {{baseUrl}}/required/Rick
+
+//=====================================================
+
+### custom constraints
+GET {{baseUrl}}/sales/month/11
+
+//=====================================================
