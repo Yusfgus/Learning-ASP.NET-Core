@@ -1,0 +1,7 @@
+
+@baseUrl = https://localhost:7012
+
+
+### Get Minimal Api
+GET {{baseUrl}}/products
+
