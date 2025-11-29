@@ -1,0 +1,36 @@
+
+@baseUrl = https://localhost:7012
+
+
+### Get 
+GET {{baseUrl}}/product/14
+
+###
+{{baseUrl}}/date/2025-12-3
+
+### default parameter
+GET {{baseUrl}}
+
+### default parameter
+GET {{baseUrl}}/products
+
+### optional rout parameter
+GET {{baseUrl}}/users
+
+### optional rout parameter
+GET {{baseUrl}}/users/42
+
+### complex rout segment
+GET {{baseUrl}}/abxcd 
+
+### complex rout segment
+GET {{baseUrl}}/aabxcd 
+
+### single catch all
+GET {{baseUrl}}/single/my/path/test/wire
+
+### single catch all
+GET {{baseUrl}}/single/my%2Fpath
+
+### double catch all
+GET {{baseUrl}}/double/my%2Fpath

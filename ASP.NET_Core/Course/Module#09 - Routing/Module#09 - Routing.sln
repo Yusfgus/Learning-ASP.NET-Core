@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-RequestMatchAndExecute",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-UseRoutingOrder", "03-UseRoutingOrder\03-UseRoutingOrder.csproj", "{F16F4CC4-206D-493A-A007-66EED7156B1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-RouteTemplates", "04-RouteTemplates\04-RouteTemplates.csproj", "{906634CF-AF1F-4395-BE97-5D36438E33E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{F16F4CC4-206D-493A-A007-66EED7156B1F}.Release|x64.Build.0 = Release|Any CPU
 		{F16F4CC4-206D-493A-A007-66EED7156B1F}.Release|x86.ActiveCfg = Release|Any CPU
 		{F16F4CC4-206D-493A-A007-66EED7156B1F}.Release|x86.Build.0 = Release|Any CPU
+		{906634CF-AF1F-4395-BE97-5D36438E33E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{906634CF-AF1F-4395-BE97-5D36438E33E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{906634CF-AF1F-4395-BE97-5D36438E33E9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{906634CF-AF1F-4395-BE97-5D36438E33E9}.Debug|x64.Build.0 = Debug|Any CPU
+		{906634CF-AF1F-4395-BE97-5D36438E33E9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{906634CF-AF1F-4395-BE97-5D36438E33E9}.Debug|x86.Build.0 = Debug|Any CPU
+		{906634CF-AF1F-4395-BE97-5D36438E33E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{906634CF-AF1F-4395-BE97-5D36438E33E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{906634CF-AF1F-4395-BE97-5D36438E33E9}.Release|x64.ActiveCfg = Release|Any CPU
+		{906634CF-AF1F-4395-BE97-5D36438E33E9}.Release|x64.Build.0 = Release|Any CPU
+		{906634CF-AF1F-4395-BE97-5D36438E33E9}.Release|x86.ActiveCfg = Release|Any CPU
+		{906634CF-AF1F-4395-BE97-5D36438E33E9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
