@@ -1,0 +1,22 @@
+@baseUrl = https://localhost:7179
+
+//=================================================
+//=========== Minimal API =========================
+//=================================================
+
+### 
+GET {{baseUrl}}/product-minimal
+Content-Type: application/x-www-form-urlencoded
+
+name=soda&price=2.99
+
+
+//=================================================
+//=========== Controllers =========================
+//=================================================
+
+### 
+GET {{baseUrl}}/product-controller
+Content-Type: application/x-www-form-urlencoded
+
+name=manga&price=4.34
