@@ -1,0 +1,41 @@
+@baseUrl = https://localhost:7179
+
+//=================================================
+//=========== Minimal API =========================
+//=================================================
+
+### Implicit Binding
+GET {{baseUrl}}/product-minimal-1?page=5&pageSize=10
+
+### Explicit Binding
+GET {{baseUrl}}/product-minimal-2?page=7&pageSize=12
+
+### AsParameters
+GET {{baseUrl}}/product-minimal-3?Query=soda&page=7&pageSize=12
+
+### Array
+GET {{baseUrl}}/product-minimal-4?ids=1&ids=2&ids=3&ids=4&ids=5
+
+### Custom Parsing
+GET {{baseUrl}}/product-minimal-5?dateRange=2025-1-1,2025-12-31
+
+
+//=================================================
+//=========== Controllers =========================
+//=================================================
+
+### Implicit Binding
+GET {{baseUrl}}/product-controller-1?page=5&pageSize=10
+
+### Explicit Binding
+GET {{baseUrl}}/product-controller-2?page=7&pageSize=12
+
+### FromQuery ( no need for AsParameters )
+GET {{baseUrl}}/product-controller-3?Query=soda&page=7&pageSize=12
+
+### Array
+GET {{baseUrl}}/product-controller-4?ids=1&ids=2&ids=3&ids=4&ids=5
+
+### Custom Parsing
+GET {{baseUrl}}/product-controller-5?dateRange=2020-1-15,2025-10-22
+
