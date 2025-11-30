@@ -1,0 +1,33 @@
+@baseUrl = https://localhost:7179
+
+//=================================================
+//=========== Minimal API =========================
+//=================================================
+
+###
+POST {{baseUrl}}/upload-minimal
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="file"; filename="invoice.png"
+Content-Type: image/png
+
+< "D:\Materials\Work\New folder\invoice.png"
+--MyBoundary--
+
+
+//=================================================
+//=========== Controllers =========================
+//=================================================
+
+###
+POST {{baseUrl}}/upload-controller
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="file"; filename="invoice.png"
+Content-Type: image/png
+
+< "D:\Materials\Work\New folder\invoice.png"
+--MyBoundary--
+
