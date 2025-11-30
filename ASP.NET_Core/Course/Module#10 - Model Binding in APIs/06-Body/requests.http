@@ -1,0 +1,50 @@
+@baseUrl = https://localhost:7179
+
+//=================================================
+//=========== Minimal API =========================
+//=================================================
+
+###
+POST {{baseUrl}}/product-minimal
+Content-Type: application/json
+
+{
+    "name": "Soda",
+    "price": 2.99
+}
+
+
+//=================================================
+//=========== Controllers =========================
+//=================================================
+
+###
+POST {{baseUrl}}/product-controller
+Content-Type: application/json
+
+{
+    "name": "Manga",
+    "price": 3.55
+}
+
+
+### XML -> Json
+POST {{baseUrl}}/product-controller
+Content-Type: application/xml
+
+<ProductRequest>
+    <Name>Manga</Name>
+    <Price>3.55</Price>
+</ProductRequest>
+
+
+### XML -> XML
+POST {{baseUrl}}/product-controller
+Content-Type: application/xml
+Accept: application/xml
+
+<ProductRequest>
+    <Name>Manga</Name>
+    <Price>3.55</Price>
+</ProductRequest>
+

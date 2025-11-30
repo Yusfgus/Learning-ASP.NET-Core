@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-Froms", "04-Froms\04-Fro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-Files", "05-Files\05-Files.csproj", "{8FBD196F-E01A-40CD-863D-DE333FD84195}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-Body", "06-Body\06-Body.csproj", "{185DE1C9-5C19-497B-B18E-0B651597E950}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{8FBD196F-E01A-40CD-863D-DE333FD84195}.Release|x64.Build.0 = Release|Any CPU
 		{8FBD196F-E01A-40CD-863D-DE333FD84195}.Release|x86.ActiveCfg = Release|Any CPU
 		{8FBD196F-E01A-40CD-863D-DE333FD84195}.Release|x86.Build.0 = Release|Any CPU
+		{185DE1C9-5C19-497B-B18E-0B651597E950}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{185DE1C9-5C19-497B-B18E-0B651597E950}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{185DE1C9-5C19-497B-B18E-0B651597E950}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{185DE1C9-5C19-497B-B18E-0B651597E950}.Debug|x64.Build.0 = Debug|Any CPU
+		{185DE1C9-5C19-497B-B18E-0B651597E950}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{185DE1C9-5C19-497B-B18E-0B651597E950}.Debug|x86.Build.0 = Debug|Any CPU
+		{185DE1C9-5C19-497B-B18E-0B651597E950}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{185DE1C9-5C19-497B-B18E-0B651597E950}.Release|Any CPU.Build.0 = Release|Any CPU
+		{185DE1C9-5C19-497B-B18E-0B651597E950}.Release|x64.ActiveCfg = Release|Any CPU
+		{185DE1C9-5C19-497B-B18E-0B651597E950}.Release|x64.Build.0 = Release|Any CPU
+		{185DE1C9-5C19-497B-B18E-0B651597E950}.Release|x86.ActiveCfg = Release|Any CPU
+		{185DE1C9-5C19-497B-B18E-0B651597E950}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
