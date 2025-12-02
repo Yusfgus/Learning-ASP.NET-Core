@@ -12,7 +12,7 @@ public class ProductResponse
 
     private ProductResponse() { } 
 
-    public static ProductResponse FromModel(Product product, IEnumerable<ProductReview>? reviews = null)
+    public static ProductResponse FromModel(Product? product, IEnumerable<ProductReview>? reviews = null)
     {
         if (product == null)
             throw new ArgumentNullException(nameof(product), "Cannot create a response from a null product");
@@ -31,7 +31,7 @@ public class ProductResponse
         return response;
     }
 
-    public static IEnumerable<ProductResponse> FromModels(IEnumerable<Product> products)
+    public static IEnumerable<ProductResponse> FromModels(IEnumerable<Product>? products)
     {
         if (products == null)
             throw new ArgumentNullException(nameof(products), "Cannot create responses from a null collection");
