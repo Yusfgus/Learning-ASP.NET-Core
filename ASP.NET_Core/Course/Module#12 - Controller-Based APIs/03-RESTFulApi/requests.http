@@ -1,7 +1,10 @@
 @baseUrl = https://localhost:7286
 
+@productId = 2779ee47-10b0-4bd7-8342-404006aa1392
 
 ###
 OPTIONS {{baseUrl}}/api/products
 
+###
+HEAD {{baseUrl}}/api/products/{{productId}}
 
