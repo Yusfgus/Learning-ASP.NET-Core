@@ -1,0 +1,17 @@
+@baseUrl = https://localhost:7286
+@productId = 2779ee47-10b0-4bd7-8342-404006aa1392
+
+
+### Json (default)
+GET {{baseUrl}}/api/products/{{productId}}
+
+
+### XML
+GET {{baseUrl}}/api/products/{{productId}}
+Accept: application/xml
+
+
+### Custom formate (text/primitives-table)
+GET {{baseUrl}}/api/products/products-table
+Accept: text/primitives-table
+
