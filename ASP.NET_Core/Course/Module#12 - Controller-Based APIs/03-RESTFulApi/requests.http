@@ -4,9 +4,11 @@
 
 ###
 OPTIONS {{baseUrl}}/api/products
+//================================================================
 
 ###
 HEAD {{baseUrl}}/api/products/{{productId}}
+//================================================================
 
 ### Get Product with id
 GET {{baseUrl}}/api/products/{{productId}}
@@ -16,4 +18,15 @@ GET {{baseUrl}}/api/products/{{productId}}?includeReviews=true
 
 ### Get Paged Products
 GET {{baseUrl}}/api/products?page=1&pagesize=3
+//================================================================
+
+###
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+    "name": "Manga",
+    "price": 30.5
+}
+//================================================================
 

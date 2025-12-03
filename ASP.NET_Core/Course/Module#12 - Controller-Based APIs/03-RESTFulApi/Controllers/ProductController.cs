@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using RESTFulApi.Data;
 using RESTFulApi.Models;
+using RESTFulApi.Requests;
 using RESTFulApi.Responses;
 
 namespace RESTFulApi.Controllers;
@@ -27,7 +28,7 @@ public class ProductController(ProductRepository repository) : ControllerBase
     }
 
 
-    [HttpGet("{productId:guid}")]
+    [HttpGet("{productId:guid}", Name = "GetProductById")]
     public ActionResult<ProductResponse> GetProductById(Guid productId, bool includeReviews = false)
     {
         Product? product = repository.GetProductById(productId);
@@ -41,6 +42,7 @@ public class ProductController(ProductRepository repository) : ControllerBase
 
         return ProductResponse.FromModel(product, reviews);
     }
+
 
     [HttpGet]
     public IActionResult GetPaged(int page = 1, int pageSize = 10)
@@ -59,6 +61,28 @@ public class ProductController(ProductRepository repository) : ControllerBase
                                                 );
 
         return Ok(pageResult);
+    }
+
+
+    [HttpPost]
+    public IActionResult CreateProduct(CreateProductRequest request)
+    {
+        if (repository.ExistsByName(request.Name))
+            return Conflict($"A product with the same name '{request.Name}' already exists.");
+
+        Product product = new Product
+        {
+            Name = request.Name,
+            Price = request.Price,
+            Id = Guid.NewGuid()
+        };
+
+        repository.AddProduct(product);
+
+        return CreatedAtRoute(routeName: "GetProductById",
+                            routeValues: new { productId = product.Id},
+                            value: ProductResponse.FromModel(product)
+                        );
     }
 
 }
