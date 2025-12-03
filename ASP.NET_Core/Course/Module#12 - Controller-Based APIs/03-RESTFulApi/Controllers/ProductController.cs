@@ -1,4 +1,5 @@
 
+using System.Text;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using RESTFulApi.Data;
@@ -21,6 +22,7 @@ public class ProductController(ProductRepository repository) : ControllerBase
         return NoContent();
     }
 
+    //======================================================================================================
 
     [HttpHead("{productId:guid}")]
     public IActionResult HeadProducts(Guid productId)
@@ -28,6 +30,7 @@ public class ProductController(ProductRepository repository) : ControllerBase
         return repository.ExistsById(productId)? Ok() : NotFound();
     }
 
+    //======================================================================================================
 
     [HttpGet("{productId:guid}", Name = "GetProductById")]
     public ActionResult<ProductResponse> GetProductById(Guid productId, bool includeReviews = false)
@@ -64,6 +67,7 @@ public class ProductController(ProductRepository repository) : ControllerBase
         return Ok(pageResult);
     }
 
+    //======================================================================================================
 
     [HttpPost]
     public IActionResult CreateProduct(CreateProductRequest request)
@@ -86,6 +90,7 @@ public class ProductController(ProductRepository repository) : ControllerBase
                         );
     }
 
+    //======================================================================================================
 
     [HttpPut("{productId:guid}")]
     public IActionResult UpdateProduct(Guid productId, UpdateProductRequest request)
@@ -105,6 +110,7 @@ public class ProductController(ProductRepository repository) : ControllerBase
         return NoContent();
     }
 
+    //======================================================================================================
 
     [HttpPatch("{productId:guid}")]
     public IActionResult Patch(Guid productId, JsonPatchDocument<UpdateProductRequest>? patchDoc)
@@ -134,6 +140,7 @@ public class ProductController(ProductRepository repository) : ControllerBase
         return NoContent();
     }
 
+    //======================================================================================================
 
     [HttpDelete("{productId:guid}")]
     public IActionResult DeleteProduct(Guid productId)
@@ -147,6 +154,7 @@ public class ProductController(ProductRepository repository) : ControllerBase
         return NoContent();
     }
 
+    //======================================================================================================
 
     [HttpPost("process")]
     public IActionResult ProcessAsync()
@@ -168,4 +176,33 @@ public class ProductController(ProductRepository repository) : ControllerBase
         return Ok(new { jobId, status = isStillProcessing ? "Processing" : "Completed" });
     }
 
+    //======================================================================================================
+
+    
+    [HttpGet("csv")]
+    public IActionResult GetProductsCSV()
+    {
+        var products = repository.GetProductsPage(1, 100);
+
+        var csvBuilder = new StringBuilder();
+        csvBuilder.AppendLine("Id,Name,Price");
+
+        foreach (var p in products)
+        {
+            csvBuilder.AppendLine($"{p.Id},{p.Name},{p.Price}");
+        }
+
+        var fileBytes = Encoding.UTF8.GetBytes(csvBuilder.ToString());
+
+        return File(fileBytes, "text/csv", "product-catalog_1_100.csv");
+    }
+
+    
+    [HttpGet("physical-csv")]
+    public IActionResult GetPhysicalFile()
+    {
+        string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Files", "product-catalog_1_100.csv");
+
+        return PhysicalFile(filePath, "text/csv", "products-export.csv");
+    }
 }
