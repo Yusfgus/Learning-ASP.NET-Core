@@ -40,3 +40,16 @@ Content-Type: application/json
 }
 //================================================================
 
+###
+PATCH  {{baseUrl}}/api/products/{{productId}}
+Content-Type: application/json-patch+json
+
+[
+    {
+        "op": "replace",
+        "path": "/price",
+        "value": 2.99
+    }
+]
+//================================================================
+

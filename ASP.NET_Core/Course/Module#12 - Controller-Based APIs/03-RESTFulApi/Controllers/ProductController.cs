@@ -1,4 +1,5 @@
 
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using RESTFulApi.Data;
 using RESTFulApi.Models;
@@ -97,6 +98,35 @@ public class ProductController(ProductRepository repository) : ControllerBase
             Name = request.Name,
             Price = request.Price ?? 0
         };
+
+        if(!repository.UpdateProduct(product))
+            return StatusCode(500, "Failed to update product");
+
+        return NoContent();
+    }
+
+
+    [HttpPatch("{productId:guid}")]
+    public IActionResult Patch(Guid productId, JsonPatchDocument<UpdateProductRequest>? patchDoc)
+    {
+        if(patchDoc is null)
+            return BadRequest("Invalid patch document");
+
+        Product? product = repository.GetProductById(productId);
+
+        if(product is null)
+            return NotFound($"No product with Id '{productId}' was found");
+
+        UpdateProductRequest updateProduct = new UpdateProductRequest
+        {
+            Name = product.Name,
+            Price = product.Price
+        };
+
+        patchDoc.ApplyTo(updateProduct);
+
+        product.Name = updateProduct.Name;
+        product.Price = updateProduct.Price ?? 0;
 
         if(!repository.UpdateProduct(product))
             return StatusCode(500, "Failed to update product");
