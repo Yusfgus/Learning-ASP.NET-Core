@@ -57,3 +57,12 @@ Content-Type: application/json-patch+json
 DELETE {{baseUrl}}/api/products/{{productId}}
 //================================================================
 
+### Accepted
+POST  {{baseUrl}}/api/products/process
+
+@JobId = efdaa0de-2ade-41fd-a537-d13ec8849373
+
+### 
+GET  {{baseUrl}}/api/products/status/{{JobId}}
+//================================================================
+

@@ -147,4 +147,25 @@ public class ProductController(ProductRepository repository) : ControllerBase
         return NoContent();
     }
 
+
+    [HttpPost("process")]
+    public IActionResult ProcessAsync()
+    {
+        var jobId = Guid.NewGuid();
+
+        return Accepted(
+            $"/api/products/status/{jobId}",
+            new { jobId, status = "Processing" }
+        );
+    }
+    
+
+    [HttpGet("status/{jobId}")]
+    public IActionResult GetProcessingStatus(Guid jobId)
+    {
+        bool isStillProcessing = new Random().Next(0, 1) == 1; // fake it
+
+        return Ok(new { jobId, status = isStillProcessing ? "Processing" : "Completed" });
+    }
+
 }
