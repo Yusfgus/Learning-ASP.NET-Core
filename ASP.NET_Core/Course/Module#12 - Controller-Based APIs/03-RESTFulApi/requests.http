@@ -73,3 +73,8 @@ GET  {{baseUrl}}/api/products/csv
 GET  {{baseUrl}}/api/products/physical-csv
 //================================================================
 
+### Temporary Redirect
+GET {{baseUrl}}/api/products/products-legacy
+
+### Permanent Redirect
+GET {{baseUrl}}/api/products/legacy-products

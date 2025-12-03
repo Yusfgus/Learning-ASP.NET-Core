@@ -177,7 +177,6 @@ public class ProductController(ProductRepository repository) : ControllerBase
     }
 
     //======================================================================================================
-
     
     [HttpGet("csv")]
     public IActionResult GetProductsCSV()
@@ -197,12 +196,42 @@ public class ProductController(ProductRepository repository) : ControllerBase
         return File(fileBytes, "text/csv", "product-catalog_1_100.csv");
     }
 
-    
+
     [HttpGet("physical-csv")]
     public IActionResult GetPhysicalFile()
     {
         string filePath = Path.Combine(Directory.GetCurrentDirectory(), "Files", "product-catalog_1_100.csv");
 
         return PhysicalFile(filePath, "text/csv", "products-export.csv");
+    }
+
+    //======================================================================================================
+    
+    [HttpGet("products-legacy")]
+    public IActionResult GetRedirect()
+    {
+        return Redirect("/api/products/temp-products");
+    }
+
+
+    [HttpGet("temp-products")]
+    public IActionResult TempProducts()
+    {
+        return Ok(new { message = "You're in the temp endpoint. Chill." });
+    }
+
+    //---------------------------------------------------
+
+    [HttpGet("legacy-products")]
+    public IActionResult GetPermanentRedirect()
+    {
+        return RedirectPermanent("/api/products/product-catalog");
+    }
+
+
+    [HttpGet("product-catalog")]
+    public IActionResult Catalog()
+    {
+        return Ok(new { message = "This is the permanent new location." });
     }
 }
