@@ -85,4 +85,23 @@ public class ProductController(ProductRepository repository) : ControllerBase
                         );
     }
 
+
+    [HttpPut("{productId:guid}")]
+    public IActionResult UpdateProduct(Guid productId, UpdateProductRequest request)
+    {
+        if(!repository.ExistsById(productId))
+            return NotFound($"No product with Id '{productId}' was found");
+
+        Product product = new Product
+        {
+            Name = request.Name,
+            Price = request.Price ?? 0
+        };
+
+        if(!repository.UpdateProduct(product))
+            return StatusCode(500, "Failed to update product");
+
+        return NoContent();
+    }
+
 }
