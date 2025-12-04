@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-HttpVerbMethods", "01-HttpVerbMethods\01-HttpVerbMethods.csproj", "{5A565BC0-9F84-49D0-B4FD-7D3352F015E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-EndpointAnatomy", "02-EndpointAnatomy\02-EndpointAnatomy.csproj", "{10CDFB27-A6CC-4194-A400-19E2C2AD0CAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,18 @@ Global
 		{5A565BC0-9F84-49D0-B4FD-7D3352F015E5}.Release|x64.Build.0 = Release|Any CPU
 		{5A565BC0-9F84-49D0-B4FD-7D3352F015E5}.Release|x86.ActiveCfg = Release|Any CPU
 		{5A565BC0-9F84-49D0-B4FD-7D3352F015E5}.Release|x86.Build.0 = Release|Any CPU
+		{10CDFB27-A6CC-4194-A400-19E2C2AD0CAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10CDFB27-A6CC-4194-A400-19E2C2AD0CAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10CDFB27-A6CC-4194-A400-19E2C2AD0CAE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{10CDFB27-A6CC-4194-A400-19E2C2AD0CAE}.Debug|x64.Build.0 = Debug|Any CPU
+		{10CDFB27-A6CC-4194-A400-19E2C2AD0CAE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{10CDFB27-A6CC-4194-A400-19E2C2AD0CAE}.Debug|x86.Build.0 = Debug|Any CPU
+		{10CDFB27-A6CC-4194-A400-19E2C2AD0CAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10CDFB27-A6CC-4194-A400-19E2C2AD0CAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10CDFB27-A6CC-4194-A400-19E2C2AD0CAE}.Release|x64.ActiveCfg = Release|Any CPU
+		{10CDFB27-A6CC-4194-A400-19E2C2AD0CAE}.Release|x64.Build.0 = Release|Any CPU
+		{10CDFB27-A6CC-4194-A400-19E2C2AD0CAE}.Release|x86.ActiveCfg = Release|Any CPU
+		{10CDFB27-A6CC-4194-A400-19E2C2AD0CAE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
