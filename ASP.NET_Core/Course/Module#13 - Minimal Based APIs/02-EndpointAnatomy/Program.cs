@@ -24,7 +24,7 @@ app.MapGet("api/products/{id:guid}", (Guid id, ProductRepository repository) =>
 {
     Product? product = repository.GetProductById(id);
     return product is null 
-            ? Results.Ok(new List<ProductResponse>()) 
+            ? Results.NotFound()
             : Results.Ok(ProductResponse.FromModel(product, repository.GetProductReviews(id)));
 });
 
