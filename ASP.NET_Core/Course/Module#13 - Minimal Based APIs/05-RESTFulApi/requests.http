@@ -1,0 +1,80 @@
+@baseUrl = https://localhost:7286
+
+@productId = 2779ee47-10b0-4bd7-8342-404006aa1392
+
+###
+OPTIONS {{baseUrl}}/api/products
+//================================================================
+
+###
+HEAD {{baseUrl}}/api/products/{{productId}}
+//================================================================
+
+### Get Product with id
+GET {{baseUrl}}/api/products/{{productId}}
+
+### Get Product with id and its Reviews
+GET {{baseUrl}}/api/products/{{productId}}?includeReviews=true
+
+### Get Paged Products
+GET {{baseUrl}}/api/products?page=1&pagesize=3
+//================================================================
+
+###
+POST {{baseUrl}}/api/products
+Content-Type: application/json
+
+{
+    "name": "Manga",
+    "price": 30.5
+}
+//================================================================
+
+###
+PUT {{baseUrl}}/api/products/{{productId}}
+Content-Type: application/json
+
+{
+    "name": "Manga",
+    "price": 30.5
+}
+//================================================================
+
+###
+PATCH  {{baseUrl}}/api/products/{{productId}}
+Content-Type: application/json-patch+json
+
+[
+    {
+        "op": "replace",
+        "path": "/price",
+        "value": 2.99
+    }
+]
+//================================================================
+
+###
+DELETE {{baseUrl}}/api/products/{{productId}}
+//================================================================
+
+### Accepted
+POST  {{baseUrl}}/api/products/process
+
+@JobId = efdaa0de-2ade-41fd-a537-d13ec8849373
+
+### 
+GET  {{baseUrl}}/api/products/status/{{JobId}}
+//================================================================
+
+### In-Memory CSV File
+GET  {{baseUrl}}/api/products/csv
+
+### Physical CSV File
+GET  {{baseUrl}}/api/products/physical-csv
+//================================================================
+
+### Temporary Redirect
+GET {{baseUrl}}/api/products/products-legacy
+
+### Permanent Redirect
+GET {{baseUrl}}/api/products/legacy-products
