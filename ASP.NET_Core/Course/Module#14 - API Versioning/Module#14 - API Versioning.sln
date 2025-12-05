@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-URLPathMinimal", "05-URL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-QueryStringMinimal", "06-QueryStringMinimal\06-QueryStringMinimal.csproj", "{A2C13481-E506-4099-83C0-A299E9BF2FA4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-HeaderMinimal", "07-HeaderMinimal\07-HeaderMinimal.csproj", "{A73EE41F-62DC-4645-BF78-9E20F682C630}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,18 @@ Global
 		{A2C13481-E506-4099-83C0-A299E9BF2FA4}.Release|x64.Build.0 = Release|Any CPU
 		{A2C13481-E506-4099-83C0-A299E9BF2FA4}.Release|x86.ActiveCfg = Release|Any CPU
 		{A2C13481-E506-4099-83C0-A299E9BF2FA4}.Release|x86.Build.0 = Release|Any CPU
+		{A73EE41F-62DC-4645-BF78-9E20F682C630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A73EE41F-62DC-4645-BF78-9E20F682C630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A73EE41F-62DC-4645-BF78-9E20F682C630}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A73EE41F-62DC-4645-BF78-9E20F682C630}.Debug|x64.Build.0 = Debug|Any CPU
+		{A73EE41F-62DC-4645-BF78-9E20F682C630}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A73EE41F-62DC-4645-BF78-9E20F682C630}.Debug|x86.Build.0 = Debug|Any CPU
+		{A73EE41F-62DC-4645-BF78-9E20F682C630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A73EE41F-62DC-4645-BF78-9E20F682C630}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A73EE41F-62DC-4645-BF78-9E20F682C630}.Release|x64.ActiveCfg = Release|Any CPU
+		{A73EE41F-62DC-4645-BF78-9E20F682C630}.Release|x64.Build.0 = Release|Any CPU
+		{A73EE41F-62DC-4645-BF78-9E20F682C630}.Release|x86.ActiveCfg = Release|Any CPU
+		{A73EE41F-62DC-4645-BF78-9E20F682C630}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
