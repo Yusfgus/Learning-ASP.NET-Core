@@ -1,0 +1,17 @@
+@baseUrl = https://localhost:7286
+@productId = 2779ee47-10b0-4bd7-8342-404006aa1392
+
+
+### old way (version 1)
+GET {{baseUrl}}/api/products/{{productId}}
+
+
+### version 1
+GET {{baseUrl}}/api/products/{{productId}}
+api-version: 1.0
+
+
+### version 2
+GET {{baseUrl}}/api/products/{{productId}}
+api-version: 2.0
+
