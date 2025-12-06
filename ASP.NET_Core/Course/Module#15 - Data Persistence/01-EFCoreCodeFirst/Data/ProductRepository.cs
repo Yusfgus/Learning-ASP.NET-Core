@@ -1,5 +1,4 @@
 
-using System.Threading.Tasks;
 using EFCoreCodeFirst.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,8 +7,7 @@ namespace EFCoreCodeFirst.Data;
 public class ProductRepository(AppDbContext context)
 {
 
-    public int GetProductsCount() =>
-        context.Products.Count();
+    public int GetProductsCount() => context.Products.Count();
 
     public List<Product> GetProductsPage(int page = 1, int pageSize = 10)
     {

@@ -5,7 +5,9 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped<ProductRepository>();
+// builder.Services.AddScoped<ProductRepository>();
+builder.Services.AddScoped<ProductRepositoryAsync>();
+
 // builder.Services.AddSingleton<ProductRepository>();  
 // System.InvalidOperationException: Cannot consume scoped service 'Microsoft.EntityFrameworkCore.DbContextOptions`1[EFCoreCodeFirst.Data.AppDbContext]' 
 // from singleton 'EFCoreCodeFirst.Data.ProductRepository'.
@@ -22,6 +24,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 var app = builder.Build();
 
-app.MapProductEndpoints();
+// app.MapProductEndpoints();
+app.MapProductEndpointsAsync();
 
 app.Run();

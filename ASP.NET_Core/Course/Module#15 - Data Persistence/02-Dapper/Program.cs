@@ -9,7 +9,8 @@ using Microsoft.Data.Sqlite;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped<ProductRepository>();
+// builder.Services.AddScoped<ProductRepository>();
+builder.Services.AddScoped<ProductRepositoryAsync>();
 
 builder.Services.Configure<JsonOptions>(options =>
 {
@@ -29,6 +30,7 @@ DatabaseInitializer.Initialize(db);
 
 SqlMapper.AddTypeHandler(new GuidHandler());
 
-app.MapProductEndpoints();
+// app.MapProductEndpoints();
+app.MapProductEndpointsAsync();
 
 app.Run();
