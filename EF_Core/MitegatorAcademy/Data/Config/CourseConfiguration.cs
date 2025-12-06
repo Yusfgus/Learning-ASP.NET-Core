@@ -23,7 +23,7 @@ public class CourseConfiguration : IEntityTypeConfiguration<Course>
         builder.Property(x => x.Price).HasPrecision(15, 2);
 
         // default data
-        // builder.HasData(SeedData.LoadCourses());
+        builder.HasData(SeedData.LoadCourses());
     }
 
 }
