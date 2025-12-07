@@ -5,6 +5,8 @@ using EFCoreCodeFirst.Requests;
 using EFCoreCodeFirst.Responses;
 using Microsoft.AspNetCore.Http.HttpResults;
 
+namespace EFCoreCodeFirst.Endpoints;
+
 public static class ProductEndpoints
 {
     public static RouteGroupBuilder MapProductEndpoints(this IEndpointRouteBuilder app)

@@ -6,6 +6,8 @@ using EFCoreCodeFirst.Requests;
 using EFCoreCodeFirst.Responses;
 using Microsoft.AspNetCore.Http.HttpResults;
 
+namespace EFCoreCodeFirst.Endpoints;
+
 public static class ProductEndpointsAsync
 {
     public static RouteGroupBuilder MapProductEndpointsAsync(this IEndpointRouteBuilder app)
