@@ -1,0 +1,12 @@
+@baseUrl = https://localhost:7107
+
+
+###
+GET {{baseUrl}}/api/products
+tenantId: TenantA
+x-api-key: TenantAKey
+
+###
+GET {{baseUrl}}/api/products
+tenantId: TenantA
+x-api-key: TenantBKey
