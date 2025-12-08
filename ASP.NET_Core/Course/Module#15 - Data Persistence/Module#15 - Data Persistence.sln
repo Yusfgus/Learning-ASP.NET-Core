@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-CancellationToken", "04-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-UnitOfWork", "05-UnitOfWork\05-UnitOfWork.csproj", "{95E30114-A48B-432E-8899-ADA6BA0CEF66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-UnitOfWorkDbContext", "06-UnitOfWorkDbContext\06-UnitOfWorkDbContext.csproj", "{81E254E0-BBD1-4BEB-9F1B-3CE5B59DA042}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{95E30114-A48B-432E-8899-ADA6BA0CEF66}.Release|x64.Build.0 = Release|Any CPU
 		{95E30114-A48B-432E-8899-ADA6BA0CEF66}.Release|x86.ActiveCfg = Release|Any CPU
 		{95E30114-A48B-432E-8899-ADA6BA0CEF66}.Release|x86.Build.0 = Release|Any CPU
+		{81E254E0-BBD1-4BEB-9F1B-3CE5B59DA042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81E254E0-BBD1-4BEB-9F1B-3CE5B59DA042}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81E254E0-BBD1-4BEB-9F1B-3CE5B59DA042}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{81E254E0-BBD1-4BEB-9F1B-3CE5B59DA042}.Debug|x64.Build.0 = Debug|Any CPU
+		{81E254E0-BBD1-4BEB-9F1B-3CE5B59DA042}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{81E254E0-BBD1-4BEB-9F1B-3CE5B59DA042}.Debug|x86.Build.0 = Debug|Any CPU
+		{81E254E0-BBD1-4BEB-9F1B-3CE5B59DA042}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81E254E0-BBD1-4BEB-9F1B-3CE5B59DA042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81E254E0-BBD1-4BEB-9F1B-3CE5B59DA042}.Release|x64.ActiveCfg = Release|Any CPU
+		{81E254E0-BBD1-4BEB-9F1B-3CE5B59DA042}.Release|x64.Build.0 = Release|Any CPU
+		{81E254E0-BBD1-4BEB-9F1B-3CE5B59DA042}.Release|x86.ActiveCfg = Release|Any CPU
+		{81E254E0-BBD1-4BEB-9F1B-3CE5B59DA042}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
