@@ -22,4 +22,11 @@ public static class Utils
         int leftSpaces = (width - text.Length) / 2;
         return text.PadLeft(width - leftSpaces, c).PadRight(width, c);
     }
+
+    public static void Highlight(string sentence, ConsoleColor color = ConsoleColor.Green)
+    {
+        Console.ForegroundColor = color;
+        Console.WriteLine(sentence);
+        Console.ResetColor();
+    }
 }
