@@ -1,0 +1,18 @@
+@baseUrl = https://localhost:7107
+
+
+### No Filter Registration
+GET {{baseUrl}}/api/employees
+
+
+### Endpoint level Filter Registration
+GET {{baseUrl}}/api/products
+
+
+### Rout Group level Filter Registration
+GET {{baseUrl}}/api/customers
+
+
+### Rout Group level Filter Registration
+GET {{baseUrl}}/api/customers/1
+
