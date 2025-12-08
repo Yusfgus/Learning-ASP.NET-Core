@@ -4,6 +4,8 @@ using Shared;
 
 namespace ActionFilters.Filters;
 
+// Run logic before and after an action executes.
+
 public class SampleActionFilter : IActionFilter
 {
     // before Action execution

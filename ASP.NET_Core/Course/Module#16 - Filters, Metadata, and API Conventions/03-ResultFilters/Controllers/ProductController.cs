@@ -1,13 +1,10 @@
-using ActionFilters.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Shared;
 
-namespace ActionFilters.Controllers;
+namespace ResultFilters.Controllers;
 
 [ApiController]
 [Route("api/products")]
-// [ServiceFilter(typeof(TrackActionTimeFilterV1))]
-[TrackActionTimeFilterV3]
 public class ProductController() : ControllerBase
 {
 

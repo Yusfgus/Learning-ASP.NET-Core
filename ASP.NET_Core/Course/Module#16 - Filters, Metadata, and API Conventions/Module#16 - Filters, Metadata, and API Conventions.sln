@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-ResourceFilters", "02-Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "..\..\..\Shared\Shared.csproj", "{EE21A7A8-8515-4CBB-99EC-48585ED944AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-ResultFilters", "03-ResultFilters\03-ResultFilters.csproj", "{A176A8A0-7C1C-429D-A09C-E1B14F888D48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{EE21A7A8-8515-4CBB-99EC-48585ED944AE}.Release|x64.Build.0 = Release|Any CPU
 		{EE21A7A8-8515-4CBB-99EC-48585ED944AE}.Release|x86.ActiveCfg = Release|Any CPU
 		{EE21A7A8-8515-4CBB-99EC-48585ED944AE}.Release|x86.Build.0 = Release|Any CPU
+		{A176A8A0-7C1C-429D-A09C-E1B14F888D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A176A8A0-7C1C-429D-A09C-E1B14F888D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A176A8A0-7C1C-429D-A09C-E1B14F888D48}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A176A8A0-7C1C-429D-A09C-E1B14F888D48}.Debug|x64.Build.0 = Debug|Any CPU
+		{A176A8A0-7C1C-429D-A09C-E1B14F888D48}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A176A8A0-7C1C-429D-A09C-E1B14F888D48}.Debug|x86.Build.0 = Debug|Any CPU
+		{A176A8A0-7C1C-429D-A09C-E1B14F888D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A176A8A0-7C1C-429D-A09C-E1B14F888D48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A176A8A0-7C1C-429D-A09C-E1B14F888D48}.Release|x64.ActiveCfg = Release|Any CPU
+		{A176A8A0-7C1C-429D-A09C-E1B14F888D48}.Release|x64.Build.0 = Release|Any CPU
+		{A176A8A0-7C1C-429D-A09C-E1B14F888D48}.Release|x86.ActiveCfg = Release|Any CPU
+		{A176A8A0-7C1C-429D-A09C-E1B14F888D48}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

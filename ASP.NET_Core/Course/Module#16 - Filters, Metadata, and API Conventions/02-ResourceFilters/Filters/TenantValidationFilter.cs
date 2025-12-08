@@ -4,6 +4,9 @@ using Shared;
 
 namespace ResourceFilters.Filters;
 
+// Runs before model binding & action
+// Good for caching, short-circuiting requests
+
 public class TenantValidationFilter(IConfiguration config) : IAsyncResourceFilter
 {
     public async Task OnResourceExecutionAsync(ResourceExecutingContext context, ResourceExecutionDelegate next)
