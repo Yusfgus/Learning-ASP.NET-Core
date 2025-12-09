@@ -13,14 +13,6 @@ GET {{baseUrl}}/api/controller-fake-errors/server-error
 POST {{baseUrl}}/api/controller-fake-errors/bad-request
 Content-Type: application/json
 
-### Bad Request
-POST {{baseUrl}}/api/controller-fake-errors/bad-request-no-body
-Content-Type: application/json
-
-### Bad Request 2
-POST {{baseUrl}}/api/controller-fake-errors/bad-request-2
-Content-Type: application/json
-
 ### Not Found
 POST {{baseUrl}}/api/controller-fake-errors/not-found
 Content-Type: application/json
@@ -49,10 +41,6 @@ Content-Type: application/json
 
 ### Bad Request
 POST {{baseUrl}}/api/minimal-fake-errors/bad-request
-Content-Type: application/json
-
-### Bad Request
-POST {{baseUrl}}/api/minimal-fake-errors/bad-request-no-body
 Content-Type: application/json
 
 ### Not Found
