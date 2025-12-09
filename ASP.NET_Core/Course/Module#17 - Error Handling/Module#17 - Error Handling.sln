@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-ControllerRFC9457", "04-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-MinimalRFC9457", "05-MinimalRFC9457\05-MinimalRFC9457.csproj", "{45036CC6-DE64-42F7-90EC-87CD06351C82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-GlobalErrorHandling", "06-GlobalErrorHandling\06-GlobalErrorHandling.csproj", "{8011EF9F-E1A9-42BB-8394-9600B3C4E34A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{45036CC6-DE64-42F7-90EC-87CD06351C82}.Release|x64.Build.0 = Release|Any CPU
 		{45036CC6-DE64-42F7-90EC-87CD06351C82}.Release|x86.ActiveCfg = Release|Any CPU
 		{45036CC6-DE64-42F7-90EC-87CD06351C82}.Release|x86.Build.0 = Release|Any CPU
+		{8011EF9F-E1A9-42BB-8394-9600B3C4E34A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8011EF9F-E1A9-42BB-8394-9600B3C4E34A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8011EF9F-E1A9-42BB-8394-9600B3C4E34A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8011EF9F-E1A9-42BB-8394-9600B3C4E34A}.Debug|x64.Build.0 = Debug|Any CPU
+		{8011EF9F-E1A9-42BB-8394-9600B3C4E34A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8011EF9F-E1A9-42BB-8394-9600B3C4E34A}.Debug|x86.Build.0 = Debug|Any CPU
+		{8011EF9F-E1A9-42BB-8394-9600B3C4E34A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8011EF9F-E1A9-42BB-8394-9600B3C4E34A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8011EF9F-E1A9-42BB-8394-9600B3C4E34A}.Release|x64.ActiveCfg = Release|Any CPU
+		{8011EF9F-E1A9-42BB-8394-9600B3C4E34A}.Release|x64.Build.0 = Release|Any CPU
+		{8011EF9F-E1A9-42BB-8394-9600B3C4E34A}.Release|x86.ActiveCfg = Release|Any CPU
+		{8011EF9F-E1A9-42BB-8394-9600B3C4E34A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

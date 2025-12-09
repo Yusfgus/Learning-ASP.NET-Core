@@ -1,0 +1,135 @@
+@baseUrl = https://localhost:7107
+
+
+### Root
+GET {{baseUrl}}
+
+// ========================================================
+
+### Server Error
+GET {{baseUrl}}/api/controller-fake-errors/server-error
+
+// ========================================================
+
+### Bad Request without Body
+POST {{baseUrl}}/api/controller-fake-errors/bad-request
+Content-Type: application/json
+
+### Bad Request with Body
+POST {{baseUrl}}/api/controller-fake-errors/bad-request-1
+Content-Type: application/json
+
+### Bad Request + Problem
+POST {{baseUrl}}/api/controller-fake-errors/bad-request-2
+Content-Type: application/json
+
+// ========================================================
+
+### Not Found without Body
+POST {{baseUrl}}/api/controller-fake-errors/not-found
+Content-Type: application/json
+
+### Not Found with Body
+POST {{baseUrl}}/api/controller-fake-errors/not-found-1
+Content-Type: application/json
+
+### Not Found + Problem
+POST {{baseUrl}}/api/controller-fake-errors/not-found-2
+Content-Type: application/json
+
+// ========================================================
+
+### Conflict without Body
+POST {{baseUrl}}/api/controller-fake-errors/conflict
+Content-Type: application/json
+
+### Conflict with Body
+POST {{baseUrl}}/api/controller-fake-errors/conflict-1
+Content-Type: application/json
+
+### Conflict + Problem
+POST {{baseUrl}}/api/controller-fake-errors/conflict-2
+Content-Type: application/json
+
+// ========================================================
+
+### Unauthorized without Body
+POST {{baseUrl}}/api/controller-fake-errors/unauthorized
+Content-Type: application/json
+
+### Unauthorized with Body
+POST {{baseUrl}}/api/controller-fake-errors/unauthorized-1
+Content-Type: application/json
+
+### Unauthorized + ProblemDetails
+POST {{baseUrl}}/api/controller-fake-errors/unauthorized-2
+Content-Type: application/json
+
+// ========================================================
+
+### Business Rule Error
+POST {{baseUrl}}/api/controller-fake-errors/business-rule-error
+Content-Type: application/json
+
+
+//==============================================================
+//==============================================================
+//==============================================================
+
+
+### Server Error
+GET {{baseUrl}}/api/minimal-fake-errors/server-error
+
+// ========================================================
+
+### Bad Request without Body
+POST {{baseUrl}}/api/minimal-fake-errors/bad-request
+Content-Type: application/json
+
+### Bad Request with Body
+POST {{baseUrl}}/api/minimal-fake-errors/bad-request-1
+Content-Type: application/json
+
+### Bad Request + Problem
+POST {{baseUrl}}/api/minimal-fake-errors/bad-request-2
+Content-Type: application/json
+
+// ========================================================
+
+### Not Found without Body
+POST {{baseUrl}}/api/minimal-fake-errors/not-found
+Content-Type: application/json
+
+### Not Found with Body
+POST {{baseUrl}}/api/minimal-fake-errors/not-found-1
+Content-Type: application/json
+
+### Not Found + Problem
+POST {{baseUrl}}/api/minimal-fake-errors/not-found-2
+Content-Type: application/json
+
+// ========================================================
+
+### Conflict without Body
+POST {{baseUrl}}/api/minimal-fake-errors/conflict
+Content-Type: application/json
+
+### Conflict with Body
+POST {{baseUrl}}/api/minimal-fake-errors/conflict-1
+Content-Type: application/json
+
+### Conflict + Problem
+POST {{baseUrl}}/api/minimal-fake-errors/conflict-2
+Content-Type: application/json
+
+// ========================================================
+
+### Unauthorized without Body
+POST {{baseUrl}}/api/minimal-fake-errors/unauthorized
+Content-Type: application/json
+
+// ========================================================
+
+### Business Rule Error
+POST {{baseUrl}}/api/minimal-fake-errors/business-rule-error
+Content-Type: application/json
