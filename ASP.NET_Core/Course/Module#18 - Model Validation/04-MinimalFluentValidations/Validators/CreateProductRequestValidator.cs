@@ -1,8 +1,8 @@
 
-using ControllerFluentValidations.Requests;
+using MinimalFluentValidations.Requests;
 using FluentValidation;
 
-namespace ControllerFluentValidations.Validators;
+namespace MinimalFluentValidations.Validators;
 
 public class CreateProductRequestValidator : AbstractValidator<CreateProductRequest>
 {

@@ -1,10 +1,9 @@
 
-using ControllerDataAnnotations.Requests;
+using MinimalFluentValidations.Requests;
 using Microsoft.AspNetCore.Mvc;
-using MinimalDataAnnotations.Extensions;
 using MinimalFluentValidations.Filters;
 
-namespace MinimalDataAnnotations.Endpoints;
+namespace MinimalFluentValidations.Endpoints;
 
 public static class ProductController
 {
@@ -13,8 +12,7 @@ public static class ProductController
         RouteGroupBuilder group = app.MapGroup("api/products");
 
         group.MapPost("/", Post)
-            .AddEndpointFilter<ValidationFilter<CreateProductRequest>>(); // add filter
-            // .Validate<CreateProductRequest>(); // extension than add filter
+            .AddEndpointFilter<ValidationFilter<CreateProductRequest>>();
 
         return group;
     }
