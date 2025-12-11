@@ -1,3 +1,4 @@
+using System.Collections;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,6 +31,9 @@ public static class RouteHandlerBuilderExtensions
 
             if (!isValid)
             {
+                // foreach(var x in validationResults)
+                //     Console.WriteLine($"{string.Join(",", x.MemberNames)}: {x.ErrorMessage}");
+
                 var errorGroups = validationResults
                                 .SelectMany(
                                     v => (v.MemberNames.Any() ? v.MemberNames : new[] { "" })
