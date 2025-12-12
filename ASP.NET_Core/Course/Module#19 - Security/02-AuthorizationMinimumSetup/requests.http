@@ -1,0 +1,28 @@
+@baseUrl = https://localhost:7008
+
+
+### Login
+GET {{baseUrl}}/login
+role: Admin
+department: HR
+
+### Logout
+GET {{baseUrl}}/logout
+
+### Get user info
+GET {{baseUrl}}/user-1
+
+### Get user info
+GET {{baseUrl}}/user-2
+
+### Admins role only
+GET {{baseUrl}}/role-1
+
+### Supervisors or Admins role only
+GET {{baseUrl}}/role-2
+
+### HR or Dev department claim only
+GET {{baseUrl}}/claim
+
+### Admin and HR policy
+GET {{baseUrl}}/policy
