@@ -3,6 +3,8 @@
 ##
 ## Get latest from `dotnet new gitignore`
 
+/ASP.NET_Core/Course/Sandboxs/
+
 # sql
 *.db
 
