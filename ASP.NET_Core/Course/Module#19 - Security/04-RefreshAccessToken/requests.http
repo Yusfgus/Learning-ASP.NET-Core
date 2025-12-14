@@ -1,0 +1,37 @@
+@baseUrl = https://localhost:7008
+
+###
+POST {{baseUrl}}/api/token/generate
+content-type: application/json
+
+{
+  "Id": "79410514-0136-4442-be9b-01f097c57f7a",
+  "FirstName": "Primary",
+  "LastName": "Manager",
+  "Email": "pm@localhost",
+  "Permissions": [
+    "project:create",
+    "project:read",
+    "project:update",
+    "project:delete",
+    "project:assign_member",
+    "project:manage_budget",
+    "task:create",
+    "task:read",
+    "task:update",
+    "task:delete",
+    "task:assign_user",
+    "task:update_status"
+  ],
+  "Roles": [
+    "ProjectManager"
+  ]
+}
+
+###
+GET {{baseUrl}}/api/projects
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjN2Q4ZTlmMC1nMWgyLWkzajQtazVsNi1tN244bzlwMHExcjIiLCJlbWFpbCI6ImVtaWx5LndoaXRlQGxvY2FsaG9zdCIsImdpdmVuX25hbWUiOiJFbWlseSIsImZhbWlseV9uYW1lIjoiV2hpdGUiLCJyb2xlIjoiU3Rha2Vob2xkZXIiLCJwZXJtaXNzaW9uIjpbInByb2plY3Q6cmVhZCIsInRhc2s6cmVhZCJdLCJuYmYiOjE3NjU2NzMyMDMsImV4cCI6MTc2NTY3MzgwMywiaWF0IjoxNzY1NjczMjAzLCJpc3MiOiJsb2NhbGhvc3QiLCJhdWQiOiJsb2NhbGhvc3QifQ.ie1M1TqsPdRtN149vjPa7OBXUyMZ6PdTgkyW28z9t0U
+
+
+###
+GET {{baseUrl}}/api/token/refresh-token

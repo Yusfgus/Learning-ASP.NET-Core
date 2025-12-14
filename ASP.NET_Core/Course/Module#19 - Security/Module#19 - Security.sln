@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-AuthorizationMinimumSetu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-JWTAuthentication", "03-JWTAuthentication\03-JWTAuthentication.csproj", "{DC5ED5E7-15C6-408C-8B50-E17F952A8896}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-RefreshAccessToken", "04-RefreshAccessToken\04-RefreshAccessToken.csproj", "{364A833E-5CD0-4C90-A38D-795525066995}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{DC5ED5E7-15C6-408C-8B50-E17F952A8896}.Release|x64.Build.0 = Release|Any CPU
 		{DC5ED5E7-15C6-408C-8B50-E17F952A8896}.Release|x86.ActiveCfg = Release|Any CPU
 		{DC5ED5E7-15C6-408C-8B50-E17F952A8896}.Release|x86.Build.0 = Release|Any CPU
+		{364A833E-5CD0-4C90-A38D-795525066995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{364A833E-5CD0-4C90-A38D-795525066995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{364A833E-5CD0-4C90-A38D-795525066995}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{364A833E-5CD0-4C90-A38D-795525066995}.Debug|x64.Build.0 = Debug|Any CPU
+		{364A833E-5CD0-4C90-A38D-795525066995}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{364A833E-5CD0-4C90-A38D-795525066995}.Debug|x86.Build.0 = Debug|Any CPU
+		{364A833E-5CD0-4C90-A38D-795525066995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{364A833E-5CD0-4C90-A38D-795525066995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{364A833E-5CD0-4C90-A38D-795525066995}.Release|x64.ActiveCfg = Release|Any CPU
+		{364A833E-5CD0-4C90-A38D-795525066995}.Release|x64.Build.0 = Release|Any CPU
+		{364A833E-5CD0-4C90-A38D-795525066995}.Release|x86.ActiveCfg = Release|Any CPU
+		{364A833E-5CD0-4C90-A38D-795525066995}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
