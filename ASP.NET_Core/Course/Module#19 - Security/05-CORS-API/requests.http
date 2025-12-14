@@ -1,0 +1,5 @@
+@baseUrl = https://localhost:7008
+
+
+### 
+GET {{baseUrl}}/api/bookings
