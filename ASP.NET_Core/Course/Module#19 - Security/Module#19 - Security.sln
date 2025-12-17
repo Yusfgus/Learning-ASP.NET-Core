@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-CORS-API", "05-CORS-API\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-CORS-App", "05-CORS-App\05-CORS-App.csproj", "{5B96F695-A25A-4CF3-BA83-4A16E51B9938}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataProtection", "DataProtection\DataProtection.csproj", "{041AEFC0-4D12-4A98-9D7C-8905D13B6662}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-DataProtection", "06-DataProtection\06-DataProtection.csproj", "{041AEFC0-4D12-4A98-9D7C-8905D13B6662}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
