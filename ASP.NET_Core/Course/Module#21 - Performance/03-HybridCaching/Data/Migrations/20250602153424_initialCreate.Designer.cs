@@ -19,7 +19,7 @@ namespace HybridCaching.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.5");
 
-            modelBuilder.Entity("InMemoryCaching.Models.Product", b =>
+            modelBuilder.Entity("HybridCaching.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
