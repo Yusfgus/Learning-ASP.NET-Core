@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = builder.Configuration.GetConnectionString("Redis");
-    options.InstanceName = "App01";
+    options.InstanceName = "02:";
 });
 
 builder.Services.AddScoped<IProductService, ProductService>();
