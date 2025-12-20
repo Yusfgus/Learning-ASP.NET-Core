@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-RateLimiting", "06-RateL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RateLimiterTest", "RateLimiterTest\RateLimiterTest.csproj", "{027C6364-D123-44B8-9ACC-D7347434F452}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-ResponseCompression", "07-ResponseCompression\07-ResponseCompression.csproj", "{6D01421C-3456-4F79-9318-63722F1DDEF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,18 @@ Global
 		{027C6364-D123-44B8-9ACC-D7347434F452}.Release|x64.Build.0 = Release|Any CPU
 		{027C6364-D123-44B8-9ACC-D7347434F452}.Release|x86.ActiveCfg = Release|Any CPU
 		{027C6364-D123-44B8-9ACC-D7347434F452}.Release|x86.Build.0 = Release|Any CPU
+		{6D01421C-3456-4F79-9318-63722F1DDEF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D01421C-3456-4F79-9318-63722F1DDEF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D01421C-3456-4F79-9318-63722F1DDEF5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6D01421C-3456-4F79-9318-63722F1DDEF5}.Debug|x64.Build.0 = Debug|Any CPU
+		{6D01421C-3456-4F79-9318-63722F1DDEF5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6D01421C-3456-4F79-9318-63722F1DDEF5}.Debug|x86.Build.0 = Debug|Any CPU
+		{6D01421C-3456-4F79-9318-63722F1DDEF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D01421C-3456-4F79-9318-63722F1DDEF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D01421C-3456-4F79-9318-63722F1DDEF5}.Release|x64.ActiveCfg = Release|Any CPU
+		{6D01421C-3456-4F79-9318-63722F1DDEF5}.Release|x64.Build.0 = Release|Any CPU
+		{6D01421C-3456-4F79-9318-63722F1DDEF5}.Release|x86.ActiveCfg = Release|Any CPU
+		{6D01421C-3456-4F79-9318-63722F1DDEF5}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
