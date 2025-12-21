@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  OrderApi:
+    # build: OrderServiceApi/Dockerfile
+    image: orderservice
+    container_name: orderservice
+    restart: always
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development 
+      ASPNETCORE_URLS: http://+:80
+      PaymentService__BaseUrl: http://paymentservice:80 # not necessary since it exists in appsettings.json unless you want to override it
+    ports:
+      - "9092:80"
+    depends_on:
+      - PaymentApi
+    volumes:
+      - sqlite_data_orderservice:/app/data 
+    networks:
+      - OrderPaymentSystem
+
+  PaymentApi:
+    # build: PaymentServiceApi/Dockerfile
+    image: paymentservice
+    container_name: paymentservice
+    restart: always
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development 
+      ASPNETCORE_URLS: http://+:80
+    ports:
+      - "9093:80"
+    networks:
+      - OrderPaymentSystem
+
+volumes:
+  sqlite_data_orderservice: {}
+
+networks:
+  OrderPaymentSystem:
+    driver: bridge
+    external: true
