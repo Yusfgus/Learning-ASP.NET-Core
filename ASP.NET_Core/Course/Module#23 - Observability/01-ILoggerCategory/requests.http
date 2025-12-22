@@ -1,0 +1,6 @@
+@baseUrl=https://localhost:5041
+
+@orderId = 97232b7c-fc74-4a6b-9738-d962f03fc87e
+
+###
+POST {{baseUrl}}/api/orders/{{orderId}}/process
