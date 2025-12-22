@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-ILoggerCategory", "01-IL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-LogLevels", "02-LogLevels\02-LogLevels.csproj", "{98BD1AEF-9FB0-4982-B52F-0BC1F699EAF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-StructuredLogging", "03-StructuredLogging\03-StructuredLogging.csproj", "{10ACADC6-1D39-4834-B95A-BF7910EB14D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{98BD1AEF-9FB0-4982-B52F-0BC1F699EAF0}.Release|x64.Build.0 = Release|Any CPU
 		{98BD1AEF-9FB0-4982-B52F-0BC1F699EAF0}.Release|x86.ActiveCfg = Release|Any CPU
 		{98BD1AEF-9FB0-4982-B52F-0BC1F699EAF0}.Release|x86.Build.0 = Release|Any CPU
+		{10ACADC6-1D39-4834-B95A-BF7910EB14D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10ACADC6-1D39-4834-B95A-BF7910EB14D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10ACADC6-1D39-4834-B95A-BF7910EB14D3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{10ACADC6-1D39-4834-B95A-BF7910EB14D3}.Debug|x64.Build.0 = Debug|Any CPU
+		{10ACADC6-1D39-4834-B95A-BF7910EB14D3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{10ACADC6-1D39-4834-B95A-BF7910EB14D3}.Debug|x86.Build.0 = Debug|Any CPU
+		{10ACADC6-1D39-4834-B95A-BF7910EB14D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10ACADC6-1D39-4834-B95A-BF7910EB14D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10ACADC6-1D39-4834-B95A-BF7910EB14D3}.Release|x64.ActiveCfg = Release|Any CPU
+		{10ACADC6-1D39-4834-B95A-BF7910EB14D3}.Release|x64.Build.0 = Release|Any CPU
+		{10ACADC6-1D39-4834-B95A-BF7910EB14D3}.Release|x86.ActiveCfg = Release|Any CPU
+		{10ACADC6-1D39-4834-B95A-BF7910EB14D3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
