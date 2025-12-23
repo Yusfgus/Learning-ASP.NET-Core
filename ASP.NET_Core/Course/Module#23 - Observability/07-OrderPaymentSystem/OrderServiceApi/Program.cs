@@ -2,7 +2,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using OrderPaymentSystem.OrderServiceApi.Repositories;
 using OrderPaymentSystem.OrderServiceApi.Services;
-using M03.RepositoryPattern.Data;
+using OrderPaymentSystem.OrderServiceApi.Data;
 
 using Microsoft.EntityFrameworkCore;
 

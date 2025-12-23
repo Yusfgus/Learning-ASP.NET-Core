@@ -1,5 +1,5 @@
 using OrderPaymentSystem.OrderServiceApi.Models;
-using M03.RepositoryPattern.Data;
+using OrderPaymentSystem.OrderServiceApi.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace OrderPaymentSystem.OrderServiceApi.Repositories;

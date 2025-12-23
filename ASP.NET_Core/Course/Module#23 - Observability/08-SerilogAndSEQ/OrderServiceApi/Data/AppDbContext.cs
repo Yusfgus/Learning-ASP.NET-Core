@@ -1,7 +1,7 @@
-using OrderPaymentSystem.OrderServiceApi.Models;
+using SerilogAndSEQ.OrderServiceApi.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace OrderPaymentSystem.OrderServiceApi.Data;
+namespace SerilogAndSEQ.OrderServiceApi.Data;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {

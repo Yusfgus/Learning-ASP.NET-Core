@@ -1,8 +1,8 @@
-using OrderPaymentSystem.OrderServiceApi.Models;
-using OrderPaymentSystem.OrderServiceApi.Data;
+using SerilogAndSEQ.OrderServiceApi.Models;
+using SerilogAndSEQ.OrderServiceApi.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace OrderPaymentSystem.OrderServiceApi.Repositories;
+namespace SerilogAndSEQ.OrderServiceApi.Repositories;
 
 public class OrderRepository(AppDbContext context) : IOrderRepository
 {

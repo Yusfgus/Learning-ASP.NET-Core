@@ -1,7 +1,7 @@
 using OrderPaymentSystem.OrderServiceApi.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace M03.RepositoryPattern.Data;
+namespace OrderPaymentSystem.OrderServiceApi.Data;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {

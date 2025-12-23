@@ -1,12 +1,20 @@
-using System.Text.Json;
+using SerilogAndSEQ.OrderServiceApi.Repositories;
+using SerilogAndSEQ.OrderServiceApi.Services;
+using SerilogAndSEQ.OrderServiceApi.Data;
 using System.Text.Json.Serialization;
-using OrderPaymentSystem.OrderServiceApi.Repositories;
-using OrderPaymentSystem.OrderServiceApi.Services;
-using OrderPaymentSystem.OrderServiceApi.Data;
-
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// // add Serilog provider with the other default providers
+// builder.Services.AddSerilog();
+
+// add Serilog provider only
+builder.Host.UseSerilog((context, loggerConfig) =>
+{
+    loggerConfig.ReadFrom.Configuration(builder.Configuration);
+});
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
@@ -30,6 +38,9 @@ builder.Services.AddHttpClient<IOrderService, OrderService>(client =>
 
 var app = builder.Build();
 
+// user Serilog middleware
+app.UseSerilogRequestLogging();
+
 app.MapControllers();
 
 using (var scope = app.Services.CreateScope())
@@ -39,5 +50,3 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.Run();
-
-// docker container run -d --name orderservice --network OrderPaymentSystem -p 9092:80 -e ASPNETCORE_ENVIRONMENT=Development -e ASPNETCORE_URLS=http://+:80  orderservice
