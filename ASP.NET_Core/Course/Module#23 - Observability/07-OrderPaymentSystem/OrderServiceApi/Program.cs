@@ -39,5 +39,3 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.Run();
-
-// docker container run -d --name orderservice --network OrderPaymentSystem -p 9092:80 -e ASPNETCORE_ENVIRONMENT=Development -e ASPNETCORE_URLS=http://+:80  orderservice
