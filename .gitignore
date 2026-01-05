@@ -4,6 +4,7 @@
 ## Get latest from `dotnet new gitignore`
 
 /ASP.NET_Core/Course/Sandboxs/
+/ASP.NET_Core/Course/MechanicShop/
 
 # sql
 *.db

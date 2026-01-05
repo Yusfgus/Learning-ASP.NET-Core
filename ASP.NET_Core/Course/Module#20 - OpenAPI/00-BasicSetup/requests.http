@@ -1,0 +1,25 @@
+@BaseUrl = https://localhost:7112
+
+
+###
+GET {{BaseUrl}}/
+
+
+###
+GET {{BaseUrl}}/api/products
+
+
+###
+GET {{BaseUrl}}/api/products/6
+
+
+###
+POST {{BaseUrl}}/api/products
+Content-Type: application/json
+
+{
+    "Id": 6,
+    "Name": "Product6",
+    "Price": 88.9,
+    "Amount": 10 
+}
