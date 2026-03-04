@@ -1,0 +1,29 @@
+@baseUrl = https://localhost:7273/api
+
+@id = c2edbd2d-9fb8-48db-ac36-64780d251052
+
+###
+GET {{baseUrl}}/todos
+
+###
+GET {{baseUrl}}/todos/{{id}}
+
+###
+POST {{baseUrl}}/todos
+Content-Type: application/json
+
+{
+    "Title": "Update the CV"
+}
+
+###
+PUT {{baseUrl}}/todos/{{id}}
+Content-Type: application/json
+
+{
+    "Title": "go to gym",
+    "Completed": true
+}
+
+###
+DELETE {{baseUrl}}/todos/{{id}}
